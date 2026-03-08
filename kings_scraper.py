@@ -1,32 +1,25 @@
 import requests
 import json
-from bs4 import BeautifulSoup
 
-url = "https://kingslive.com.au/"
+url = "https://kingslive.com.au/Home/GetSchedule"
 
-r = requests.get(url)
-soup = BeautifulSoup(r.text, "html.parser")
+response = requests.get(url)
+
+data = response.json()
 
 events = []
 
-rows = soup.select(".schedule-row")
-
-for row in rows:
-
-    cols = row.find_all("div")
-
-    if len(cols) < 7:
-        continue
+for e in data:
 
     events.append({
         "venue": "Kings",
-        "time": cols[0].get_text(strip=True),
-        "name": cols[1].get_text(strip=True),
-        "buyin": cols[2].get_text(strip=True),
-        "prize_pool": cols[3].get_text(strip=True),
-        "clock": cols[4].get_text(strip=True),
-        "type": cols[5].get_text(strip=True),
-        "chips": cols[6].get_text(strip=True)
+        "name": e.get("Name"),
+        "start_time": e.get("Start"),
+        "buyin": e.get("BuyIn"),
+        "guarantee": e.get("GTD"),
+        "chips": e.get("Stack"),
+        "clock": e.get("Clock"),
+        "type": e.get("Type")
     })
 
 with open("kings_games.json", "w") as f:
