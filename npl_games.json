@@ -1,1 +1,1570 @@
-[]
+[
+  {
+    "venue": "Venue",
+    "start_time": "Start",
+    "entry": "Entry",
+    "type": "Type",
+    "league": "NPL"
+  },
+  {
+    "venue": "Windsor Leagues Club, Hawkesbury, NSW",
+    "start_time": "5:30 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Lake Mulwala Hotel, Riverina , NSW",
+    "start_time": "7:00 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "The Gem Hotel, Riverina , NSW",
+    "start_time": "2:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Cheers Bar, Sydney CBD, NSW  ",
+    "start_time": "6:00 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Glasgow Arms Hotel Ultimo, Sydney CBD, NSW  ",
+    "start_time": "3:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham Inn, Sydney Marrickville, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham Inn, Sydney Marrickville, NSW  ",
+    "start_time": "6:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Club Willoughby, Sydney North, NSW  ",
+    "start_time": "3:00 PM",
+    "entry": "$150.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Club Willoughby, Sydney North, NSW  ",
+    "start_time": "3:00 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "West Pymble Bicentennial Club, Sydney North, NSW  ",
+    "start_time": "5:00 PM",
+    "entry": "$30.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Maso's, Sydney South, NSW  ",
+    "start_time": "3:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Granville Diggers, Blacktown / Seven Hills, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Padstow Bowling Club, Sydney Inner West, NSW  ",
+    "start_time": "3:00 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Guildford Leagues Club, Sydney Parramatta, NSW  ",
+    "start_time": "4:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Crown on McCredie, Sydney South West, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Albion Park RSL, Wollongong, NSW  ",
+    "start_time": "5:00 PM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Shoalhaven Ex-Servicemens Club, South Coast, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$23.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "St Georges Basin Country Club, South Coast, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Marlin Hotel, South Coast, NSW  ",
+    "start_time": "4:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Club Malua, Far South Coast, NSW  ",
+    "start_time": "11:00 AM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "12:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "3:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$65.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Moruya Bowling and Recreation Club, Shappire Coast , NSW  ",
+    "start_time": "5:00 PM",
+    "entry": "$10.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Test, Sydney CBD, NSW  ",
+    "start_time": "3:15 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Ocean Shores Country Club, Far North Coast, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hotel Australia Miles, Brisbane West, QLD  ",
+    "start_time": "12:30 PM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Railway Hotel Bundaberg, Bundaberg, QLD  ",
+    "start_time": "1:00 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Parafield Gardens Community Club, Metro North, SA  ",
+    "start_time": "7:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Venue",
+    "start_time": "Start",
+    "entry": "Entry",
+    "type": "Type",
+    "league": "NPL"
+  },
+  {
+    "venue": "North Bondi RSL, Sydney East, NSW",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Wests Ashfield Leagues Club, Sydney South, NSW",
+    "start_time": "7:00 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "World Square Bar, Sydney CBD, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Norths, Sydney North, NSW  ",
+    "start_time": "6:00 PM",
+    "entry": "$150.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Norths, Sydney North, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$30.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham Inn, Sydney Marrickville, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Royal Hotel Leichhardt, Sydney Inner West, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Greengate Hotel, Sydney North, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Bexley RSL, Sydney South, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "South Hurstville RSL Club, Sydney South, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Crown on McCredie, Sydney South West, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hotel Seven Hills, Blacktown / Seven Hills, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Cabramatta Golf Club, Sydney South West, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Oran Park Hotel, Penrith / Nepean, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Windsor RSL, Hawkesbury, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$65.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hotel Bargo, Southern Highlands , NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Albion Park RSL, Wollongong, NSW  ",
+    "start_time": "11:00 AM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Shoalhaven Heads Hotel, Wollongong, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Greenwell Point Bowling and Sports Club, South Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "St Georges Basin Country Club, South Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Goulburn Workers Club, Southern Tablelands, NSW  ",
+    "start_time": "6:00 PM",
+    "entry": "$65.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Marlin Hotel, South Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Eagle Hawk Hotel, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Exchange Hotel Taree, Mid North Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$120.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "The Grand Hotel Armidale, Northern Tablelands, NSW  ",
+    "start_time": "6:00 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Bangalow Hotel, Far North Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Sunnybank Hotel, South Brisbane, QLD  ",
+    "start_time": "8:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "White Lion Hotel, Maryborough, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$14.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hervey Bay RSL, Hervey bay, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$14.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Bundy Services Club, Bundaberg, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$13.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Venue",
+    "start_time": "Start",
+    "entry": "Entry",
+    "type": "Type",
+    "league": "NPL"
+  },
+  {
+    "venue": "Oberon RSL Club, Blue Mountains, NSW",
+    "start_time": "7:00 AM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Narrandera Ex-Servicemens Club, Riverina , NSW",
+    "start_time": "7:15 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Empire Hotel Goulburn, Southern Tablelands, NSW",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Cheers Bar, Sydney CBD, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "World Square Bar, Sydney CBD, NSW  ",
+    "start_time": "9:00 PM",
+    "entry": "$5.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham Inn, Sydney Marrickville, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Club Willoughby, Sydney North, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$60.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Harbord Diggers Club, Northern Beaches, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Brighton Le Sands RSL Club, Sydney South, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Ramsgate RSL, Sydney South, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "South Hurstville RSL Club, Sydney South, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Padstow Bowling Club, Sydney Inner West, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hornsby RSL Club, Sydney North, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$30.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Club Parramatta, Sydney Parramatta, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$10.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Crown on McCredie, Sydney South West, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Fairfield Railway Hotel, Sydney South West, NSW  ",
+    "start_time": "10:00 PM",
+    "entry": "$35.00",
+    "type": "Pineapple",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hotel Seven Hills, Blacktown / Seven Hills, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$25.00",
+    "type": "7 Card Stud",
+    "league": "NPL"
+  },
+  {
+    "venue": "Cabramatta Golf Club, Sydney South West, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Ambarvale Hotel, Sydney South West, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "The Richmond Inn, Hawkesbury, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Cabbage Tree Hotel, Wollongong, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Gerringong Bowling & Recreation Club, Wollongong, NSW  ",
+    "start_time": "6:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Culburra Bowling & Recreation Club, South Coast, NSW  ",
+    "start_time": "6:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Sussex Inlet Tavern, South Coast, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Mollymook Golf Club, South Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Club Malua, Far South Coast, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$65.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Moruya Bowling and Recreation Club, Shappire Coast , NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Kempsey Macleay RSL, Mid North Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Nimbin Hotel, Far North Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$30.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Byron Bay Services Club, Far North Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Waterloo Bay Hotel, Brisbane, QLD  ",
+    "start_time": "7:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Club Hotel Chinchilla, Brisbane West, QLD  ",
+    "start_time": "7:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Federal Hotel, Maryborough, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$2.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hervey Bay RSL, Hervey bay, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$14.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Railway Hotel Bundaberg, Bundaberg, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$13.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Venue",
+    "start_time": "Start",
+    "entry": "Entry",
+    "type": "Type",
+    "league": "NPL"
+  },
+  {
+    "venue": "The Gem Hotel, Riverina , NSW",
+    "start_time": "7:15 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em - Cash Game",
+    "league": "NPL"
+  },
+  {
+    "venue": "The Railway Hotel Temora , Riverina , NSW",
+    "start_time": "7:15 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Wests Ashfield Leagues Club, Sydney South, NSW",
+    "start_time": "7:00 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Concourse Bar, Sydney CBD, NSW  ",
+    "start_time": "6:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Cheers Bar, Sydney CBD, NSW  ",
+    "start_time": "9:30 PM",
+    "entry": "$2.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Mosman RSL Club, Sydney North, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham Inn, Sydney Marrickville, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham RSL, Sydney Marrickville, NSW  ",
+    "start_time": "9:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "The Alcott, Sydney North, NSW  ",
+    "start_time": "6:00 PM",
+    "entry": "$150.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "West Pymble Bicentennial Club, Sydney North, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Kogarah Clubhouse, Sydney South, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Crown on McCredie, Sydney South West, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Cabramatta Golf Club, Sydney South West, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Riverstone Schofields Memorial Club, Hawkesbury, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Ambarvale Hotel, Sydney South West, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$55.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Cabbage Tree Hotel, Wollongong, NSW  ",
+    "start_time": "11:00 AM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "St Georges Basin Country Club, South Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Goulburn Workers Club, Southern Tablelands, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Marlin Hotel, South Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Batemans Bay Soldiers Club, Far South Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Eagle Hawk Hotel, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$65.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$10.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Moruya Golf Club, Shappire Coast , NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$10.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Club Narooma, Shappire Coast , NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$30.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Kempsey Heights Bowling Club, Mid North Coast, NSW  ",
+    "start_time": "6:00 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "The Grand Hotel Armidale, Northern Tablelands, NSW  ",
+    "start_time": "6:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "The Lennox Hotel, Far North Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "The Clubhouse Hervey Bay, Hervey bay, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$14.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Bundy Services Club, Bundaberg, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$28.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Parafield Gardens Community Club, Metro North, SA  ",
+    "start_time": "7:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Venue",
+    "start_time": "Start",
+    "entry": "Entry",
+    "type": "Type",
+    "league": "NPL"
+  },
+  {
+    "venue": "Oberon RSL Club, Blue Mountains, NSW",
+    "start_time": "7:00 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Coleambally Community Club, Riverina , NSW",
+    "start_time": "7:00 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Cheers Bar, Sydney CBD, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "World Square Bar, Sydney CBD, NSW  ",
+    "start_time": "10:00 PM",
+    "entry": "$10.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Minskys Hotel, Sydney North, NSW  ",
+    "start_time": "8:00 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Norths, Sydney North, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$100.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "The Oxford Hotel Drummoyne, Sydney CBD, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham Inn, Sydney Marrickville, NSW  ",
+    "start_time": "8:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham RSL, Sydney Marrickville, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$110.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham RSL, Sydney Marrickville, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$550.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham RSL, Sydney Marrickville, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hurstville RSL Memorial Club, Sydney South, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Granville Diggers, Blacktown / Seven Hills, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Asquith Bowling & Recreation Club, Sydney North, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$30.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Crown on McCredie, Sydney South West, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Fairfield Railway Hotel, Sydney South West, NSW  ",
+    "start_time": "10:00 PM",
+    "entry": "$35.00",
+    "type": "Omaha",
+    "league": "NPL"
+  },
+  {
+    "venue": "Moorebank Sports Club, Sydney South West, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$55.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Cabramatta Golf Club, Sydney South West, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$75.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Ambarvale Hotel, Sydney South West, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Windsor RSL, Hawkesbury, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Dicey Riley's Hotel, Wollongong, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Albion Park RSL, Wollongong, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Club Lithgow, Blue Mountains, NSW  ",
+    "start_time": "5:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Shoalhaven Ex-Servicemens Club, South Coast, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$13.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Sussex Inlet Tavern, South Coast, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Goulburn Railway Bowling Club, Southern Tablelands, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$225.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Moruya Bowling and Recreation Club, Shappire Coast , NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$10.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Bermagui Country Club, Shappire Coast , NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Kempsey Macleay RSL, Mid North Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Manilla Bowling Club, Northern Tablelands, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Byron Bay Services Club, Far North Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$30.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hervey Bay RSL, Hervey bay, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$14.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Burnett Bowls Club, Bundaberg, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$33.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "The Graham Hotel, Mareeba, QLD  ",
+    "start_time": "7:00 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Venue",
+    "start_time": "Start",
+    "entry": "Entry",
+    "type": "Type",
+    "league": "NPL"
+  },
+  {
+    "venue": "West Kempsey Hotel, Mid North Coast, NSW",
+    "start_time": "6:30 PM",
+    "entry": "$30.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Darlington Point Sports Club, Riverina , NSW",
+    "start_time": "7:15 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queensport Tavern, Brisbane, QLD",
+    "start_time": "6:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Carindale Hotel, South Brisbane, QLD",
+    "start_time": "6:30 PM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham RSL, Sydney Marrickville, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$75.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham RSL, Sydney Marrickville, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Kogarah Clubhouse, Sydney South, NSW  ",
+    "start_time": "1:00 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Maso's, Sydney South, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Padstow RSL, Sydney Inner West, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$55.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Guildford Leagues Club, Sydney Parramatta, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Crown on McCredie, Sydney South West, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hotel Seven Hills, Blacktown / Seven Hills, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Glenquarie Tavern, Sydney South West, NSW  ",
+    "start_time": "10:30 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Ambarvale Hotel, Sydney South West, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$55.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Windsor RSL, Hawkesbury, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$65.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Shoalhaven Ex-Servicemens Club, South Coast, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$13.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Sussex Inlet Tavern, South Coast, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$13.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Goulburn Golf Club, Southern Tablelands, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Yass Soldiers Club, Queanbeyan / ACT, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$15.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$65.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Moruya Bowling and Recreation Club, Shappire Coast , NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Henry Rous Tavern, Far North Coast, NSW  ",
+    "start_time": "6:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Club Chermside, Brisbane, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$60.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hervey Bay RSL, Hervey bay, QLD  ",
+    "start_time": "6:30 PM",
+    "entry": "$54.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Parafield Gardens Community Club, Metro North, SA  ",
+    "start_time": "7:30 PM",
+    "entry": "$30.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Venue",
+    "start_time": "Start",
+    "entry": "Entry",
+    "type": "Type",
+    "league": "NPL"
+  },
+  {
+    "venue": "Berkeley Sports Club, Wollongong, NSW",
+    "start_time": "7:00 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Concourse Bar, Sydney CBD, NSW  ",
+    "start_time": "5:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham Inn, Sydney Marrickville, NSW  ",
+    "start_time": "9:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham RSL, Sydney Marrickville, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$75.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham RSL, Sydney Marrickville, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$550.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Petersham RSL, Sydney Marrickville, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Bexley RSL, Sydney South, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Kogarah Clubhouse, Sydney South, NSW  ",
+    "start_time": "1:00 PM",
+    "entry": "$50.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hurstville RSL Memorial Club, Sydney South, NSW  ",
+    "start_time": "9:30 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Padstow RSL, Sydney Inner West, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Padstow RSL, Sydney Inner West, NSW  ",
+    "start_time": "3:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Crown on McCredie, Sydney South West, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$55.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hotel Seven Hills, Blacktown / Seven Hills, NSW  ",
+    "start_time": "7:30 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Glenquarie Tavern, Sydney South West, NSW  ",
+    "start_time": "10:30 PM",
+    "entry": "$35.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Ambarvale Hotel, Sydney South West, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$40.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Richmond Club, Hawkesbury, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$55.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Shoalhaven Ex-Servicemens Club, South Coast, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$23.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Batemans Bay Soldiers Club, Far South Coast, NSW  ",
+    "start_time": "5:00 PM",
+    "entry": "$65.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "5:00 PM",
+    "entry": "$120.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Queanbeyan Kangaroos RLFC, Queanbeyan / ACT, NSW  ",
+    "start_time": "12:00 PM",
+    "entry": "Free",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Bombala RSL Club, Snowy Mountains, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$10.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Goonellabah Soccer Club, Far North Coast, NSW  ",
+    "start_time": "7:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Ocean Shores Tavern, Far North Coast, NSW  ",
+    "start_time": "2:00 PM",
+    "entry": "$30.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hervey Bay RSL, Hervey bay, QLD  ",
+    "start_time": "2:00 PM",
+    "entry": "$20.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  },
+  {
+    "venue": "Hervey Bay RSL, Hervey bay, QLD  ",
+    "start_time": "5:00 PM",
+    "entry": "$25.00",
+    "type": "Texas hold 'em",
+    "league": "NPL"
+  }
+]
