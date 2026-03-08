@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+from datetime import datetime, timedelta
 
 base_url = "https://npl.com.au/Home/IndexEvents"
 
@@ -13,9 +14,16 @@ params = {
 
 games = []
 
+today = datetime.today()
+today_weekday = today.isoweekday()
 for day in range(1,8):
 
     params["dayOfWeek"] = day
+    days_ahead = day - today_weekday
+if days_ahead < 0:
+    days_ahead += 7
+
+event_date = (today + timedelta(days=days_ahead)).strftime("%Y-%m-%d")
 
     r = requests.get(base_url, params=params)
 
@@ -36,11 +44,13 @@ for day in range(1,8):
         game_type = cols[3].text.strip()
 
         games.append({
-            "venue": venue,
-            "start_time": start,
-            "entry": entry,
-            "type": game_type,
-            "league": "NPL"
+    "venue": venue,
+    "date": event_date,
+    "start_time": start,
+    "entry": entry,
+    "type": game_type,
+    "league": "NPL"
+})
         })
 
 with open("npl_games.json","w") as f:
