@@ -1,1 +1,162 @@
-[]
+[
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "4:00 pm",
+    "buyin": "KC @ Churchills Event 6: Pokershop DEEPSTACK",
+    "prize_pool": "$300",
+    "chips": "$60,320"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-EntryGame:NL HEBuy-In:$300GTD:$20,000Prize Pool:$60,320Chips:100,000Entries:232Players:27Reg Ends:10Status:CLOSEDStatus:RunningShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "chips": "$300"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "6:00 pm",
+    "buyin": "KC @ Churchills Event 7: One Shot SC",
+    "prize_pool": "$300",
+    "chips": "$10,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "Game:NL HEBuy-In:$300GTD:$10,000Prize Pool:$10,000Chips:40,000Entries:0Players:0Reg Ends:8Status:ScheduledStatus:InitiatingShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "chips": "$300"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "7:30 pm",
+    "buyin": "KC @ Churchills Event 8: Survivor Bounty",
+    "prize_pool": "$300",
+    "chips": ""
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-EntryGame:NL HEBuy-In:$300Chips:40,000Entries:0Players:0Reg Ends:8Status:ScheduledStatus:InitiatingShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "chips": "$300"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "6:00 pm",
+    "buyin": "KC @ Churchills Event 9: The 300",
+    "prize_pool": "$300",
+    "chips": "$30,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "Late rego and rebuys until 9:20pmRe-BuyGame:NL HEBuy-In:$300GTD:$30,000Prize Pool:$30,000Chips:30,000Entries:0Players:0Reg Ends:8Status:ScheduledStatus:InitiatingShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "chips": "$300"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "5:00 pm",
+    "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1A",
+    "prize_pool": "$400",
+    "chips": "$200,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$200,000Chips:50,000Entries:0Players:0Reg Ends:10Status:ScheduledStatus:InitiatingShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "chips": "$400"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "5:00 pm",
+    "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1B",
+    "prize_pool": "$400",
+    "chips": "$200,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$200,000Chips:50,000Entries:0Players:0Reg Ends:10Status:ScheduledStatus:InitiatingShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "chips": "$400"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "5:00 pm",
+    "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1C",
+    "prize_pool": "$400",
+    "chips": "$200,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$200,000Chips:50,000Entries:0Players:0Reg Ends:10Status:ScheduledStatus:InitiatingShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "chips": "$400"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "2:00 pm",
+    "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1D",
+    "prize_pool": "$400",
+    "chips": "$200,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$200,000Chips:50,000Entries:0Players:0Reg Ends:10Status:ScheduledStatus:InitiatingShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "chips": "$400"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "11:00 am",
+    "buyin": "KC @ Churchills Event 10: MAIN EVENT - Day 2",
+    "prize_pool": "Limited",
+    "chips": "$200,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-EntryGame:NL HEBuy-In:LimitedGTD:$200,000Prize Pool:$200,000Chips:50,000Entries:0Players:0Status:ScheduledStatus:InitiatingShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "chips": "Limited"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "1:30 pm",
+    "buyin": "KC @ Churchills Event 11: Series Saver",
+    "prize_pool": "$450",
+    "chips": "$30,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "Unlimited Re-EntriesRe-EntryGame:NL HEBuy-In:$450GTD:$30,000Prize Pool:$30,000Chips:50,000Entries:0Players:0Reg Ends:9Status:ScheduledStatus:InitiatingShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "chips": "$450"
+  }
+]
