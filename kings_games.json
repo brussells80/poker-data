@@ -1,1 +1,202 @@
-[]
+[
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "4:00 pm",
+    "buyin": "KC @ Churchills Event 6: Pokershop DEEPSTACK",
+    "prize_pool": "$300",
+    "clock": "$60,320",
+    "type": "20",
+    "chips": "Re-Entry"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-Entry\n\n\n\n\nGame:\u00a0\u00a0NL HE\nBuy-In:\u00a0\u00a0$300\nGTD:\u00a0\u00a0$20,000\nPrize Pool:\u00a0\u00a0$60,320\nChips:\u00a0\u00a0100,000\nEntries:\u00a0\u00a0232\nPlayers:\u00a0\u00a032\nReg Ends:\u00a0\u00a010\nStatus:\u00a0\u00a0CLOSED\nStatus:\u00a0\u00a0Running\n\nShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "clock": "$300",
+    "type": "GTD:",
+    "chips": "$20,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "6:00 pm",
+    "buyin": "KC @ Churchills Event 7: One Shot SC",
+    "prize_pool": "$300",
+    "clock": "$10,000",
+    "type": "20",
+    "chips": ""
+  },
+  {
+    "venue": "Kings",
+    "time": "Game:\u00a0\u00a0NL HE\nBuy-In:\u00a0\u00a0$300\nGTD:\u00a0\u00a0$10,000\nPrize Pool:\u00a0\u00a0$10,000\nChips:\u00a0\u00a040,000\nEntries:\u00a0\u00a00\nPlayers:\u00a0\u00a00\nReg Ends:\u00a0\u00a08\nStatus:\u00a0\u00a0Scheduled\nStatus:\u00a0\u00a0Initiating\n\nShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "clock": "$300",
+    "type": "GTD:",
+    "chips": "$10,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "7:30 pm",
+    "buyin": "KC @ Churchills Event 8: Survivor Bounty",
+    "prize_pool": "$300",
+    "clock": "",
+    "type": "20",
+    "chips": "Re-Entry"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-Entry\n\n\n\n\nGame:\u00a0\u00a0NL HE\nBuy-In:\u00a0\u00a0$300\nChips:\u00a0\u00a040,000\nEntries:\u00a0\u00a00\nPlayers:\u00a0\u00a00\nReg Ends:\u00a0\u00a08\nStatus:\u00a0\u00a0Scheduled\nStatus:\u00a0\u00a0Initiating\n\nShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "clock": "$300",
+    "type": "Chips:",
+    "chips": "40,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "6:00 pm",
+    "buyin": "KC @ Churchills Event 9: The 300",
+    "prize_pool": "$300",
+    "clock": "$30,000",
+    "type": "20",
+    "chips": "Re-Buy"
+  },
+  {
+    "venue": "Kings",
+    "time": "Late rego and rebuys until 9:20pm\nRe-Buy\n\n\n\n\nGame:\u00a0\u00a0NL HE\nBuy-In:\u00a0\u00a0$300\nGTD:\u00a0\u00a0$30,000\nPrize Pool:\u00a0\u00a0$30,000\nChips:\u00a0\u00a030,000\nEntries:\u00a0\u00a00\nPlayers:\u00a0\u00a00\nReg Ends:\u00a0\u00a08\nStatus:\u00a0\u00a0Scheduled\nStatus:\u00a0\u00a0Initiating\n\nShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "clock": "$300",
+    "type": "GTD:",
+    "chips": "$30,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "5:00 pm",
+    "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1A",
+    "prize_pool": "$400",
+    "clock": "$200,000",
+    "type": "30",
+    "chips": "Re-Entry"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-Entry\n\n\n\n\nGame:\u00a0\u00a0NL HE\nBuy-In:\u00a0\u00a0$400\nGTD:\u00a0\u00a0$200,000\nPrize Pool:\u00a0\u00a0$200,000\nChips:\u00a0\u00a050,000\nEntries:\u00a0\u00a00\nPlayers:\u00a0\u00a00\nReg Ends:\u00a0\u00a010\nStatus:\u00a0\u00a0Scheduled\nStatus:\u00a0\u00a0Initiating\n\nShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "clock": "$400",
+    "type": "GTD:",
+    "chips": "$200,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "5:00 pm",
+    "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1B",
+    "prize_pool": "$400",
+    "clock": "$200,000",
+    "type": "30",
+    "chips": "Re-Entry"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-Entry\n\n\n\n\nGame:\u00a0\u00a0NL HE\nBuy-In:\u00a0\u00a0$400\nGTD:\u00a0\u00a0$200,000\nPrize Pool:\u00a0\u00a0$200,000\nChips:\u00a0\u00a050,000\nEntries:\u00a0\u00a00\nPlayers:\u00a0\u00a00\nReg Ends:\u00a0\u00a010\nStatus:\u00a0\u00a0Scheduled\nStatus:\u00a0\u00a0Initiating\n\nShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "clock": "$400",
+    "type": "GTD:",
+    "chips": "$200,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "5:00 pm",
+    "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1C",
+    "prize_pool": "$400",
+    "clock": "$200,000",
+    "type": "30",
+    "chips": "Re-Entry"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-Entry\n\n\n\n\nGame:\u00a0\u00a0NL HE\nBuy-In:\u00a0\u00a0$400\nGTD:\u00a0\u00a0$200,000\nPrize Pool:\u00a0\u00a0$200,000\nChips:\u00a0\u00a050,000\nEntries:\u00a0\u00a00\nPlayers:\u00a0\u00a00\nReg Ends:\u00a0\u00a010\nStatus:\u00a0\u00a0Scheduled\nStatus:\u00a0\u00a0Initiating\n\nShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "clock": "$400",
+    "type": "GTD:",
+    "chips": "$200,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "2:00 pm",
+    "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1D",
+    "prize_pool": "$400",
+    "clock": "$200,000",
+    "type": "30",
+    "chips": "Re-Entry"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-Entry\n\n\n\n\nGame:\u00a0\u00a0NL HE\nBuy-In:\u00a0\u00a0$400\nGTD:\u00a0\u00a0$200,000\nPrize Pool:\u00a0\u00a0$200,000\nChips:\u00a0\u00a050,000\nEntries:\u00a0\u00a00\nPlayers:\u00a0\u00a00\nReg Ends:\u00a0\u00a010\nStatus:\u00a0\u00a0Scheduled\nStatus:\u00a0\u00a0Initiating\n\nShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "clock": "$400",
+    "type": "GTD:",
+    "chips": "$200,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "11:00 am",
+    "buyin": "KC @ Churchills Event 10: MAIN EVENT - Day 2",
+    "prize_pool": "Limited",
+    "clock": "$200,000",
+    "type": "40",
+    "chips": "Re-Entry"
+  },
+  {
+    "venue": "Kings",
+    "time": "Re-Entry\n\n\n\n\nGame:\u00a0\u00a0NL HE\nBuy-In:\u00a0\u00a0Limited\nGTD:\u00a0\u00a0$200,000\nPrize Pool:\u00a0\u00a0$200,000\nChips:\u00a0\u00a050,000\nEntries:\u00a0\u00a00\nPlayers:\u00a0\u00a00\nStatus:\u00a0\u00a0Scheduled\nStatus:\u00a0\u00a0Initiating\n\nShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "clock": "Limited",
+    "type": "GTD:",
+    "chips": "$200,000"
+  },
+  {
+    "venue": "Kings",
+    "time": "",
+    "name": "1:30 pm",
+    "buyin": "KC @ Churchills Event 11: Series Saver",
+    "prize_pool": "$450",
+    "clock": "$30,000",
+    "type": "30",
+    "chips": "Re-Entry"
+  },
+  {
+    "venue": "Kings",
+    "time": "Unlimited Re-Entries\nRe-Entry\n\n\n\n\nGame:\u00a0\u00a0NL HE\nBuy-In:\u00a0\u00a0$450\nGTD:\u00a0\u00a0$30,000\nPrize Pool:\u00a0\u00a0$30,000\nChips:\u00a0\u00a050,000\nEntries:\u00a0\u00a00\nPlayers:\u00a0\u00a00\nReg Ends:\u00a0\u00a09\nStatus:\u00a0\u00a0Scheduled\nStatus:\u00a0\u00a0Initiating\n\nShow me more details...",
+    "name": "Game:",
+    "buyin": "NL HE",
+    "prize_pool": "Buy-In:",
+    "clock": "$450",
+    "type": "GTD:",
+    "chips": "$30,000"
+  }
+]
