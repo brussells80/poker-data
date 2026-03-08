@@ -25,7 +25,7 @@ for day in range(1,8):
 
     for row in rows:
 
-        cols = row.find_all("td")
+        cols = row.find_all(["td","th"])
 
         if len(cols) < 4:
             continue
