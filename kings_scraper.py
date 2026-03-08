@@ -1,32 +1,59 @@
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime
 import json
 
-url = "https://kingslive.com.au/"
+URL = "https://www.kingsroom.com.au/tournaments"
 
-response = requests.get(url)
+def scrape_kings():
+    response = requests.get(URL)
+    soup = BeautifulSoup(response.text, "html.parser")
 
-soup = BeautifulSoup(response.text, "html.parser")
+    games = []
 
-events = []
+    today = datetime.now().strftime("%Y-%m-%d")
 
-rows = soup.select("tr")
+    rows = soup.find_all("tr")
 
-for row in rows:
+    for row in rows:
+        cols = row.find_all("td")
 
-    cols = row.find_all("td")
+        if len(cols) < 3:
+            continue
 
-    if len(cols) < 5:
-        continue
+        try:
+            time = cols[0].text.strip()
+            name = cols[1].text.strip()
+            buyin = cols[2].text.strip()
 
-    events.append({
-        "venue": "Kings",
-        "time": cols[0].get_text(strip=True),
-        "name": cols[1].get_text(strip=True),
-        "buyin": cols[2].get_text(strip=True),
-        "prize_pool": cols[3].get_text(strip=True),
-        "chips": cols[4].get_text(strip=True)
-    })
+            prize_pool = ""
+            chips = ""
 
-with open("kings_games.json", "w") as f:
-    json.dump(events, f, indent=2)
+            if len(cols) > 3:
+                prize_pool = cols[3].text.strip()
+
+            if len(cols) > 4:
+                chips = cols[4].text.strip()
+
+            game = {
+                "venue": "Kings",
+                "date": today,
+                "time": time,
+                "name": name,
+                "buyin": buyin,
+                "prize_pool": prize_pool,
+                "chips": chips
+            }
+
+            games.append(game)
+
+        except:
+            continue
+
+    return games
+
+
+if __name__ == "__main__":
+    games = scrape_kings()
+
+    print(json.dumps(games, indent=2))
