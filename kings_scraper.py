@@ -12,18 +12,20 @@ events = []
 rows = soup.select("table tbody tr")
 
 for row in rows:
+
     cols = row.find_all("td")
-    
-    if len(cols) < 6:
+
+    # Only take rows with exactly 7 columns (real schedule rows)
+    if len(cols) != 7:
         continue
 
-    time = cols[0].text.strip()
-    name = cols[1].text.strip()
-    buyin = cols[2].text.strip()
-    prize_pool = cols[3].text.strip()
-    clock = cols[4].text.strip()
-    type_game = cols[5].text.strip()
-    chips = cols[6].text.strip()
+    time = cols[0].get_text(strip=True)
+    name = cols[1].get_text(strip=True)
+    buyin = cols[2].get_text(strip=True)
+    prize_pool = cols[3].get_text(strip=True)
+    clock = cols[4].get_text(strip=True)
+    type_game = cols[5].get_text(strip=True)
+    chips = cols[6].get_text(strip=True)
 
     events.append({
         "venue": "Kings",
