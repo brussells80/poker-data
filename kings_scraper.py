@@ -1,41 +1,25 @@
 import requests
 import json
-from bs4 import BeautifulSoup
 
-url = "https://kingslive.com.au/"
+url = "https://kingslive.com.au/api/events"
 
-r = requests.get(url)
-soup = BeautifulSoup(r.text, "html.parser")
+response = requests.get(url)
+data = response.json()
 
 events = []
 
-rows = soup.select("table tbody tr")
-
-for row in rows:
-
-    cols = row.find_all("td")
-
-    # Only take rows with exactly 7 columns (real schedule rows)
-    if len(cols) != 7:
-        continue
-
-    time = cols[0].get_text(strip=True)
-    name = cols[1].get_text(strip=True)
-    buyin = cols[2].get_text(strip=True)
-    prize_pool = cols[3].get_text(strip=True)
-    clock = cols[4].get_text(strip=True)
-    type_game = cols[5].get_text(strip=True)
-    chips = cols[6].get_text(strip=True)
+for e in data:
 
     events.append({
         "venue": "Kings",
-        "time": time,
-        "name": name,
-        "buyin": buyin,
-        "prize_pool": prize_pool,
-        "clock": clock,
-        "type": type_game,
-        "chips": chips
+        "name": e.get("name"),
+        "start_time": e.get("start"),
+        "buyin": e.get("buyin"),
+        "guarantee": e.get("guarantee"),
+        "entries": e.get("entries"),
+        "players_remaining": e.get("players"),
+        "late_reg_level": e.get("late_reg"),
+        "chips": e.get("chips")
     })
 
 with open("kings_games.json", "w") as f:
