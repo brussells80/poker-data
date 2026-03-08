@@ -21,7 +21,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run scraper
-        run: python npl_scraper.py
+        run: |
+  python npl_scraper.py
+  python kings_scraper.py
 
       - name: Commit JSON
         run: |
