@@ -16,12 +16,12 @@ def scrape_npl():
 
     table = soup.find("table")
 
-    if not table:
+    if table is None:
         return games
 
-    rows = table.find("tbody").find_all("tr")
+    tbody = table.find("tbody")
 
-    for row in rows:
+    for row in tbody.find_all("tr"):
 
         cols = row.find_all("td")
 
@@ -33,6 +33,7 @@ def scrape_npl():
         entry = cols[2].get_text(strip=True)
         game_type = cols[3].get_text(strip=True)
 
+        # remove distance text like "(44.0 KM)"
         if "(" in venue:
             venue = venue.split("(")[0].strip()
 
@@ -51,5 +52,10 @@ def scrape_npl():
 
 
 if __name__ == "__main__":
+
     games = scrape_npl()
-    print(json.dumps(games, indent=2))
+
+    with open("poker-data/npl_games.json", "w") as f:
+        json.dump(games, f, indent=2)
+
+    print("Saved", len(games), "NPL games")
