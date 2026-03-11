@@ -8,19 +8,28 @@ URL = "https://www.kingsroom.com.au/tournaments"
 
 
 def extract_field(text, label):
-    pattern = rf"{label}:(.*?)(?=[A-Z][a-zA-Z ]*:|$)"
-    match = re.search(pattern, text)
-    if match:
-        return match.group(1).strip()
+    try:
+        pattern = rf"{label}:(.*?)(?=[A-Z][a-zA-Z ]*:|$)"
+        match = re.search(pattern, text)
+        if match:
+            return match.group(1).strip()
+    except:
+        pass
     return None
 
 
 def scrape_kings():
 
-    response = requests.get(URL)
-    soup = BeautifulSoup(response.text, "html.parser")
-
     games = []
+
+    try:
+        response = requests.get(URL, timeout=30)
+        response.raise_for_status()
+    except Exception as e:
+        print("Failed to load Kings page:", e)
+        return games
+
+    soup = BeautifulSoup(response.text, "html.parser")
 
     today = datetime.now().strftime("%Y-%m-%d")
 
@@ -59,7 +68,8 @@ def scrape_kings():
                 "guarantee": gtd
             })
 
-        except Exception:
+        except Exception as e:
+            print("Skipping row:", e)
             continue
 
     return games
@@ -69,7 +79,9 @@ if __name__ == "__main__":
 
     games = scrape_kings()
 
-    with open("kings_games.json", "w") as f:
-        json.dump(games, f, indent=2)
-
-    print(f"Saved {len(games)} Kings games")
+    try:
+        with open("kings_games.json", "w") as f:
+            json.dump(games, f, indent=2)
+        print(f"Saved {len(games)} Kings games")
+    except Exception as e:
+        print("Failed to save JSON:", e)
