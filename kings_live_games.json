@@ -10,7 +10,8 @@
     "guarantee": "$400",
     "late_reg": null,
     "clock": "$200,000",
-    "chips": "30",
+    "type": "30",
+    "chips": "Re-Entry",
     "entries": null,
     "players_remaining": null
   },
@@ -25,7 +26,8 @@
     "guarantee": "Buy-In:",
     "late_reg": "10",
     "clock": "$400",
-    "chips": "GTD:",
+    "type": "GTD:",
+    "chips": "$200,000",
     "entries": "120",
     "players_remaining": "97"
   },
@@ -40,7 +42,8 @@
     "guarantee": "$400",
     "late_reg": null,
     "clock": "$200,000",
-    "chips": "30",
+    "type": "30",
+    "chips": "Re-Entry",
     "entries": null,
     "players_remaining": null
   },
@@ -55,7 +58,8 @@
     "guarantee": "Buy-In:",
     "late_reg": "10",
     "clock": "$400",
-    "chips": "GTD:",
+    "type": "GTD:",
+    "chips": "$200,000",
     "entries": "0",
     "players_remaining": "0"
   },
@@ -70,7 +74,8 @@
     "guarantee": "$400",
     "late_reg": null,
     "clock": "$200,000",
-    "chips": "30",
+    "type": "30",
+    "chips": "Re-Entry",
     "entries": null,
     "players_remaining": null
   },
@@ -85,7 +90,8 @@
     "guarantee": "Buy-In:",
     "late_reg": "10",
     "clock": "$400",
-    "chips": "GTD:",
+    "type": "GTD:",
+    "chips": "$200,000",
     "entries": "0",
     "players_remaining": "0"
   },
@@ -100,7 +106,8 @@
     "guarantee": "Limited",
     "late_reg": null,
     "clock": "$200,000",
-    "chips": "40",
+    "type": "40",
+    "chips": "Re-Entry",
     "entries": null,
     "players_remaining": null
   },
@@ -115,7 +122,8 @@
     "guarantee": "Buy-In:",
     "late_reg": null,
     "clock": "Limited",
-    "chips": "GTD:",
+    "type": "GTD:",
+    "chips": "$200,000",
     "entries": "0",
     "players_remaining": "0"
   },
@@ -130,7 +138,8 @@
     "guarantee": "$450",
     "late_reg": null,
     "clock": "$30,000",
-    "chips": "30",
+    "type": "30",
+    "chips": "Re-Entry",
     "entries": null,
     "players_remaining": null
   },
@@ -145,7 +154,8 @@
     "guarantee": "Buy-In:",
     "late_reg": "9",
     "clock": "$450",
-    "chips": "GTD:",
+    "type": "GTD:",
+    "chips": "$30,000",
     "entries": "0",
     "players_remaining": "0"
   }
