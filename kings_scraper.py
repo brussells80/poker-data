@@ -1,77 +1,41 @@
 import requests
 import json
 
-games = []
+LIST_URL = "https://api.kingspoker.com.au/api/v1/tournament/venue?1=date_g_2026-3-12&2=date_le_2026-3-26&exp=1*2&sort=date_asc:starttime_asc"
 
 headers = {
-    "User-Agent": "Mozilla/5.0",
-    "Accept": "application/json"
+    "User-Agent": "Mozilla/5.0"
 }
 
-# -------------------------
-# WEEKLY KINGS TOURNAMENTS
-# -------------------------
+games = []
 
-weekly_url = "https://kingspoker.com.au/wp-json/wp/v2/tournaments?per_page=100"
+r = requests.get(LIST_URL, headers=headers)
+tournaments = r.json()
 
-try:
-    r = requests.get(weekly_url, headers=headers)
-    data = r.json()
+for t in tournaments:
 
-    for e in data:
+    tid = t["idtournament"]
+
+    detail_url = f"https://api.kingspoker.com.au/api/v1/tournament/{tid}"
+
+    try:
+        d = requests.get(detail_url, headers=headers).json()
 
         games.append({
             "league": "Kings",
-            "series": "Weekly",
-            "name": e.get("title", {}).get("rendered"),
-            "venue": e.get("acf", {}).get("venue"),
-            "date": e.get("acf", {}).get("date"),
-            "time": e.get("acf", {}).get("start_time"),
-            "buyin": e.get("acf", {}).get("buyin"),
-            "guarantee": e.get("acf", {}).get("guarantee"),
-            "late_reg": e.get("acf", {}).get("late_reg"),
+            "name": d.get("name"),
+            "venue": d.get("venue"),
+            "date": d.get("date"),
+            "time": d.get("starttime"),
+            "buyin": d.get("buyin"),
+            "guarantee": d.get("guarantee"),
+            "late_reg": d.get("latereg"),
             "entries": None,
             "players_remaining": None
         })
 
-except Exception as e:
-    print("Weekly Kings failed:", e)
-
-
-# -------------------------
-# KINGS LIVE SERIES
-# -------------------------
-
-live_url = "https://kingslive.com.au/api/tournaments"
-
-try:
-
-    r = requests.get(live_url, headers=headers)
-    data = r.json()
-
-    for e in data:
-
-        games.append({
-            "league": "Kings",
-            "series": "Live",
-            "name": e.get("name"),
-            "venue": e.get("venue"),
-            "date": e.get("date"),
-            "time": e.get("start_time"),
-            "buyin": e.get("buyin"),
-            "guarantee": e.get("guarantee"),
-            "late_reg": e.get("late_reg"),
-            "entries": e.get("entries"),
-            "players_remaining": e.get("players_remaining")
-        })
-
-except Exception as e:
-    print("Kings live failed:", e)
-
-
-# -------------------------
-# SAVE OUTPUT
-# -------------------------
+    except:
+        pass
 
 with open("kings_games.json", "w") as f:
     json.dump(games, f, indent=2)
