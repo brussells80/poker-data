@@ -1,61 +1,42 @@
 import requests
-from bs4 import BeautifulSoup
-from datetime import datetime
 import json
+from datetime import datetime
 
-URL = "https://www.npl.com.au/todays-league-events/"
+BASE_URL = "https://www.npl.com.au/umbraco/surface/eventsurface/IndexEvents"
 
 headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
+    "User-Agent": "Mozilla/5.0"
 }
 
-def scrape_npl():
+games = []
 
-    response = requests.get(URL, headers=headers)
-    soup = BeautifulSoup(response.text, "html.parser")
+today = datetime.now()
 
-    today = datetime.now().strftime("%Y-%m-%d")
+for day in range(7):
 
-    games = []
+    url = f"{BASE_URL}?dayOfWeek={day}"
 
-    rows = soup.select("table tbody tr")
+    print("Getting day", day)
 
-    for row in rows:
+    r = requests.get(url, headers=headers)
+    data = r.json()
 
-        cols = row.find_all("td")
+    for e in data:
 
-        if len(cols) < 4:
-            continue
-
-        venue = cols[0].get_text(strip=True)
-        start_time = cols[1].get_text(strip=True)
-        entry = cols[2].get_text(strip=True)
-        game_type = cols[3].get_text(strip=True)
-
-        if "(" in venue:
-            venue = venue.split("(")[0].strip()
-
-        game = {
+        games.append({
             "league": "NPL",
-            "state": None,
-            "name": game_type,
-            "venue": venue,
-            "suburb": None,
-            "date": today,
-            "time": start_time,
-            "buyin": entry,
-            "guarantee": None,
+            "state": e.get("State"),
+            "name": e.get("Name"),
+            "venue": e.get("Venue"),
+            "suburb": e.get("Suburb"),
+            "date": e.get("Date"),
+            "time": e.get("StartTime"),
+            "buyin": e.get("Entry"),
+            "guarantee": e.get("Guarantee"),
             "late_reg": None,
             "lat": None,
             "lng": None
-        }
-
-        games.append(game)
-
-    return games
-
-
-games = scrape_npl()
+        })
 
 with open("npl_games.json", "w") as f:
     json.dump(games, f, indent=2)
