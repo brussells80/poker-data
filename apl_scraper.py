@@ -44,24 +44,35 @@ for state, stateId in states.items():
     print(data[0])
     exit()
 
-    for e in data:
+   for e in data:
 
-        venue = e.get("venue", {})
+    venue = e.get("venue", {})
 
-        games.append({
-            "league": "APL",
-            "state": e.get("stateName"),
-            "name": e.get("type"),
-            "venue": venue.get("title"),
-            "suburb": venue.get("suburb"),
-            "date": e.get("lateRego"),   # closest available timestamp
-            "time": e.get("rego"),
-            "buyin": e.get("addOnMax"),
-            "guarantee": e.get("takeHomeAmount"),
-            "late_reg": e.get("lateRego"),
-            "lat": venue.get("latitude"),
-            "lng": venue.get("longitude")
-        })
+    date_time = e.get("dateTime")
+    late_reg = e.get("lateRego")
+
+    date = None
+    if date_time:
+        date = date_time.split(" ")[0]
+
+    late_reg_time = None
+    if late_reg:
+        late_reg_time = late_reg.split(" ")[1]
+
+    games.append({
+        "league": "APL",
+        "state": e.get("stateName"),
+        "name": e.get("description") or e.get("type"),
+        "venue": venue.get("title"),
+        "suburb": venue.get("suburb"),
+        "date": date,
+        "time": e.get("startTime"),
+        "buyin": e.get("buyInDescription"),
+        "guarantee": e.get("takeHomeAmount"),
+        "late_reg": late_reg_time,
+        "lat": venue.get("latitude"),
+        "lng": venue.get("longitude")
+    })
 
 with open("apl_games.json","w") as f:
     json.dump(games,f,indent=2)
