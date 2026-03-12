@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+import re
 
 URL = "https://kingslive.com.au/results"
 
@@ -14,30 +15,63 @@ soup = BeautifulSoup(r.text, "html.parser")
 
 games = []
 
-rows = soup.find_all("tr")
+events = soup.find_all("div", class_="event")
 
-for row in rows:
+for e in events:
 
-    cols = row.find_all("td")
+    text = e.get_text(" ", strip=True)
 
-    if len(cols) < 5:
-        continue
+    # Tournament name
+    name_tag = e.find("h3")
+    name = name_tag.get_text(strip=True) if name_tag else None
 
-    name = cols[0].get_text(strip=True)
-    prize_pool = cols[1].get_text(strip=True)
-    clock = cols[2].get_text(strip=True)
-    game_type = cols[3].get_text(strip=True)
-    chips = cols[4].get_text(strip=True)
+    # Buy-in
+    buyin = None
+    m = re.search(r"\$\d+\s*buy", text.lower())
+    if m:
+        buyin = m.group(0)
+
+    # Guarantee
+    guarantee = None
+    m = re.search(r"\$\d[\d,]*\s*gtd", text.lower())
+    if m:
+        guarantee = m.group(0)
+
+    # Start time
+    start_time = None
+    m = re.search(r"\b\d{1,2}:\d{2}\s*(am|pm)", text.lower())
+    if m:
+        start_time = m.group(0)
+
+    # Late reg
+    late_reg = None
+    m = re.search(r"late.*?(\d{1,2}:\d{2})", text.lower())
+    if m:
+        late_reg = m.group(1)
+
+    # Entries
+    entries = None
+    m = re.search(r"entries\s*(\d+)", text.lower())
+    if m:
+        entries = m.group(1)
+
+    # Players remaining
+    players_remaining = None
+    m = re.search(r"players\s*(\d+)", text.lower())
+    if m:
+        players_remaining = m.group(1)
 
     games.append({
         "league": "Kings",
         "series": "Live",
         "name": name,
         "venue": "Kings Live",
-        "prize_pool": prize_pool,
-        "clock": clock,
-        "type": game_type,
-        "chips": chips
+        "buyin": buyin,
+        "guarantee": guarantee,
+        "start_time": start_time,
+        "late_reg": late_reg,
+        "entries": entries,
+        "players_remaining": players_remaining
     })
 
 with open("kings_live_games.json", "w") as f:
