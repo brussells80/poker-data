@@ -1,16 +1,15 @@
 import requests
 import json
-from datetime import datetime
 
 BASE_URL = "https://www.npl.com.au/umbraco/surface/eventsurface/IndexEvents"
 
 headers = {
-    "User-Agent": "Mozilla/5.0"
+    "User-Agent": "Mozilla/5.0",
+    "X-Requested-With": "XMLHttpRequest",
+    "Accept": "application/json"
 }
 
 games = []
-
-today = datetime.now()
 
 for day in range(7):
 
@@ -19,7 +18,16 @@ for day in range(7):
     print("Getting day", day)
 
     r = requests.get(url, headers=headers)
-    data = r.json()
+
+    if r.status_code != 200:
+        print("Failed request:", r.status_code)
+        continue
+
+    try:
+        data = r.json()
+    except:
+        print("Not JSON response")
+        continue
 
     for e in data:
 
