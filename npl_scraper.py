@@ -18,15 +18,9 @@ def scrape_npl():
 
     games = []
 
-    table = soup.find("table")
+    rows = soup.select("table tbody tr")
 
-    if not table:
-        print("No NPL table found")
-        return games
-
-    tbody = table.find("tbody")
-
-    for row in tbody.find_all("tr"):
+    for row in rows:
 
         cols = row.find_all("td")
 
@@ -38,7 +32,6 @@ def scrape_npl():
         entry = cols[2].get_text(strip=True)
         game_type = cols[3].get_text(strip=True)
 
-        # remove distance text like "(44.0 KM)"
         if "(" in venue:
             venue = venue.split("(")[0].strip()
 
