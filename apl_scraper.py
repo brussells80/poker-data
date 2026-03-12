@@ -45,16 +45,17 @@ for state, stateId in states.items():
 
         venue = e.get("venue", {})
 
+        # Extract date
         date_time = e.get("dateTime")
-        late_reg = e.get("lateRego")
-
         date = None
         if date_time:
-            date = date_time.split(" ")[0]
+            date = date_time.split("T")[0]
 
+        # Extract late reg time
+        late_reg_raw = e.get("lateRego")
         late_reg_time = None
-        if late_reg:
-            late_reg_time = late_reg.split(" ")[1]
+        if late_reg_raw and " " in late_reg_raw:
+            late_reg_time = late_reg_raw.split(" ")[1]
 
         games.append({
             "league": "APL",
