@@ -6,13 +6,13 @@
     "venue": "Kings Live",
     "date": null,
     "start_time": "",
-    "late_reg": "",
+    "late_reg": null,
     "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1B",
     "guarantee": "$400",
     "clock": "$200,000",
     "chips": "30",
-    "entries": "",
-    "players_remaining": ""
+    "entries": null,
+    "players_remaining": null
   },
   {
     "league": "Kings",
@@ -20,14 +20,14 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$200,000Chips:50,000Entries:118Players:95Reg Ends:10Status:OPEN (till level 10)Status:RunningShow me more details...",
-    "late_reg": "",
+    "start_time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$200,000Chips:50,000Entries:119Players:96Reg Ends:10Status:OPEN (till level 10)Status:RunningShow me more details...",
+    "late_reg": "10",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "clock": "$400",
     "chips": "GTD:",
-    "entries": "",
-    "players_remaining": ""
+    "entries": "119",
+    "players_remaining": "96"
   },
   {
     "league": "Kings",
@@ -36,13 +36,13 @@
     "venue": "Kings Live",
     "date": null,
     "start_time": "",
-    "late_reg": "",
+    "late_reg": null,
     "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1C",
     "guarantee": "$400",
     "clock": "$200,000",
     "chips": "30",
-    "entries": "",
-    "players_remaining": ""
+    "entries": null,
+    "players_remaining": null
   },
   {
     "league": "Kings",
@@ -51,13 +51,13 @@
     "venue": "Kings Live",
     "date": null,
     "start_time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$200,000Chips:50,000Entries:0Players:0Reg Ends:10Status:ScheduledStatus:InitiatingShow me more details...",
-    "late_reg": "",
+    "late_reg": "10",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "clock": "$400",
     "chips": "GTD:",
-    "entries": "",
-    "players_remaining": ""
+    "entries": "0",
+    "players_remaining": "0"
   },
   {
     "league": "Kings",
@@ -66,13 +66,13 @@
     "venue": "Kings Live",
     "date": null,
     "start_time": "",
-    "late_reg": "",
+    "late_reg": null,
     "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1D",
     "guarantee": "$400",
     "clock": "$200,000",
     "chips": "30",
-    "entries": "",
-    "players_remaining": ""
+    "entries": null,
+    "players_remaining": null
   },
   {
     "league": "Kings",
@@ -81,13 +81,13 @@
     "venue": "Kings Live",
     "date": null,
     "start_time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$200,000Chips:50,000Entries:0Players:0Reg Ends:10Status:ScheduledStatus:InitiatingShow me more details...",
-    "late_reg": "",
+    "late_reg": "10",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "clock": "$400",
     "chips": "GTD:",
-    "entries": "",
-    "players_remaining": ""
+    "entries": "0",
+    "players_remaining": "0"
   },
   {
     "league": "Kings",
@@ -101,8 +101,8 @@
     "guarantee": "Limited",
     "clock": "$200,000",
     "chips": "40",
-    "entries": "",
-    "players_remaining": ""
+    "entries": null,
+    "players_remaining": null
   },
   {
     "league": "Kings",
@@ -116,8 +116,8 @@
     "guarantee": "Buy-In:",
     "clock": "Limited",
     "chips": "GTD:",
-    "entries": "",
-    "players_remaining": ""
+    "entries": "0",
+    "players_remaining": "0"
   },
   {
     "league": "Kings",
@@ -126,13 +126,13 @@
     "venue": "Kings Live",
     "date": null,
     "start_time": "",
-    "late_reg": "",
+    "late_reg": null,
     "buyin": "KC @ Churchills Event 11: Series Saver",
     "guarantee": "$450",
     "clock": "$30,000",
     "chips": "30",
-    "entries": "",
-    "players_remaining": ""
+    "entries": null,
+    "players_remaining": null
   },
   {
     "league": "Kings",
@@ -141,12 +141,12 @@
     "venue": "Kings Live",
     "date": null,
     "start_time": "Unlimited Re-EntriesRe-EntryGame:NL HEBuy-In:$450GTD:$30,000Prize Pool:$30,000Chips:50,000Entries:0Players:0Reg Ends:9Status:ScheduledStatus:InitiatingShow me more details...",
-    "late_reg": "",
+    "late_reg": "9",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "clock": "$450",
     "chips": "GTD:",
-    "entries": "",
-    "players_remaining": ""
+    "entries": "0",
+    "players_remaining": "0"
   }
 ]
