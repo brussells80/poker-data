@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-import re
 
 URL = "https://kingslive.com.au"
 
@@ -13,58 +12,62 @@ soup = BeautifulSoup(r.text, "html.parser")
 
 games = []
 
-rows = soup.find_all("tr")
+rows = soup.select("tr")
 
 for row in rows:
 
     cols = row.find_all("td")
 
-    if len(cols) < 4:
+    if len(cols) < 6:
         continue
 
-    name = cols[0].get_text(strip=True)
-    clock = cols[1].get_text(strip=True)
-    game_type = cols[2].get_text(strip=True)
-    chips = cols[3].get_text(strip=True)
+    start_time = cols[0].get_text(strip=True)
+    name = cols[1].get_text(strip=True)
+    buyin = cols[2].get_text(strip=True)
+    guarantee = cols[3].get_text(strip=True)
+    clock = cols[4].get_text(strip=True)
+    chips = cols[5].get_text(strip=True)
 
-    row_text = row.get_text(" ", strip=True).lower()
+    details = row.find_next("div")
 
-    # entries
     entries = None
-    m = re.search(r'entries\s*(\d+)', row_text)
-    if m:
-        entries = m.group(1)
-
-    # players remaining
-    players_remaining = None
-    m = re.search(r'players\s*(\d+)', row_text)
-    if m:
-        players_remaining = m.group(1)
-
-    # start time
-    start_time = None
-    m = re.search(r'\b\d{1,2}:\d{2}\s*(am|pm)', row_text)
-    if m:
-        start_time = m.group(0)
-
-    # late reg
+    players = None
     late_reg = None
-    m = re.search(r'late\s*rego\s*(\d{1,2}:\d{2})', row_text)
-    if m:
-        late_reg = m.group(1)
+    date = None
+
+    if details:
+
+        lines = details.get_text("\n", strip=True).split("\n")
+
+        for line in lines:
+
+            if "Entries:" in line:
+                entries = line.split(":")[1].strip()
+
+            if "Players:" in line:
+                players = line.split(":")[1].strip()
+
+            if "Reg Ends:" in line:
+                late_reg = line.split(":")[1].strip()
+
+    date_header = row.find_previous("h4")
+    if date_header:
+        date = date_header.get_text(strip=True)
 
     games.append({
         "league": "Kings",
         "series": "Live",
         "name": name,
         "venue": "Kings Live",
+        "date": date,
         "start_time": start_time,
         "late_reg": late_reg,
+        "buyin": buyin,
+        "guarantee": guarantee,
         "clock": clock,
-        "type": game_type,
         "chips": chips,
         "entries": entries,
-        "players_remaining": players_remaining
+        "players_remaining": players
     })
 
 with open("kings_live_games.json", "w") as f:
