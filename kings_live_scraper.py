@@ -3,11 +3,9 @@ from bs4 import BeautifulSoup
 import json
 import re
 
-URL = "https://kingslive.com.au/results"
+URL = "https://kingslive.com.au"
 
-headers = {
-    "User-Agent": "Mozilla/5.0"
-}
+headers = {"User-Agent": "Mozilla/5.0"}
 
 r = requests.get(URL, headers=headers)
 
@@ -15,61 +13,56 @@ soup = BeautifulSoup(r.text, "html.parser")
 
 games = []
 
-events = soup.find_all("div", class_="event")
+rows = soup.find_all("tr")
 
-for e in events:
+for row in rows:
 
-    text = e.get_text(" ", strip=True)
+    cols = row.find_all("td")
 
-    # Tournament name
-    name_tag = e.find("h3")
-    name = name_tag.get_text(strip=True) if name_tag else None
+    if len(cols) < 4:
+        continue
 
-    # Buy-in
-    buyin = None
-    m = re.search(r"\$\d+\s*buy", text.lower())
-    if m:
-        buyin = m.group(0)
+    name = cols[0].get_text(strip=True)
+    clock = cols[1].get_text(strip=True)
+    game_type = cols[2].get_text(strip=True)
+    chips = cols[3].get_text(strip=True)
 
-    # Guarantee
-    guarantee = None
-    m = re.search(r"\$\d[\d,]*\s*gtd", text.lower())
-    if m:
-        guarantee = m.group(0)
+    row_text = row.get_text(" ", strip=True).lower()
 
-    # Start time
-    start_time = None
-    m = re.search(r"\b\d{1,2}:\d{2}\s*(am|pm)", text.lower())
-    if m:
-        start_time = m.group(0)
-
-    # Late reg
-    late_reg = None
-    m = re.search(r"late.*?(\d{1,2}:\d{2})", text.lower())
-    if m:
-        late_reg = m.group(1)
-
-    # Entries
+    # entries
     entries = None
-    m = re.search(r"entries\s*(\d+)", text.lower())
+    m = re.search(r'entries\s*(\d+)', row_text)
     if m:
         entries = m.group(1)
 
-    # Players remaining
+    # players remaining
     players_remaining = None
-    m = re.search(r"players\s*(\d+)", text.lower())
+    m = re.search(r'players\s*(\d+)', row_text)
     if m:
         players_remaining = m.group(1)
+
+    # start time
+    start_time = None
+    m = re.search(r'\b\d{1,2}:\d{2}\s*(am|pm)', row_text)
+    if m:
+        start_time = m.group(0)
+
+    # late reg
+    late_reg = None
+    m = re.search(r'late\s*rego\s*(\d{1,2}:\d{2})', row_text)
+    if m:
+        late_reg = m.group(1)
 
     games.append({
         "league": "Kings",
         "series": "Live",
         "name": name,
         "venue": "Kings Live",
-        "buyin": buyin,
-        "guarantee": guarantee,
         "start_time": start_time,
         "late_reg": late_reg,
+        "clock": clock,
+        "type": game_type,
+        "chips": chips,
         "entries": entries,
         "players_remaining": players_remaining
     })
