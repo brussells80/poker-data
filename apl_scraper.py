@@ -41,6 +41,9 @@ for state, stateId in states.items():
     r = requests.post(url, json=payload)
     data = r.json()
 
+    print(data[0])
+    exit()
+
     for e in data:
 
         venue = e.get("venue", {})
