@@ -8,12 +8,11 @@ URL = "https://kingslive.com.au"
 headers = {"User-Agent": "Mozilla/5.0"}
 
 r = requests.get(URL, headers=headers)
-
 soup = BeautifulSoup(r.text, "html.parser")
 
 games = []
 
-rows = soup.find_all("tr")
+rows = soup.select("table tr")
 
 for row in rows:
 
@@ -29,28 +28,26 @@ for row in rows:
     clock = cols[4].get_text(strip=True)
     chips = cols[5].get_text(strip=True)
 
-    # grab full text block (contains entries/players etc)
+    # grab text from the expanded section
     text = row.get_text(" ", strip=True)
 
-    # entries
     entries = None
-    m = re.search(r'Entries[:\s]*(\d+)', text)
+    players_remaining = None
+    late_reg = None
+
+    m = re.search(r'Entries:\s*(\d+)', text)
     if m:
         entries = m.group(1)
 
-    # players remaining
-    players_remaining = None
-    m = re.search(r'Players[:\s]*(\d+)', text)
+    m = re.search(r'Players:\s*(\d+)', text)
     if m:
         players_remaining = m.group(1)
 
-    # late reg
-    late_reg = None
-    m = re.search(r'Reg Ends[:\s]*(\d+)', text)
+    m = re.search(r'Reg Ends:\s*(\d+)', text)
     if m:
         late_reg = m.group(1)
 
-    # date (section header above table)
+    # get date from section header
     date_header = row.find_previous("h4")
     date = date_header.get_text(strip=True) if date_header else None
 
@@ -61,9 +58,9 @@ for row in rows:
         "venue": "Kings Live",
         "date": date,
         "start_time": start_time,
-        "late_reg": late_reg,
         "buyin": buyin,
         "guarantee": guarantee,
+        "late_reg": late_reg,
         "clock": clock,
         "chips": chips,
         "entries": entries,
