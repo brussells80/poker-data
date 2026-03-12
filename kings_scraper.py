@@ -1,12 +1,11 @@
 import requests
 import json
+import re
 from datetime import datetime, timedelta
 
-headers = {
-    "User-Agent": "Mozilla/5.0"
-}
+headers = {"User-Agent": "Mozilla/5.0"}
 
-# dynamic date range (today → 30 days)
+# dynamic 30-day range
 today = datetime.today()
 future = today + timedelta(days=30)
 
@@ -22,28 +21,26 @@ tournaments = r.json()
 
 for t in tournaments:
 
-    tid = t["idtournament"]
+    description = t.get("description", "")
 
-    detail_url = f"https://api.kingspoker.com.au/api/v1/tournament/details/{tid}"
+    # extract late reg time from text
+    late_reg = None
+    match = re.search(r'(\d{1,2}:\d{2})\s*pm?\s*late', description.lower())
+    if match:
+        late_reg = match.group(1)
 
-    try:
-        d = requests.get(detail_url, headers=headers).json()
-
-        games.append({
-            "league": "Kings",
-            "name": d.get("name"),
-            "venue": d.get("venue_name"),
-            "date": d.get("date"),
-            "time": d.get("starttime"),
-            "buyin": d.get("buyin"),
-            "guarantee": d.get("guarantee"),
-            "late_reg": d.get("late_reg"),
-            "entries": d.get("entries"),
-            "players_remaining": d.get("players_remaining")
-        })
-
-    except Exception as e:
-        print("Failed tournament", tid)
+    games.append({
+        "league": "Kings",
+        "name": t.get("title"),
+        "venue": t.get("idvenue"),
+        "date": t.get("date"),
+        "time": t.get("starttime"),
+        "buyin": t.get("price"),
+        "guarantee": t.get("gtd"),
+        "late_reg": late_reg,
+        "entries": None,
+        "players_remaining": None
+    })
 
 with open("kings_games.json", "w") as f:
     json.dump(games, f, indent=2)
