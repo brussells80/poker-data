@@ -21,15 +21,15 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$200,000Chips:50,000Entries:244Players:93Reg Ends:10Status:OPEN (till level 10)Status:RunningShow me more details...",
+    "start_time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$200,000Chips:50,000Entries:252Players:40Reg Ends:10Status:CLOSEDStatus:Clock stoppedShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": "10",
     "clock": "$400",
     "type": "GTD:",
     "chips": "$200,000",
-    "entries": "244",
-    "players_remaining": "93"
+    "entries": "252",
+    "players_remaining": "40"
   },
   {
     "league": "Kings",
