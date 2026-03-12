@@ -55,7 +55,7 @@ if __name__ == "__main__":
 
     games = scrape_npl()
 
-    with open("poker-data/npl_games.json", "w") as f:
+    with open("npl_games.json", "w") as f:
         json.dump(games, f, indent=2)
 
     print("Saved", len(games), "NPL games")
