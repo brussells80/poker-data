@@ -4,14 +4,14 @@ import json
 url = "https://playapl.com/Umbraco/Api/event/searchevents"
 
 states = {
-    "NSW":2,
-    "QLD":3,
-    "VIC":4,
-    "SA":5,
-    "WA":6,
-    "ACT":7,
-    "NT":8,
-    "TAS":9
+    "NSW": 2,
+    "QLD": 3,
+    "VIC": 4,
+    "SA": 5,
+    "WA": 6,
+    "ACT": 7,
+    "NT": 8,
+    "TAS": 9
 }
 
 games = []
@@ -24,7 +24,7 @@ for state, stateId in states.items():
         "suburb": None,
         "stateId": stateId,
         "brandId": 2,
-        "buyIn": {"min":0,"max":210},
+        "buyIn": {"min": 0, "max": 210},
         "currentLat": -33.859,
         "currentLng": 151.218,
         "fromDate": None,
@@ -41,40 +41,37 @@ for state, stateId in states.items():
     r = requests.post(url, json=payload)
     data = r.json()
 
-    print(data[0])
-    exit()
+    for e in data:
 
-   for e in data:
+        venue = e.get("venue", {})
 
-    venue = e.get("venue", {})
+        date_time = e.get("dateTime")
+        late_reg = e.get("lateRego")
 
-    date_time = e.get("dateTime")
-    late_reg = e.get("lateRego")
+        date = None
+        if date_time:
+            date = date_time.split(" ")[0]
 
-    date = None
-    if date_time:
-        date = date_time.split(" ")[0]
+        late_reg_time = None
+        if late_reg:
+            late_reg_time = late_reg.split(" ")[1]
 
-    late_reg_time = None
-    if late_reg:
-        late_reg_time = late_reg.split(" ")[1]
+        games.append({
+            "league": "APL",
+            "state": e.get("stateName"),
+            "name": e.get("description") or e.get("type"),
+            "venue": venue.get("title"),
+            "suburb": venue.get("suburb"),
+            "date": date,
+            "time": e.get("startTime"),
+            "buyin": e.get("buyInDescription"),
+            "guarantee": e.get("takeHomeAmount"),
+            "late_reg": late_reg_time,
+            "lat": venue.get("latitude"),
+            "lng": venue.get("longitude")
+        })
 
-    games.append({
-        "league": "APL",
-        "state": e.get("stateName"),
-        "name": e.get("description") or e.get("type"),
-        "venue": venue.get("title"),
-        "suburb": venue.get("suburb"),
-        "date": date,
-        "time": e.get("startTime"),
-        "buyin": e.get("buyInDescription"),
-        "guarantee": e.get("takeHomeAmount"),
-        "late_reg": late_reg_time,
-        "lat": venue.get("latitude"),
-        "lng": venue.get("longitude")
-    })
+with open("apl_games.json", "w") as f:
+    json.dump(games, f, indent=2)
 
-with open("apl_games.json","w") as f:
-    json.dump(games,f,indent=2)
-
-print("Saved",len(games),"APL games")
+print("Saved", len(games), "APL games")
