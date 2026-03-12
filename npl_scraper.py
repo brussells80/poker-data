@@ -5,9 +5,13 @@ import json
 
 URL = "https://www.npl.com.au/todays-league-events/"
 
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
+}
+
 def scrape_npl():
 
-    response = requests.get(URL)
+    response = requests.get(URL, headers=headers)
     soup = BeautifulSoup(response.text, "html.parser")
 
     today = datetime.now().strftime("%Y-%m-%d")
@@ -16,7 +20,8 @@ def scrape_npl():
 
     table = soup.find("table")
 
-    if table is None:
+    if not table:
+        print("No NPL table found")
         return games
 
     tbody = table.find("tbody")
@@ -38,12 +43,18 @@ def scrape_npl():
             venue = venue.split("(")[0].strip()
 
         game = {
+            "league": "NPL",
+            "state": None,
+            "name": game_type,
             "venue": venue,
+            "suburb": None,
             "date": today,
-            "start_time": start_time,
-            "entry": entry,
-            "type": game_type,
-            "league": "NPL"
+            "time": start_time,
+            "buyin": entry,
+            "guarantee": None,
+            "late_reg": None,
+            "lat": None,
+            "lng": None
         }
 
         games.append(game)
@@ -51,11 +62,9 @@ def scrape_npl():
     return games
 
 
-if __name__ == "__main__":
+games = scrape_npl()
 
-    games = scrape_npl()
+with open("npl_games.json", "w") as f:
+    json.dump(games, f, indent=2)
 
-    with open("npl_games.json", "w") as f:
-        json.dump(games, f, indent=2)
-
-    print("Saved", len(games), "NPL games")
+print("Saved", len(games), "NPL games")
