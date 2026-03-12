@@ -27,6 +27,7 @@ jobs:
         run: |
           python npl_scraper.py
           python kings_scraper.py
+          python apl_scraper.py
 
       - name: Commit updated JSON
         run: |
