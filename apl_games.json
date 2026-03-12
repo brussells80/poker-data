@@ -6512,20 +6512,6 @@
   {
     "league": "APL",
     "state": "QLD",
-    "name": "Event 10 - ONE AND DONE FREEZEOUT",
-    "venue": "The Broncos Club",
-    "suburb": "Red Hill",
-    "date": "2026-03-18",
-    "time": "19:00",
-    "buyin": 150.0,
-    "guarantee": null,
-    "late_reg": "21:15",
-    "lat": -27.448803,
-    "lng": 152.996082
-  },
-  {
-    "league": "APL",
-    "state": "QLD",
     "name": "Event 9 - PLO TERMINATOR ($100 per KO)",
     "venue": "The Broncos Club",
     "suburb": "Red Hill",
@@ -6534,6 +6520,20 @@
     "buyin": 460.0,
     "guarantee": null,
     "late_reg": "22:50",
+    "lat": -27.448803,
+    "lng": 152.996082
+  },
+  {
+    "league": "APL",
+    "state": "QLD",
+    "name": "Event 10 - ONE AND DONE FREEZEOUT",
+    "venue": "The Broncos Club",
+    "suburb": "Red Hill",
+    "date": "2026-03-18",
+    "time": "19:00",
+    "buyin": 150.0,
+    "guarantee": null,
+    "late_reg": "21:15",
     "lat": -27.448803,
     "lng": 152.996082
   },
