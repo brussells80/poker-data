@@ -65,7 +65,7 @@ for state, stateId in states.items():
             "suburb": venue.get("suburb"),
             "date": date,
             "time": e.get("startTime"),
-            "buyin": e.get("buyInDescription"),
+            "buyin": e.get("buyInAmount") or e.get("buyInDescription"),
             "guarantee": e.get("takeHomeAmount"),
             "late_reg": late_reg_time,
             "lat": venue.get("latitude"),
