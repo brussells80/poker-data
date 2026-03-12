@@ -1,7 +1,7 @@
 import requests
 import json
 
-BASE_URL = "https://www.npl.com.au/umbraco/surface/eventsurface/IndexEvents"
+BASE_URL = "https://www.npl.com.au/umbraco/surface/events/IndexEvents"
 
 headers = {
     "User-Agent": "Mozilla/5.0",
@@ -23,11 +23,7 @@ for day in range(7):
         print("Failed request:", r.status_code)
         continue
 
-    try:
-        data = r.json()
-    except:
-        print("Not JSON response")
-        continue
+    data = r.json()
 
     for e in data:
 
