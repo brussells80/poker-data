@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+import re
 
 URL = "https://kingslive.com.au"
 
@@ -12,7 +13,7 @@ soup = BeautifulSoup(r.text, "html.parser")
 
 games = []
 
-rows = soup.select("tr")
+rows = soup.find_all("tr")
 
 for row in rows:
 
@@ -28,31 +29,30 @@ for row in rows:
     clock = cols[4].get_text(strip=True)
     chips = cols[5].get_text(strip=True)
 
-    details = row.find_next("div")
+    # grab full text block (contains entries/players etc)
+    text = row.get_text(" ", strip=True)
 
+    # entries
     entries = None
-    players = None
+    m = re.search(r'Entries[:\s]*(\d+)', text)
+    if m:
+        entries = m.group(1)
+
+    # players remaining
+    players_remaining = None
+    m = re.search(r'Players[:\s]*(\d+)', text)
+    if m:
+        players_remaining = m.group(1)
+
+    # late reg
     late_reg = None
-    date = None
+    m = re.search(r'Reg Ends[:\s]*(\d+)', text)
+    if m:
+        late_reg = m.group(1)
 
-    if details:
-
-        lines = details.get_text("\n", strip=True).split("\n")
-
-        for line in lines:
-
-            if "Entries:" in line:
-                entries = line.split(":")[1].strip()
-
-            if "Players:" in line:
-                players = line.split(":")[1].strip()
-
-            if "Reg Ends:" in line:
-                late_reg = line.split(":")[1].strip()
-
+    # date (section header above table)
     date_header = row.find_previous("h4")
-    if date_header:
-        date = date_header.get_text(strip=True)
+    date = date_header.get_text(strip=True) if date_header else None
 
     games.append({
         "league": "Kings",
@@ -67,7 +67,7 @@ for row in rows:
         "clock": clock,
         "chips": chips,
         "entries": entries,
-        "players_remaining": players
+        "players_remaining": players_remaining
     })
 
 with open("kings_live_games.json", "w") as f:
