@@ -24,10 +24,19 @@ for t in tournaments:
     description = t.get("description", "")
 
     # extract late reg time from text
-    late_reg = None
-    match = re.search(r'(\d{1,2}:\d{2})\s*pm?\s*late', description.lower())
-    if match:
-        late_reg = match.group(1)
+   late_reg = None
+
+patterns = [
+    r'(\d{1,2}:\d{2})\s*pm?\s*late',
+    r'late\s*reg(?:istration)?\s*(?:until)?\s*(\d{1,2}:\d{2})',
+    r'(\d{1,2}:\d{2})\s*pm?\s*close',
+]
+
+for p in patterns:
+    m = re.search(p, description.lower())
+    if m:
+        late_reg = m.group(1)
+        break
 
     games.append({
         "league": "Kings",
