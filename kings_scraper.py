@@ -1,87 +1,79 @@
 import requests
-from bs4 import BeautifulSoup
-from datetime import datetime
 import json
-import re
 
-URL = "https://www.kingsroom.com.au/tournaments"
+games = []
 
+headers = {
+    "User-Agent": "Mozilla/5.0",
+    "Accept": "application/json"
+}
 
-def extract_field(text, label):
-    try:
-        pattern = rf"{label}:(.*?)(?=[A-Z][a-zA-Z ]*:|$)"
-        match = re.search(pattern, text)
-        if match:
-            return match.group(1).strip()
-    except:
-        pass
-    return None
+# -------------------------
+# WEEKLY KINGS TOURNAMENTS
+# -------------------------
 
+weekly_url = "https://kingspoker.com.au/wp-json/wp/v2/tournaments?per_page=100"
 
-def scrape_kings():
+try:
+    r = requests.get(weekly_url, headers=headers)
+    data = r.json()
 
-    games = []
+    for e in data:
 
-    try:
-        response = requests.get(URL, timeout=30)
-        response.raise_for_status()
-    except Exception as e:
-        print("Failed to load Kings page:", e)
-        return games
+        games.append({
+            "league": "Kings",
+            "series": "Weekly",
+            "name": e.get("title", {}).get("rendered"),
+            "venue": e.get("acf", {}).get("venue"),
+            "date": e.get("acf", {}).get("date"),
+            "time": e.get("acf", {}).get("start_time"),
+            "buyin": e.get("acf", {}).get("buyin"),
+            "guarantee": e.get("acf", {}).get("guarantee"),
+            "late_reg": e.get("acf", {}).get("late_reg"),
+            "entries": None,
+            "players_remaining": None
+        })
 
-    soup = BeautifulSoup(response.text, "html.parser")
-
-    today = datetime.now().strftime("%Y-%m-%d")
-
-    rows = soup.find_all("tr")
-
-    for row in rows:
-
-        cols = row.find_all("td")
-
-        if len(cols) < 3:
-            continue
-
-        try:
-
-            name = cols[0].get_text(strip=True)
-            time = cols[1].get_text(strip=True)
-            details = cols[2].get_text(strip=True)
-
-            buyin = extract_field(details, "Buy-In")
-            prize_pool = extract_field(details, "Prize Pool")
-            chips = extract_field(details, "Chips")
-            entries = extract_field(details, "Entries")
-            players = extract_field(details, "Players")
-            gtd = extract_field(details, "GTD")
-
-            games.append({
-                "venue": "Kings",
-                "name": name,
-                "date": today,
-                "time": time,
-                "buyin": buyin,
-                "prize_pool": prize_pool,
-                "chips": chips,
-                "entries": entries,
-                "players_remaining": players,
-                "guarantee": gtd
-            })
-
-        except Exception as e:
-            print("Skipping row:", e)
-            continue
-
-    return games
+except Exception as e:
+    print("Weekly Kings failed:", e)
 
 
-if __name__ == "__main__":
+# -------------------------
+# KINGS LIVE SERIES
+# -------------------------
 
-    games = scrape_kings()
+live_url = "https://kingslive.com.au/api/tournaments"
 
-    try:
-        with open("kings_games.json", "w") as f:
-            json.dump(games, f, indent=2)
-        print(f"Saved {len(games)} Kings games")
-    except Exception as e:
-        print("Failed to save JSON:", e)
+try:
+
+    r = requests.get(live_url, headers=headers)
+    data = r.json()
+
+    for e in data:
+
+        games.append({
+            "league": "Kings",
+            "series": "Live",
+            "name": e.get("name"),
+            "venue": e.get("venue"),
+            "date": e.get("date"),
+            "time": e.get("start_time"),
+            "buyin": e.get("buyin"),
+            "guarantee": e.get("guarantee"),
+            "late_reg": e.get("late_reg"),
+            "entries": e.get("entries"),
+            "players_remaining": e.get("players_remaining")
+        })
+
+except Exception as e:
+    print("Kings live failed:", e)
+
+
+# -------------------------
+# SAVE OUTPUT
+# -------------------------
+
+with open("kings_games.json", "w") as f:
+    json.dump(games, f, indent=2)
+
+print("Saved", len(games), "Kings games")
