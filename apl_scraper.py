@@ -43,16 +43,21 @@ for state, stateId in states.items():
 
     for e in data:
 
+        venue = e.get("venue", {})
+
         games.append({
             "league": "APL",
-            "state": state,
-            "name": e.get("name"),
-            "venue": e.get("venueName"),
-            "date": e.get("eventDate"),
-            "time": e.get("startTime"),
-            "buyin": e.get("buyIn"),
-            "guarantee": e.get("guarantee"),
-            "late_reg": e.get("lateRegistration")
+            "state": e.get("stateName"),
+            "name": e.get("type"),
+            "venue": venue.get("title"),
+            "suburb": venue.get("suburb"),
+            "date": e.get("lateRego"),   # closest available timestamp
+            "time": e.get("rego"),
+            "buyin": e.get("addOnMax"),
+            "guarantee": e.get("takeHomeAmount"),
+            "late_reg": e.get("lateRego"),
+            "lat": venue.get("latitude"),
+            "lng": venue.get("longitude")
         })
 
 with open("apl_games.json","w") as f:
