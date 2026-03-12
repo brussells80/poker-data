@@ -5,32 +5,24 @@ BASE_URL = "https://www.npl.com.au/umbraco/surface/eventsurface/IndexEvents"
 
 headers = {
     "User-Agent": "Mozilla/5.0",
-    "X-Requested-With": "XMLHttpRequest",
-    "Accept": "application/json",
-    "Content-Type": "application/json"
+    "X-Requested-With": "XMLHttpRequest"
 }
 
 games = []
 
 for day in range(7):
 
+    url = f"{BASE_URL}?dayOfWeek={day}"
+
     print("Getting day", day)
 
-    payload = {
-        "dayOfWeek": day
-    }
-
-    r = requests.post(BASE_URL, json=payload, headers=headers)
+    r = requests.get(url, headers=headers)
 
     if r.status_code != 200:
         print("Failed request:", r.status_code)
         continue
 
-    try:
-        data = r.json()
-    except:
-        print("Invalid JSON")
-        continue
+    data = r.json()
 
     for e in data:
 
