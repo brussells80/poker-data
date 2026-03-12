@@ -3,9 +3,11 @@ import json
 import re
 from datetime import datetime, timedelta
 
-headers = {"User-Agent": "Mozilla/5.0"}
+headers = {
+    "User-Agent": "Mozilla/5.0"
+}
 
-# dynamic 30-day range
+# Dynamic 30-day window
 today = datetime.today()
 future = today + timedelta(days=30)
 
@@ -21,22 +23,33 @@ tournaments = r.json()
 
 for t in tournaments:
 
-    description = t.get("description", "")
+    description = t.get("description", "").lower()
 
-    # extract late reg time from text
-   late_reg = None
+    # -------------------------
+    # Extract late reg time
+    # -------------------------
 
-patterns = [
-    r'(\d{1,2}:\d{2})\s*pm?\s*late',
-    r'late\s*reg(?:istration)?\s*(?:until)?\s*(\d{1,2}:\d{2})',
-    r'(\d{1,2}:\d{2})\s*pm?\s*close',
-]
+    late_reg = None
 
-for p in patterns:
-    m = re.search(p, description.lower())
-    if m:
-        late_reg = m.group(1)
-        break
+    patterns = [
+        r'(\d{1,2}:\d{2})\s*pm?\s*late',
+        r'late\s*reg(?:istration)?\s*(?:until)?\s*(\d{1,2}:\d{2})',
+        r'(\d{1,2}:\d{2})\s*pm?\s*close'
+    ]
+
+    for p in patterns:
+        m = re.search(p, description)
+        if m:
+            late_reg = m.group(1)
+            break
+
+    # fallback calculation if not found
+    if late_reg is None and t.get("starttime"):
+        try:
+            start_time = datetime.strptime(t["starttime"], "%H:%M")
+            late_reg = (start_time + timedelta(hours=2, minutes=30)).strftime("%H:%M")
+        except:
+            late_reg = None
 
     games.append({
         "league": "Kings",
