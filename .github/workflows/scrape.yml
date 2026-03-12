@@ -23,11 +23,12 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium
 
-      - name: Run scrapers
-        run: |
+      - - name: Run scrapers
+          run: |
           python npl_scraper.py
-          python kings_scraper.py
           python apl_scraper.py
+          python kings_scraper.py
+          python kings_live_scraper.py
 
       - name: Commit updated JSON
         run: |
