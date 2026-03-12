@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-URL = "https://kingslive.com.au/"
+URL = "https://kingslive.com.au/results"
 
 headers = {
     "User-Agent": "Mozilla/5.0"
@@ -14,37 +14,31 @@ soup = BeautifulSoup(r.text, "html.parser")
 
 games = []
 
-tables = soup.find_all("table")
+rows = soup.find_all("tr")
 
-for table in tables:
+for row in rows:
 
-    rows = table.find_all("tr")
+    cols = row.find_all("td")
 
-    for row in rows:
+    if len(cols) < 5:
+        continue
 
-        cols = row.find_all("td")
+    name = cols[0].get_text(strip=True)
+    prize_pool = cols[1].get_text(strip=True)
+    clock = cols[2].get_text(strip=True)
+    game_type = cols[3].get_text(strip=True)
+    chips = cols[4].get_text(strip=True)
 
-        if len(cols) < 5:
-            continue
-
-        name = cols[0].get_text(strip=True)
-        buyin = cols[1].get_text(strip=True)
-        clock = cols[2].get_text(strip=True)
-        game_type = cols[3].get_text(strip=True)
-        chips = cols[4].get_text(strip=True)
-
-        games.append({
-            "league": "Kings",
-            "series": "Live",
-            "name": name,
-            "venue": "Kings Live",
-            "buyin": buyin,
-            "clock": clock,
-            "type": game_type,
-            "chips": chips,
-            "entries": None,
-            "players_remaining": None
-        })
+    games.append({
+        "league": "Kings",
+        "series": "Live",
+        "name": name,
+        "venue": "Kings Live",
+        "prize_pool": prize_pool,
+        "clock": clock,
+        "type": game_type,
+        "chips": chips
+    })
 
 with open("kings_live_games.json", "w") as f:
     json.dump(games, f, indent=2)
