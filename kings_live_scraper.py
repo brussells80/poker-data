@@ -4,7 +4,6 @@ import json
 import re
 
 URL = "https://kingslive.com.au"
-
 headers = {"User-Agent": "Mozilla/5.0"}
 
 r = requests.get(URL, headers=headers)
@@ -12,13 +11,14 @@ soup = BeautifulSoup(r.text, "html.parser")
 
 games = []
 
-rows = soup.select("table tr")
+rows = soup.select("table tbody tr")
 
 for row in rows:
 
     cols = row.find_all("td")
 
-    if len(cols) < 6:
+    # skip rows without the main columns
+    if len(cols) < 7:
         continue
 
     start_time = cols[0].get_text(strip=True)
@@ -26,9 +26,10 @@ for row in rows:
     buyin = cols[2].get_text(strip=True)
     guarantee = cols[3].get_text(strip=True)
     clock = cols[4].get_text(strip=True)
-    chips = cols[5].get_text(strip=True)
+    game_type = cols[5].get_text(strip=True)
+    chips = cols[6].get_text(strip=True)
 
-    # grab text from the expanded section
+    # full row text (contains entries / players etc)
     text = row.get_text(" ", strip=True)
 
     entries = None
@@ -47,7 +48,7 @@ for row in rows:
     if m:
         late_reg = m.group(1)
 
-    # get date from section header
+    # find the date header above the table
     date_header = row.find_previous("h4")
     date = date_header.get_text(strip=True) if date_header else None
 
@@ -62,6 +63,7 @@ for row in rows:
         "guarantee": guarantee,
         "late_reg": late_reg,
         "clock": clock,
+        "type": game_type,
         "chips": chips,
         "entries": entries,
         "players_remaining": players_remaining
