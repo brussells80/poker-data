@@ -9,7 +9,7 @@
     "buyin": "KC @ Churchills Event 10: MAIN EVENT Flight 1D",
     "guarantee": "$400",
     "late_reg": null,
-    "clock": "$337,065",
+    "clock": "$344,310",
     "type": "30",
     "chips": "Re-Entry",
     "entries": null,
@@ -21,15 +21,15 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$337,065Chips:50,000Entries:234Players:143Reg Ends:10Status:OPEN (till level 10)Status:RunningShow me more details...",
+    "start_time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$344,310Chips:50,000Entries:255Players:138Reg Ends:10Status:OPEN (till level 10)Status:RunningShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": "10",
     "clock": "$400",
     "type": "GTD:",
     "chips": "$200,000",
-    "entries": "234",
-    "players_remaining": "143"
+    "entries": "255",
+    "players_remaining": "138"
   },
   {
     "league": "Kings",
