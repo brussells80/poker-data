@@ -1,42 +1,6 @@
 [
   {
     "league": "Kings",
-    "name": "Easts Saturday",
-    "venue": 116,
-    "date": "2026-03-14 00:00:00",
-    "time": "13:00",
-    "buyin": "25",
-    "guarantee": "$1,000",
-    "late_reg": "15:30",
-    "entries": null,
-    "players_remaining": null
-  },
-  {
-    "league": "Kings",
-    "name": "Manly Leagues Saturday FULLY DEALT",
-    "venue": 119,
-    "date": "2026-03-14 00:00:00",
-    "time": "18:00",
-    "buyin": "120",
-    "guarantee": "$5,000",
-    "late_reg": "9:40",
-    "entries": null,
-    "players_remaining": null
-  },
-  {
-    "league": "Kings",
-    "name": "CANCELLED due to KC",
-    "venue": 158,
-    "date": "2026-03-14 00:00:00",
-    "time": "19:00",
-    "buyin": "",
-    "guarantee": "",
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null
-  },
-  {
-    "league": "Kings",
     "name": "Scots Club Sunday Megastack",
     "venue": 166,
     "date": "2026-03-15 00:00:00",
@@ -1808,6 +1772,78 @@
     "buyin": "25",
     "guarantee": "$1,000",
     "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Kings Room Mondays",
+    "venue": 122,
+    "date": "2026-04-13 00:00:00",
+    "time": "18:30",
+    "buyin": "120",
+    "guarantee": "$5,000",
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Hillside Hotel Mondays",
+    "venue": 182,
+    "date": "2026-04-13 00:00:00",
+    "time": "18:30",
+    "buyin": "120",
+    "guarantee": "$4,000",
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Dee Why Bowling Monday",
+    "venue": 170,
+    "date": "2026-04-13 00:00:00",
+    "time": "19:00",
+    "buyin": "45",
+    "guarantee": "$1,500",
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Doncaster Monday",
+    "venue": 174,
+    "date": "2026-04-13 00:00:00",
+    "time": "19:00",
+    "buyin": "30",
+    "guarantee": "",
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Mt Lewis Mondays",
+    "venue": 168,
+    "date": "2026-04-13 00:00:00",
+    "time": "19:00",
+    "buyin": "20",
+    "guarantee": "$2,000",
+    "late_reg": "9:20",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Silverwater Hotel Monday",
+    "venue": 176,
+    "date": "2026-04-13 00:00:00",
+    "time": "19:00",
+    "buyin": "40",
+    "guarantee": "$2,000",
+    "late_reg": "9:20",
     "entries": null,
     "players_remaining": null
   }
