@@ -1,54 +1,6 @@
 [
   {
     "league": "Kings",
-    "name": "Scots Club Sunday Megastack",
-    "venue": 166,
-    "date": "2026-03-15 00:00:00",
-    "time": "13:00",
-    "buyin": "50",
-    "guarantee": "$2,000",
-    "late_reg": "15:30",
-    "entries": null,
-    "players_remaining": null
-  },
-  {
-    "league": "Kings",
-    "name": "Manly Leagues Sunday",
-    "venue": 119,
-    "date": "2026-03-15 00:00:00",
-    "time": "13:30",
-    "buyin": "150",
-    "guarantee": "",
-    "late_reg": "16:00",
-    "entries": null,
-    "players_remaining": null
-  },
-  {
-    "league": "Kings",
-    "name": "CANCELLED due to KC",
-    "venue": 158,
-    "date": "2026-03-15 00:00:00",
-    "time": "18:00",
-    "buyin": "",
-    "guarantee": "",
-    "late_reg": "20:30",
-    "entries": null,
-    "players_remaining": null
-  },
-  {
-    "league": "Kings",
-    "name": "Easts Bondi Junction Sunday",
-    "venue": 116,
-    "date": "2026-03-15 00:00:00",
-    "time": "19:00",
-    "buyin": "25",
-    "guarantee": "$1,000",
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null
-  },
-  {
-    "league": "Kings",
     "name": "Kings Room Mondays",
     "venue": 122,
     "date": "2026-03-16 00:00:00",
@@ -1844,6 +1796,66 @@
     "buyin": "40",
     "guarantee": "$2,000",
     "late_reg": "9:20",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Churchills Tuesday Highroller",
+    "venue": 158,
+    "date": "2026-04-14 00:00:00",
+    "time": "18:00",
+    "buyin": "200",
+    "guarantee": "",
+    "late_reg": "9:20",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Bella Vista Hotel Tuesdays",
+    "venue": 171,
+    "date": "2026-04-14 00:00:00",
+    "time": "18:30",
+    "buyin": "150",
+    "guarantee": "$6,000",
+    "late_reg": "21:00",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Rocksia Hotel Tuesday",
+    "venue": 178,
+    "date": "2026-04-14 00:00:00",
+    "time": "19:00",
+    "buyin": "65",
+    "guarantee": "$4,000",
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Royal Oak Tuesday",
+    "venue": 108,
+    "date": "2026-04-14 00:00:00",
+    "time": "19:00",
+    "buyin": "20",
+    "guarantee": "$500",
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Manly Leagues Tuesday",
+    "venue": 119,
+    "date": "2026-04-14 00:00:00",
+    "time": "19:00",
+    "buyin": "40",
+    "guarantee": "$1,200",
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null
   }
