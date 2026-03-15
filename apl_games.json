@@ -5280,20 +5280,6 @@
   {
     "league": "APL",
     "state": "QLD",
-    "name": "DEEP FREEZE Satellite - 1 in 10 win 3x SEATS GTD",
-    "venue": "The Broncos Club",
-    "suburb": "Red Hill",
-    "date": "2026-03-19",
-    "time": "12:00",
-    "buyin": 70.0,
-    "guarantee": 1800.0,
-    "late_reg": "13:00",
-    "lat": -27.448803,
-    "lng": 152.996082
-  },
-  {
-    "league": "APL",
-    "state": "QLD",
     "name": "Event 6 - APLPT CLASSIC - FLIGHT 2 - $20,000 GTD",
     "venue": "The Broncos Club",
     "suburb": "Red Hill",
@@ -5302,6 +5288,20 @@
     "buyin": 180.0,
     "guarantee": 20000.0,
     "late_reg": "16:30",
+    "lat": -27.448803,
+    "lng": 152.996082
+  },
+  {
+    "league": "APL",
+    "state": "QLD",
+    "name": "DEEP FREEZE Satellite - 1 in 10 win 3x SEATS GTD",
+    "venue": "The Broncos Club",
+    "suburb": "Red Hill",
+    "date": "2026-03-19",
+    "time": "12:00",
+    "buyin": 70.0,
+    "guarantee": 1800.0,
+    "late_reg": "13:00",
     "lat": -27.448803,
     "lng": 152.996082
   },
@@ -5420,6 +5420,20 @@
   {
     "league": "APL",
     "state": "QLD",
+    "name": "Event 6 - APLPT CLASSIC - FLIGHT 3 - $20,000 GTD",
+    "venue": "The Broncos Club",
+    "suburb": "Red Hill",
+    "date": "2026-03-19",
+    "time": "18:00",
+    "buyin": 180.0,
+    "guarantee": 20000.0,
+    "late_reg": "22:30",
+    "lat": -27.448803,
+    "lng": 152.996082
+  },
+  {
+    "league": "APL",
+    "state": "QLD",
     "name": "Event 14 - PLO 8-MAX",
     "venue": "The Broncos Club",
     "suburb": "Red Hill",
@@ -5441,20 +5455,6 @@
     "time": "18:00",
     "buyin": 480.0,
     "guarantee": 100000.0,
-    "late_reg": "22:30",
-    "lat": -27.448803,
-    "lng": 152.996082
-  },
-  {
-    "league": "APL",
-    "state": "QLD",
-    "name": "Event 6 - APLPT CLASSIC - FLIGHT 3 - $20,000 GTD",
-    "venue": "The Broncos Club",
-    "suburb": "Red Hill",
-    "date": "2026-03-19",
-    "time": "18:00",
-    "buyin": 180.0,
-    "guarantee": 20000.0,
     "late_reg": "22:30",
     "lat": -27.448803,
     "lng": 152.996082
