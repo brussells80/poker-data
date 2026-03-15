@@ -21,7 +21,7 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Time bank replenish: 90, 45, 18, 9Re-EntryGame:NL HEBuy-In:LimitedGTD:$200,000Prize Pool:$358,800Chips:50,000Entries:1,040Players:40Status:FINALStatus:RunningShow me more details...",
+    "start_time": "Time bank replenish: 90, 45, 18, 9Re-EntryGame:NL HEBuy-In:LimitedGTD:$200,000Prize Pool:$358,800Chips:50,000Entries:1,040Players:22Status:FINALStatus:RunningShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": null,
@@ -29,7 +29,7 @@
     "type": "GTD:",
     "chips": "$200,000",
     "entries": "1",
-    "players_remaining": "40"
+    "players_remaining": "22"
   },
   {
     "league": "Kings",
@@ -41,7 +41,7 @@
     "buyin": "KC @ Churchills Event 11: Series Saver",
     "guarantee": "$450",
     "late_reg": null,
-    "clock": "$37,050",
+    "clock": "$53,820",
     "type": "30",
     "chips": "Re-Entry",
     "entries": null,
@@ -53,15 +53,15 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Unlimited Re-EntriesRe-EntryGame:NL HEBuy-In:$450GTD:$30,000Prize Pool:$37,050Chips:50,000Entries:95Players:57Reg Ends:9Status:OPEN (till level 9)Status:RunningShow me more details...",
+    "start_time": "Unlimited Re-EntriesRe-EntryGame:NL HEBuy-In:$450GTD:$30,000Prize Pool:$53,820Chips:50,000Entries:138Players:67Reg Ends:9Status:CLOSEDStatus:RunningShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": "9",
     "clock": "$450",
     "type": "GTD:",
     "chips": "$30,000",
-    "entries": "95",
-    "players_remaining": "57"
+    "entries": "138",
+    "players_remaining": "67"
   },
   {
     "league": "Kings",
