@@ -21,7 +21,7 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Time bank replenish: 90, 45, 18, 9Re-EntryGame:NL HEBuy-In:LimitedGTD:$200,000Prize Pool:$358,800Chips:50,000Entries:1,040Players:7Status:FINALStatus:RunningShow me more details...",
+    "start_time": "Time bank replenish: 90, 45, 18, 9Re-EntryGame:NL HEBuy-In:LimitedGTD:$200,000Prize Pool:$358,800Chips:50,000Entries:1,040Players:4Status:FINALStatus:RunningShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": null,
@@ -29,7 +29,7 @@
     "type": "GTD:",
     "chips": "$200,000",
     "entries": "1",
-    "players_remaining": "7"
+    "players_remaining": "4"
   },
   {
     "league": "Kings",
@@ -53,7 +53,7 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Unlimited Re-EntriesRe-EntryGame:NL HEBuy-In:$450GTD:$30,000Prize Pool:$53,820Chips:50,000Entries:138Players:13Reg Ends:9Status:CLOSEDStatus:RunningShow me more details...",
+    "start_time": "Unlimited Re-EntriesRe-EntryGame:NL HEBuy-In:$450GTD:$30,000Prize Pool:$53,820Chips:50,000Entries:138Players:3Reg Ends:9Status:CLOSEDStatus:RunningShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": "9",
@@ -61,7 +61,7 @@
     "type": "GTD:",
     "chips": "$30,000",
     "entries": "138",
-    "players_remaining": "13"
+    "players_remaining": "3"
   },
   {
     "league": "Kings",
