@@ -25,24 +25,24 @@
   },
   {
     "league": "Kings",
+    "name": "Kings Room Thursday",
+    "venue": 122,
+    "date": "2026-03-19 00:00:00",
+    "time": "18:30",
+    "buyin": "120",
+    "guarantee": "$6,000",
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
     "name": "Churchills Thursday",
     "venue": 158,
     "date": "2026-03-19 00:00:00",
     "time": "19:00",
     "buyin": "35",
     "guarantee": "$2,000",
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null
-  },
-  {
-    "league": "Kings",
-    "name": "Doncaster Thursday CASH GAME",
-    "venue": 174,
-    "date": "2026-03-19 00:00:00",
-    "time": "19:00",
-    "buyin": "50-200",
-    "guarantee": "",
     "late_reg": "21:30",
     "entries": null,
     "players_remaining": null
@@ -61,13 +61,25 @@
   },
   {
     "league": "Kings",
-    "name": "Arena Sports Thursday",
+    "name": "CANCELLED due to venue damage",
     "venue": 181,
     "date": "2026-03-19 00:00:00",
     "time": "19:00",
-    "buyin": "30",
-    "guarantee": "$2,500",
+    "buyin": "",
+    "guarantee": "",
     "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Doncaster Thursday CASH GAME",
+    "venue": 174,
+    "date": "2026-03-19 00:00:00",
+    "time": "20:30",
+    "buyin": "50-200",
+    "guarantee": "",
+    "late_reg": "23:00",
     "entries": null,
     "players_remaining": null
   },
@@ -121,12 +133,12 @@
   },
   {
     "league": "Kings",
-    "name": "Arena Sports Friday",
+    "name": "CANCELLED due to venue damage",
     "venue": 181,
     "date": "2026-03-20 00:00:00",
     "time": "19:00",
-    "buyin": "30",
-    "guarantee": "$2,500",
+    "buyin": "",
+    "guarantee": "",
     "late_reg": "21:30",
     "entries": null,
     "players_remaining": null
@@ -476,6 +488,18 @@
     "buyin": "150",
     "guarantee": "$8,000",
     "late_reg": "9:30",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Kings Room Thursday",
+    "venue": 122,
+    "date": "2026-03-26 00:00:00",
+    "time": "18:30",
+    "buyin": "120",
+    "guarantee": "$6,000",
+    "late_reg": "9:40",
     "entries": null,
     "players_remaining": null
   },
@@ -932,6 +956,18 @@
     "buyin": "150",
     "guarantee": "$8,000",
     "late_reg": "9:30",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Kings Room Thursday",
+    "venue": 122,
+    "date": "2026-04-02 00:00:00",
+    "time": "18:30",
+    "buyin": "120",
+    "guarantee": "$6,000",
+    "late_reg": "9:40",
     "entries": null,
     "players_remaining": null
   },
@@ -1376,6 +1412,18 @@
     "buyin": "150",
     "guarantee": "$8,000",
     "late_reg": "9:30",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Kings Room Thursday",
+    "venue": 122,
+    "date": "2026-04-09 00:00:00",
+    "time": "18:30",
+    "buyin": "120",
+    "guarantee": "$6,000",
+    "late_reg": "9:40",
     "entries": null,
     "players_remaining": null
   },
@@ -1820,6 +1868,18 @@
     "buyin": "150",
     "guarantee": "$8,000",
     "late_reg": "9:30",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "name": "Kings Room Thursday",
+    "venue": 122,
+    "date": "2026-04-16 00:00:00",
+    "time": "18:30",
+    "buyin": "120",
+    "guarantee": "$6,000",
+    "late_reg": "9:40",
     "entries": null,
     "players_remaining": null
   },
