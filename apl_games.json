@@ -4104,20 +4104,6 @@
   {
     "league": "APL",
     "state": "QLD",
-    "name": "Event 14 - PLO 8-MAX",
-    "venue": "The Broncos Club",
-    "suburb": "Red Hill",
-    "date": "2026-03-19",
-    "time": "18:00",
-    "buyin": 360.0,
-    "guarantee": null,
-    "late_reg": "21:50",
-    "lat": -27.448803,
-    "lng": 152.996082
-  },
-  {
-    "league": "APL",
-    "state": "QLD",
     "name": "Event 6 - APLPT CLASSIC - FLIGHT 3 - $20,000 GTD",
     "venue": "The Broncos Club",
     "suburb": "Red Hill",
@@ -4140,6 +4126,20 @@
     "buyin": 480.0,
     "guarantee": 100000.0,
     "late_reg": "22:30",
+    "lat": -27.448803,
+    "lng": 152.996082
+  },
+  {
+    "league": "APL",
+    "state": "QLD",
+    "name": "Event 14 - PLO 8-MAX",
+    "venue": "The Broncos Club",
+    "suburb": "Red Hill",
+    "date": "2026-03-19",
+    "time": "18:00",
+    "buyin": 360.0,
+    "guarantee": null,
+    "late_reg": "21:50",
     "lat": -27.448803,
     "lng": 152.996082
   },
@@ -4552,20 +4552,6 @@
   {
     "league": "APL",
     "state": "QLD",
-    "name": "Event 2 - APLPT QUEENSLAND MAIN EVENT - FLIGHT 4 $100,000 GTD",
-    "venue": "The Broncos Club",
-    "suburb": "Red Hill",
-    "date": "2026-03-20",
-    "time": "11:00",
-    "buyin": 480.0,
-    "guarantee": 100000.0,
-    "late_reg": "15:30",
-    "lat": -27.448803,
-    "lng": 152.996082
-  },
-  {
-    "league": "APL",
-    "state": "QLD",
     "name": "JACKSTAR SHR Satellite - 1 in 10 win",
     "venue": "The Broncos Club",
     "suburb": "Red Hill",
@@ -4574,6 +4560,20 @@
     "buyin": 170.0,
     "guarantee": null,
     "late_reg": "12:00",
+    "lat": -27.448803,
+    "lng": 152.996082
+  },
+  {
+    "league": "APL",
+    "state": "QLD",
+    "name": "Event 2 - APLPT QUEENSLAND MAIN EVENT - FLIGHT 4 $100,000 GTD",
+    "venue": "The Broncos Club",
+    "suburb": "Red Hill",
+    "date": "2026-03-20",
+    "time": "11:00",
+    "buyin": 480.0,
+    "guarantee": 100000.0,
+    "late_reg": "15:30",
     "lat": -27.448803,
     "lng": 152.996082
   },
