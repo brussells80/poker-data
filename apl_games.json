@@ -3082,13 +3082,13 @@
   {
     "league": "APL",
     "state": "WA",
-    "name": "Hotel Northbridge - Pro-Series",
+    "name": "APL MILLION Satellite - Hotel Norhbridge",
     "venue": "Hotel Northbridge",
     "suburb": "Northbridge",
     "date": "2026-03-21",
-    "time": "17:01",
+    "time": "17:03",
     "buyin": 50.0,
-    "guarantee": null,
+    "guarantee": 4500.0,
     "late_reg": "18:45",
     "lat": -31.941748,
     "lng": 115.860657
@@ -3187,6 +3187,20 @@
     "time": "19:01",
     "buyin": 50.0,
     "guarantee": 1000.0,
+    "late_reg": "20:45",
+    "lat": -32.373077,
+    "lng": 115.759399
+  },
+  {
+    "league": "APL",
+    "state": "WA",
+    "name": "Cumbre Sports Facility - $1500 GTD",
+    "venue": "Cumbre Sports Facility",
+    "suburb": "Port Kennedy",
+    "date": "2026-03-25",
+    "time": "19:03",
+    "buyin": 20.0,
+    "guarantee": 1500.0,
     "late_reg": "20:45",
     "lat": -32.373077,
     "lng": 115.759399
