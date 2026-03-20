@@ -4006,20 +4006,6 @@
   {
     "league": "APL",
     "state": "QLD",
-    "name": "Event 16 - BRONCOS CLUB TURBO DEEPSTACK",
-    "venue": "The Broncos Club",
-    "suburb": "Red Hill",
-    "date": "2026-03-20",
-    "time": "13:00",
-    "buyin": 120.0,
-    "guarantee": null,
-    "late_reg": "15:15",
-    "lat": -27.448803,
-    "lng": 152.996082
-  },
-  {
-    "league": "APL",
-    "state": "QLD",
     "name": "JACKSTAR SHR Satellite - 1 in 10 win",
     "venue": "The Broncos Club",
     "suburb": "Red Hill",
@@ -4028,6 +4014,20 @@
     "buyin": 170.0,
     "guarantee": null,
     "late_reg": "14:00",
+    "lat": -27.448803,
+    "lng": 152.996082
+  },
+  {
+    "league": "APL",
+    "state": "QLD",
+    "name": "Event 16 - BRONCOS CLUB TURBO DEEPSTACK",
+    "venue": "The Broncos Club",
+    "suburb": "Red Hill",
+    "date": "2026-03-20",
+    "time": "13:00",
+    "buyin": 120.0,
+    "guarantee": null,
+    "late_reg": "15:15",
     "lat": -27.448803,
     "lng": 152.996082
   },
@@ -4384,20 +4384,6 @@
   {
     "league": "APL",
     "state": "QLD",
-    "name": "Event 22 - FRIDAY FREEZEOUT",
-    "venue": "The Broncos Club",
-    "suburb": "Red Hill",
-    "date": "2026-03-20",
-    "time": "21:00",
-    "buyin": 120.0,
-    "guarantee": null,
-    "late_reg": "22:30",
-    "lat": -27.448803,
-    "lng": 152.996082
-  },
-  {
-    "league": "APL",
-    "state": "QLD",
     "name": "NLH MINI HIGH ROLLER Satellite - 1 in 10 win",
     "venue": "The Broncos Club",
     "suburb": "Red Hill",
@@ -4406,6 +4392,20 @@
     "buyin": 55.0,
     "guarantee": null,
     "late_reg": "22:00",
+    "lat": -27.448803,
+    "lng": 152.996082
+  },
+  {
+    "league": "APL",
+    "state": "QLD",
+    "name": "Event 22 - FRIDAY FREEZEOUT",
+    "venue": "The Broncos Club",
+    "suburb": "Red Hill",
+    "date": "2026-03-20",
+    "time": "21:00",
+    "buyin": 120.0,
+    "guarantee": null,
+    "late_reg": "22:30",
     "lat": -27.448803,
     "lng": 152.996082
   },
