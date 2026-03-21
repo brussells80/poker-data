@@ -1,39 +1,58 @@
 name: Scrape Poker Games
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/30 * * * *"   # runs every 30 minutes
+  workflow_dispatch:         # allows manual run
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # 2. Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
 
-      - name: Install libraries
+      # 3. Install dependencies
+      - name: Install dependencies
         run: |
+          pip install --upgrade pip
           pip install -r requirements.txt
-          playwright install chromium
 
-      - name: Run scrapers
+      # 4. Install Chrome + Chromedriver
+      - name: Install Chrome
         run: |
-          python npl_scraper.py
-          python apl_scraper.py
-          python kings_scraper.py
-          python kings_live_scraper.py
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser chromium-chromedriver
 
-      - name: Commit updated JSON
+      # 5. Run scrapers
+      - name: Run APL scraper
+        run: python apl_scraper.py
+
+      - name: Run NPL scraper
+        run: python npl_scraper.py
+
+      - name: Run Kings scraper
+        run: python kings_scraper.py
+
+      - name: Run Kings Live scraper
+        run: python kings_live_scraper.py
+
+      # 6. Commit updated JSON files
+      - name: Commit and push
         run: |
           git config --global user.name "poker-bot"
-          git config --global user.email "bot@github.com"
+          git config --global user.email "actions@github.com"
+
           git add *.json
-          git commit -m "update poker data" || echo "no changes"
+
+          git commit -m "update poker data" || echo "No changes to commit"
+
           git push
