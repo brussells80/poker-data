@@ -2,37 +2,32 @@ name: Scrape Poker Games
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # runs every 30 minutes
-  workflow_dispatch:         # allows manual run
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # 2. Set up Python
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # 3. Install dependencies
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4. Install Chrome + Chromedriver
       - name: Install Chrome
         run: |
           sudo apt-get update
-          sudo apt-get install -y chromium-browser chromium-chromedriver
+          sudo apt-get install -y chromium-browser chromium-driver
 
-      # 5. Run scrapers
       - name: Run APL scraper
         run: python apl_scraper.py
 
@@ -45,14 +40,11 @@ jobs:
       - name: Run Kings Live scraper
         run: python kings_live_scraper.py
 
-      # 6. Commit updated JSON files
       - name: Commit and push
         run: |
           git config --global user.name "poker-bot"
           git config --global user.email "actions@github.com"
 
-          git add *.json
-
+          git add *.json *.html *.png || true
           git commit -m "update poker data" || echo "No changes to commit"
-
           git push
