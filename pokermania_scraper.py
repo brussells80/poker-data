@@ -18,10 +18,90 @@ DAY_ORDER = [
 DAY_TO_INDEX = {day: i for i, day in enumerate(DAY_ORDER)}
 
 
+VENUE_ALIASES = {
+    "mollys tavern": "Molly Malone's Irish Tavern",
+    "molly malones irish tavern": "Molly Malone's Irish Tavern",
+    "molly malone's irish tavern": "Molly Malone's Irish Tavern",
+    "molly malone’s irish tavern": "Molly Malone's Irish Tavern",
+    "mollys tavern gts": "Molly Malone's Irish Tavern",
+    "mollys tavern gt’s": "Molly Malone's Irish Tavern",
+    "molly malone's irish tavern gts": "Molly Malone's Irish Tavern",
+    "molly malone’s irish tavern gt’s": "Molly Malone's Irish Tavern",
+}
+
+
+SUBURB_ALIASES = {
+    "surry hills": "Surry Hills",
+    "taren point": "Taren Point",
+    "cabramatta west": "Cabramatta West",
+    "surryhills": "Surry Hills",
+}
+
+
 def clean_text(value):
     if value is None:
         return ""
     return re.sub(r"\s+", " ", str(value)).strip()
+
+
+def simplify_text(value):
+    text = clean_text(value).lower()
+    text = text.replace("’", "'")
+    text = re.sub(r"\(.*?\)", "", text)
+    text = re.sub(r"[^a-z0-9\s']", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def canonicalize_venue(value):
+    text = simplify_text(value)
+    if not text:
+        return ""
+
+    if text in VENUE_ALIASES:
+        return VENUE_ALIASES[text]
+
+    return clean_text(value)
+
+
+def canonicalize_suburb(value):
+    text = simplify_text(value)
+    if not text:
+        return ""
+
+    if text in SUBURB_ALIASES:
+        return SUBURB_ALIASES[text]
+
+    return clean_text(value).title()
+
+
+def venue_match_score(summary_venue, detail_name, detail_title):
+    s = simplify_text(summary_venue)
+    d1 = simplify_text(detail_name)
+    d2 = simplify_text(detail_title)
+
+    canon_summary = simplify_text(canonicalize_venue(summary_venue))
+    canon_d1 = simplify_text(canonicalize_venue(detail_name))
+    canon_d2 = simplify_text(canonicalize_venue(detail_title))
+
+    scores = []
+
+    for a in [s, canon_summary]:
+        for b in [d1, d2, canon_d1, canon_d2]:
+            if not a or not b:
+                continue
+            if a == b:
+                scores.append(100)
+            elif a in b or b in a:
+                scores.append(80)
+            else:
+                a_words = set(a.split())
+                b_words = set(b.split())
+                overlap = len(a_words & b_words)
+                if overlap:
+                    scores.append(overlap * 10)
+
+    return max(scores) if scores else 0
 
 
 def parse_money(value):
@@ -46,9 +126,6 @@ def parse_money(value):
 def normalize_time(text):
     text = clean_text(text).upper().replace(".", ":")
 
-    # Examples:
-    # 2.00 PM -> 2:00 PM
-    # 7.30 PM – 12.00 AM -> take first time only
     range_match = re.match(r"^(.+?)(?:\s*[–-]\s*.+)?$", text)
     if range_match:
         text = range_match.group(1).strip()
@@ -73,6 +150,8 @@ def infer_type_from_prize(prize_text, notes_text):
         return "Cash Game"
     if "freezeout" in notes:
         return "Freezeout"
+    if "tournament" in prize:
+        return "Tournament"
     return None
 
 
@@ -113,11 +192,6 @@ def day_to_next_date(day_name):
 
 
 def parse_summary_rows(lines):
-    """
-    Parses the top summary list:
-    Sunday $1000 EXP Engadine RSL Engadine 2.00 PM $25
-    Sunday Cash Game Mollys Tavern (GT’s) Surry Hills 4.00 PM $50-$200
-    """
     games = []
 
     i = 0
@@ -130,7 +204,6 @@ def parse_summary_rows(lines):
 
         day_name = line
 
-        # collect until "More Details"
         parts = [day_name]
         j = i + 1
         while j < len(lines):
@@ -144,7 +217,6 @@ def parse_summary_rows(lines):
 
         summary_text = " ".join(parts)
 
-        # Extract time
         time_match = re.search(r"(\d{1,2}\.\d{2}\s*[AP]M)", summary_text, re.IGNORECASE)
         if not time_match:
             i = j + 1 if j < len(lines) and lines[j] == "More Details" else j
@@ -156,11 +228,8 @@ def parse_summary_rows(lines):
 
         entry_fee = right if right else None
 
-        # Remove day from left
         left = re.sub(rf"^{day_name}\s+", "", left, flags=re.IGNORECASE).strip()
 
-        # Try to split prize + venue + suburb
-        tokens = left.split()
         prize = None
         venue = None
         suburb = None
@@ -168,20 +237,18 @@ def parse_summary_rows(lines):
         if left.lower().startswith("cash game"):
             prize = "Cash Game"
             rest = left[9:].strip()
-            # heuristic: last 1-2 words are suburb
             rest_tokens = rest.split()
+
             if len(rest_tokens) >= 3:
                 suburb = " ".join(rest_tokens[-2:])
                 venue = " ".join(rest_tokens[:-2])
-                if suburb.lower() not in {
-                    "surry hills", "taren point", "cabramatta west"
-                }:
+
+                if simplify_text(suburb) not in {"surry hills", "taren point", "cabramatta west"}:
                     suburb = rest_tokens[-1]
                     venue = " ".join(rest_tokens[:-1])
             else:
                 venue = rest
         else:
-            # prize first, then venue, then suburb
             prize_match = re.match(r"^(\$\s*[0-9,]+\s*(?:EXP|GTD)?|Tournament)\s+(.+)$", left, re.IGNORECASE)
             if prize_match:
                 prize = clean_text(prize_match.group(1))
@@ -193,9 +260,8 @@ def parse_summary_rows(lines):
             if len(rest_tokens) >= 3:
                 suburb = " ".join(rest_tokens[-2:])
                 venue = " ".join(rest_tokens[:-2])
-                if suburb.lower() not in {
-                    "surry hills", "taren point", "cabramatta west"
-                }:
+
+                if simplify_text(suburb) not in {"surry hills", "taren point", "cabramatta west"}:
                     suburb = rest_tokens[-1]
                     venue = " ".join(rest_tokens[:-1])
             else:
@@ -204,8 +270,8 @@ def parse_summary_rows(lines):
         games.append({
             "day": day_name,
             "summary_prize": clean_text(prize) if prize else None,
-            "venue": clean_text(venue),
-            "suburb": clean_text(suburb),
+            "venue": canonicalize_venue(venue),
+            "suburb": canonicalize_suburb(suburb),
             "summary_time": normalize_time(raw_time),
             "summary_entry_fee": clean_text(entry_fee)
         })
@@ -216,10 +282,6 @@ def parse_summary_rows(lines):
 
 
 def parse_detail_sections(lines):
-    """
-    Parses the detailed sections below the summary table.
-    Each starts with ### Venue heading and then fields.
-    """
     details = []
     i = 0
 
@@ -231,15 +293,13 @@ def parse_detail_sections(lines):
             continue
 
         section_name = clean_text(line.replace("### ", "", 1))
-
-        # Next # heading is the display title
         display_title = section_name
+
         j = i + 1
         if j < len(lines) and clean_text(lines[j]).startswith("# "):
             display_title = clean_text(lines[j].replace("# ", "", 1))
             j += 1
 
-        # collect until next ### or end
         block = []
         while j < len(lines):
             candidate = clean_text(lines[j])
@@ -267,15 +327,18 @@ def parse_detail_sections(lines):
         prize = field_value("Prize")
         additional_notes = field_value("Additional Notes")
 
-        # Website link
         website = None
-        website_match = re.search(r"Venue Website\s*:\s*(https?://[^\s]+|[A-Za-z0-9.-]+\.[A-Za-z]{2,}[^\s]*)", block_text, re.IGNORECASE)
+        website_match = re.search(
+            r"Venue Website\s*:\s*(https?://[^\s]+|[A-Za-z0-9.-]+\.[A-Za-z]{2,}[^\s]*)",
+            block_text,
+            re.IGNORECASE
+        )
         if website_match:
             website = clean_text(website_match.group(1))
 
         details.append({
-            "section_name": section_name,
-            "display_title": display_title,
+            "section_name": canonicalize_venue(section_name),
+            "display_title": canonicalize_venue(display_title),
             "when": when,
             "start_time": normalize_time(start_time),
             "late_entry": normalize_time(late_entry),
@@ -299,6 +362,7 @@ def merge_summary_and_details(summary_rows, detail_sections):
 
     for summary in summary_rows:
         best_idx = None
+        best_score = 0
 
         for idx, detail in enumerate(detail_sections):
             if idx in used_detail_indexes:
@@ -307,30 +371,26 @@ def merge_summary_and_details(summary_rows, detail_sections):
             if clean_text(detail["when"]).lower() != clean_text(summary["day"]).lower():
                 continue
 
-            summary_venue = clean_text(summary["venue"]).lower()
-            detail_name = clean_text(detail["section_name"]).lower()
-            detail_title = clean_text(detail["display_title"]).lower()
+            score = venue_match_score(
+                summary["venue"],
+                detail["section_name"],
+                detail["display_title"]
+            )
 
-            # fuzzy venue match
-            if (
-                summary_venue in detail_name
-                or summary_venue in detail_title
-                or detail_name in summary_venue
-                or detail_title in summary_venue
-            ):
+            if score > best_score:
+                best_score = score
                 best_idx = idx
-                break
 
-        detail = detail_sections[best_idx] if best_idx is not None else {}
-        if best_idx is not None:
+        detail = detail_sections[best_idx] if best_idx is not None and best_score >= 40 else {}
+        if best_idx is not None and best_score >= 40:
             used_detail_indexes.add(best_idx)
 
         prize_text = detail.get("prize_raw") or summary.get("summary_prize") or ""
         notes_text = detail.get("additional_notes") or ""
         entry_fee_raw = detail.get("entry_fee_raw") or summary.get("summary_entry_fee")
 
-        venue = detail.get("display_title") or summary.get("venue")
-        suburb = summary.get("suburb")
+        venue = canonicalize_venue(detail.get("display_title") or summary.get("venue"))
+        suburb = canonicalize_suburb(summary.get("suburb"))
         state = "NSW"
 
         game_type = infer_type_from_prize(prize_text, notes_text)
@@ -344,8 +404,8 @@ def merge_summary_and_details(summary_rows, detail_sections):
         game = {
             "league": "PokerMania",
             "name": clean_text(name),
-            "venue": clean_text(venue),
-            "suburb": clean_text(suburb),
+            "venue": venue,
+            "suburb": suburb,
             "state": state,
             "date": day_to_next_date(summary["day"]),
             "time": detail.get("start_time") or summary.get("summary_time"),
