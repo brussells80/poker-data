@@ -126,19 +126,45 @@ def setup_driver():
     return webdriver.Chrome(service=service, options=options)
 
 
-def click_text_if_found(driver, text):
+def click_first_matching_text(driver, text):
+    xpaths = [
+        f"//*[self::button or self::a or self::div or self::span][normalize-space()='{text}']",
+        f"//*[contains(normalize-space(), '{text}')]",
+    ]
+
+    for xpath in xpaths:
+        elems = driver.find_elements(By.XPATH, xpath)
+        for elem in elems:
+            try:
+                if not elem.is_displayed():
+                    continue
+                driver.execute_script("arguments[0].scrollIntoView({block:'center'});", elem)
+                time.sleep(0.3)
+                driver.execute_script("arguments[0].click();", elem)
+                time.sleep(1.5)
+                return True
+            except Exception:
+                continue
+
+    return False
+
+
+def click_day_tab(driver, day_label):
+    # Prefer small filter/tab elements with exact text match
     xpath = (
-        f"//*[self::button or self::a or self::div or self::span]"
-        f"[normalize-space()='{text}']"
+        f"//*[self::a or self::button or self::div or self::span]"
+        f"[normalize-space()='{day_label}']"
     )
     elems = driver.find_elements(By.XPATH, xpath)
 
     for elem in elems:
         try:
+            if not elem.is_displayed():
+                continue
             driver.execute_script("arguments[0].scrollIntoView({block:'center'});", elem)
-            time.sleep(0.3)
+            time.sleep(0.2)
             driver.execute_script("arguments[0].click();", elem)
-            time.sleep(1.2)
+            time.sleep(3)
             return True
         except Exception:
             continue
@@ -228,53 +254,37 @@ def extract_games_from_body_text(driver, game_date):
     return games
 
 
-def save_debug_files(driver):
-    with open("npl_debug_source.html", "w", encoding="utf-8") as f:
+def save_debug_files(driver, suffix=""):
+    suffix_part = f"_{suffix}" if suffix else ""
+
+    with open(f"npl_debug_source{suffix_part}.html", "w", encoding="utf-8") as f:
         f.write(driver.page_source)
 
-    with open("npl_debug_text.txt", "w", encoding="utf-8") as f:
+    with open(f"npl_debug_text{suffix_part}.txt", "w", encoding="utf-8") as f:
         f.write(driver.find_element(By.TAG_NAME, "body").text)
 
-    driver.save_screenshot("npl_debug_screenshot.png")
+    driver.save_screenshot(f"npl_debug_screenshot{suffix_part}.png")
 
 
 def get_remaining_days_this_week():
     today = datetime.now()
     today_label = today.strftime("%a").upper()
-
-    if today_label not in DAY_TO_INDEX:
-        return []
-
     start_index = DAY_TO_INDEX[today_label]
     return DAY_ORDER[start_index:]
 
 
 def get_date_for_day_label(day_label):
     today = datetime.now()
-    today_index = today.weekday()  # Monday=0 ... Sunday=6
+    today_index = today.weekday()  # Mon=0
     target_index = DAY_TO_INDEX[day_label]
-
-    day_diff = target_index - today_index
-    target_date = today + timedelta(days=day_diff)
-
+    target_date = today + timedelta(days=(target_index - today_index))
     return target_date.strftime("%Y-%m-%d")
 
 
-def scrape_single_day(driver, day_label):
-    if not click_text_if_found(driver, day_label):
-        print(f"Could not click day tab: {day_label}")
-        return []
-
-    time.sleep(3)
-
-    game_date = get_date_for_day_label(day_label)
-
+def extract_games_for_current_view(driver, game_date):
     games = extract_games_from_table_rows(driver, game_date)
-
     if not games:
         games = extract_games_from_body_text(driver, game_date)
-
-    print(f"Scraped {len(games)} games for {day_label} ({game_date})")
     return games
 
 
@@ -285,17 +295,54 @@ def scrape_npl():
         driver.get(URL)
         time.sleep(10)
 
-        click_text_if_found(driver, "ALL")
+        click_first_matching_text(driver, "ALL")
         time.sleep(1)
 
-        click_text_if_found(driver, "NSW")
+        click_first_matching_text(driver, "NSW")
         time.sleep(2)
 
         all_games = []
         seen = set()
+        days = get_remaining_days_this_week()
 
-        for day_label in get_remaining_days_this_week():
-            day_games = scrape_single_day(driver, day_label)
+        # First scrape whatever is currently shown
+        if days:
+            current_day = days[0]
+            current_date = get_date_for_day_label(current_day)
+            current_games = extract_games_for_current_view(driver, current_date)
+
+            print(f"Scraped {len(current_games)} games for initial view ({current_day})")
+
+            for game in current_games:
+                key = (
+                    game["venue"],
+                    game["suburb"],
+                    game["date"],
+                    game["time"],
+                    game["buyin"],
+                    game["type"]
+                )
+                if key not in seen:
+                    seen.add(key)
+                    all_games.append(game)
+
+            save_debug_files(driver, current_day.lower())
+
+        # Then click later day tabs
+        for day_label in days[1:]:
+            clicked = click_day_tab(driver, day_label)
+            if not clicked:
+                print(f"Could not click day tab: {day_label}")
+                continue
+
+            time.sleep(4)
+
+            game_date = get_date_for_day_label(day_label)
+            day_games = extract_games_for_current_view(driver, game_date)
+
+            print(f"Scraped {len(day_games)} games for {day_label} ({game_date})")
+
+            save_debug_files(driver, day_label.lower())
 
             for game in day_games:
                 key = (
@@ -306,12 +353,9 @@ def scrape_npl():
                     game["buyin"],
                     game["type"]
                 )
-                if key in seen:
-                    continue
-                seen.add(key)
-                all_games.append(game)
-
-        save_debug_files(driver)
+                if key not in seen:
+                    seen.add(key)
+                    all_games.append(game)
 
         return all_games
 
