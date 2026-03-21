@@ -18,15 +18,15 @@ def clean_text(text):
 
 
 def parse_buyin(entry_text):
-    entry_text = clean_text(entry_text).upper()
+    text = clean_text(entry_text).upper()
 
-    if not entry_text:
+    if not text:
         return None
 
-    if "FREE" in entry_text:
+    if "FREE" in text:
         return 0
 
-    match = re.search(r"\$?\s*([0-9]+(?:\.[0-9]{1,2})?)", entry_text)
+    match = re.search(r"\$?\s*([0-9]+(?:\.[0-9]{1,2})?)", text)
     if not match:
         return None
 
@@ -47,9 +47,15 @@ def parse_venue(venue_text):
             distance = float(distance_match.group(1))
         except Exception:
             distance = None
-        venue_text = re.sub(r"\([\d.]+\s*KM\)", "", venue_text, flags=re.IGNORECASE).strip()
 
-    parts = [p.strip() for p in venue_text.split(",") if p.strip()]
+    venue_without_distance = re.sub(
+        r"\([\d.]+\s*KM\)",
+        "",
+        venue_text,
+        flags=re.IGNORECASE
+    ).strip()
+
+    parts = [p.strip() for p in venue_without_distance.split(",") if p.strip()]
 
     venue = parts[0].title() if len(parts) > 0 else ""
     suburb = parts[1].title() if len(parts) > 1 else ""
@@ -111,20 +117,10 @@ def setup_driver():
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
-    options.add_argument("--window-size=1800,3000")
+    options.add_argument("--window-size=1800,3200")
 
     service = Service(executable_path=chromedriver_path)
     return webdriver.Chrome(service=service, options=options)
-
-
-def save_debug(driver):
-    with open("npl_debug_source.html", "w", encoding="utf-8") as f:
-        f.write(driver.page_source)
-
-    with open("npl_debug_text.txt", "w", encoding="utf-8") as f:
-        f.write(driver.find_element(By.TAG_NAME, "body").text)
-
-    driver.save_screenshot("npl_debug_screenshot.png")
 
 
 def click_text_if_found(driver, text):
@@ -133,6 +129,7 @@ def click_text_if_found(driver, text):
         f"[normalize-space()='{text}']"
     )
     elems = driver.find_elements(By.XPATH, xpath)
+
     for elem in elems:
         try:
             driver.execute_script("arguments[0].scrollIntoView({block:'center'});", elem)
@@ -142,26 +139,33 @@ def click_text_if_found(driver, text):
             return True
         except Exception:
             continue
+
     return False
 
 
-def extract_games_from_rows(driver):
+def extract_games_from_table_rows(driver):
     games = []
     seen = set()
 
-    row_candidates = driver.find_elements(By.XPATH, "//tr[td]")
+    row_candidates = driver.find_elements(By.XPATH, "//tr")
+
     for row in row_candidates:
         try:
-            cols = row.find_elements(By.TAG_NAME, "td")
-            if len(cols) < 4:
+            cells = row.find_elements(By.XPATH, ".//*[self::td or self::th]")
+            texts = [clean_text(c.text) for c in cells if clean_text(c.text)]
+
+            if len(texts) < 4:
                 continue
 
-            venue_text = clean_text(cols[0].text)
-            start_text = clean_text(cols[1].text)
-            entry_text = clean_text(cols[2].text)
-            type_text = clean_text(cols[3].text)
+            if texts[0].upper() == "VENUE":
+                continue
 
-            if not venue_text or not start_text:
+            venue_text = texts[0]
+            start_text = texts[1]
+            entry_text = texts[2]
+            type_text = texts[3]
+
+            if not re.search(r"\d{1,2}:\d{2}\s*[AP]M", start_text, re.IGNORECASE):
                 continue
 
             key = (venue_text, start_text, entry_text, type_text)
@@ -174,6 +178,61 @@ def extract_games_from_rows(driver):
             continue
 
     return games
+
+
+def extract_games_from_body_text(driver):
+    body_text = driver.find_element(By.TAG_NAME, "body").text
+    lines = [clean_text(line) for line in body_text.splitlines()]
+    lines = [line for line in lines if line]
+
+    with open("npl_debug_text.txt", "w", encoding="utf-8") as f:
+        f.write(body_text)
+
+    games = []
+    seen = set()
+
+    pattern = re.compile(
+        r"^(?P<venue>.+?)\s+"
+        r"(?P<time>\d{1,2}:\d{2}\s*[AP]M)\s+"
+        r"(?P<entry>FREE|\$\s*\d+(?:\.\d{2})?)\s+"
+        r"(?P<type>.+)$",
+        re.IGNORECASE
+    )
+
+    for line in lines:
+        upper_line = line.upper()
+
+        if "TODAY'S LEAGUE EVENTS" in upper_line:
+            continue
+        if upper_line in {"VENUE", "START", "ENTRY", "TYPE"}:
+            continue
+        if upper_line == "VENUE START ENTRY TYPE":
+            continue
+
+        match = pattern.match(line)
+        if not match:
+            continue
+
+        venue_text = match.group("venue")
+        start_text = match.group("time")
+        entry_text = match.group("entry")
+        type_text = match.group("type")
+
+        key = (venue_text, start_text, entry_text, type_text)
+        if key in seen:
+            continue
+
+        seen.add(key)
+        games.append(make_game(venue_text, start_text, entry_text, type_text))
+
+    return games
+
+
+def save_debug_files(driver):
+    with open("npl_debug_source.html", "w", encoding="utf-8") as f:
+        f.write(driver.page_source)
+
+    driver.save_screenshot("npl_debug_screenshot.png")
 
 
 def scrape_npl():
@@ -189,11 +248,15 @@ def scrape_npl():
 
         time.sleep(8)
 
-        games = extract_games_from_rows(driver)
+        save_debug_files(driver)
 
-        save_debug(driver)
+        games = extract_games_from_table_rows(driver)
+
+        if not games:
+            games = extract_games_from_body_text(driver)
 
         return games
+
     finally:
         driver.quit()
 
