@@ -1,4 +1,5 @@
 import json
+import os
 import re
 import time
 from datetime import datetime
@@ -41,11 +42,6 @@ def parse_buyin(entry_text):
 
 
 def parse_venue(venue_text):
-    """
-    Example:
-    BERKELEY SPORTS CLUB, WOLLONGONG, NSW
-    CONCOURSE BAR, SYDNEY CBD, NSW (3.2 KM)
-    """
     venue_text = clean_text(venue_text)
 
     distance = None
@@ -61,10 +57,7 @@ def parse_venue(venue_text):
 
     venue = parts[0].title() if len(parts) > 0 else ""
     suburb = parts[1].title() if len(parts) > 1 else ""
-    state = ""
-
-    if len(parts) > 2:
-        state = parts[2].upper().split()[0]
+    state = parts[2].upper().split()[0] if len(parts) > 2 else ""
 
     return venue, suburb, state, distance
 
@@ -72,19 +65,13 @@ def parse_venue(venue_text):
 def make_game(venue_text, start_text, entry_text, type_text):
     venue, suburb, state, distance = parse_venue(venue_text)
 
-    today = datetime.now().strftime("%Y-%m-%d")
-
-    name_parts = [venue]
-    if start_text:
-        name_parts.append(start_text)
-
     return {
         "league": "NPL",
         "state": state,
-        "name": " ".join(name_parts).strip(),
+        "name": f"{venue} {clean_text(start_text)}".strip(),
         "venue": venue,
         "suburb": suburb,
-        "date": today,
+        "date": datetime.now().strftime("%Y-%m-%d"),
         "time": clean_text(start_text),
         "buyin": parse_buyin(entry_text),
         "guarantee": None,
@@ -96,30 +83,55 @@ def make_game(venue_text, start_text, entry_text, type_text):
     }
 
 
+def get_existing_path(paths):
+    for path in paths:
+        if os.path.exists(path):
+            return path
+    return None
+
+
 def setup_driver():
+    chrome_binary = get_existing_path([
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/snap/bin/chromium"
+    ])
+
+    chromedriver_path = get_existing_path([
+        "/usr/bin/chromedriver",
+        "/usr/lib/chromium-browser/chromedriver",
+        "/usr/lib/chromium/chromedriver"
+    ])
+
+    if not chrome_binary:
+        raise RuntimeError("Could not find Chromium binary on runner")
+
+    if not chromedriver_path:
+        raise RuntimeError("Could not find chromedriver on runner")
+
     options = Options()
+    options.binary_location = chrome_binary
     options.add_argument("--headless=new")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1600,2200")
 
-    service = Service()
+    service = Service(executable_path=chromedriver_path)
     driver = webdriver.Chrome(service=service, options=options)
     return driver
 
 
 def safe_click_by_text(driver, texts, timeout=5):
-    """
-    Tries to click a button/filter matching any visible text in `texts`.
-    """
     for text in texts:
-        xpath_candidates = [
+        xpaths = [
             f"//*[self::button or self::a or self::div or self::span][normalize-space()='{text}']",
             f"//*[contains(@class,'btn') and normalize-space()='{text}']",
             f"//*[contains(@class,'filter') and normalize-space()='{text}']",
+            f"//*[contains(@class,'button') and normalize-space()='{text}']",
         ]
 
-        for xpath in xpath_candidates:
+        for xpath in xpaths:
             try:
                 elem = WebDriverWait(driver, timeout).until(
                     EC.element_to_be_clickable((By.XPATH, xpath))
@@ -136,8 +148,7 @@ def safe_click_by_text(driver, texts, timeout=5):
 
 
 def current_day_labels():
-    day = datetime.now().strftime("%a").upper()  # MON, TUE, WED...
-    return [day]
+    return [datetime.now().strftime("%a").upper()]
 
 
 def wait_for_page_ready(driver, timeout=20):
@@ -146,10 +157,7 @@ def wait_for_page_ready(driver, timeout=20):
     )
 
 
-def extract_rows_from_tables(driver):
-    games = []
-
-    # Try all possible row patterns
+def extract_rows(driver):
     row_selectors = [
         "table tbody tr",
         "tbody tr",
@@ -159,6 +167,7 @@ def extract_rows_from_tables(driver):
         ".events-table tbody tr",
     ]
 
+    games = []
     seen = set()
 
     for selector in row_selectors:
@@ -190,46 +199,6 @@ def extract_rows_from_tables(driver):
     return games
 
 
-def extract_rows_from_text_blocks(driver):
-    """
-    Fallback parser if table markup is unusual but visible text exists.
-    """
-    games = []
-
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        for table in tables:
-            text = clean_text(table.text)
-            if "VENUE" not in text.upper() or "START" not in text.upper():
-                continue
-
-            rows = table.find_elements(By.XPATH, ".//tr")
-            for row in rows:
-                cols = row.find_elements(By.XPATH, ".//td")
-                if len(cols) < 4:
-                    continue
-
-                venue_text = clean_text(cols[0].text)
-                start_text = clean_text(cols[1].text)
-                entry_text = clean_text(cols[2].text)
-                type_text = clean_text(cols[3].text)
-
-                if venue_text and start_text:
-                    games.append(make_game(venue_text, start_text, entry_text, type_text))
-    except:
-        pass
-
-    deduped = []
-    seen = set()
-    for g in games:
-        key = (g["venue"], g["time"], g["buyin"], g["type"])
-        if key not in seen:
-            seen.add(key)
-            deduped.append(g)
-
-    return deduped
-
-
 def save_debug_files(driver):
     try:
         with open("npl_debug_source.html", "w", encoding="utf-8") as f:
@@ -251,17 +220,13 @@ def scrape_npl():
         wait_for_page_ready(driver)
         time.sleep(5)
 
-        # Try to set useful filters if present
         safe_click_by_text(driver, ["ALL"])
         safe_click_by_text(driver, ["NSW"])
         safe_click_by_text(driver, current_day_labels())
 
         time.sleep(3)
 
-        games = extract_rows_from_tables(driver)
-
-        if not games:
-            games = extract_rows_from_text_blocks(driver)
+        games = extract_rows(driver)
 
         if not games:
             save_debug_files(driver)
