@@ -129,7 +129,8 @@ def setup_driver():
 def click_first_matching_text(driver, text):
     xpaths = [
         f"//*[self::button or self::a or self::div or self::span][normalize-space()='{text}']",
-        f"//*[contains(normalize-space(), '{text}')]",
+        f"//*[contains(@class, 'filter') and normalize-space()='{text}']",
+        f"//*[contains(@class, 'btn') and normalize-space()='{text}']",
     ]
 
     for xpath in xpaths:
@@ -150,24 +151,25 @@ def click_first_matching_text(driver, text):
 
 
 def click_day_tab(driver, day_label):
-    # Prefer small filter/tab elements with exact text match
-    xpath = (
-        f"//*[self::a or self::button or self::div or self::span]"
-        f"[normalize-space()='{day_label}']"
-    )
-    elems = driver.find_elements(By.XPATH, xpath)
+    xpaths = [
+        f"//*[self::button or self::a or self::div or self::span][normalize-space()='{day_label}']",
+        f"//*[contains(@class, 'filter') and normalize-space()='{day_label}']",
+        f"//*[contains(@class, 'btn') and normalize-space()='{day_label}']",
+    ]
 
-    for elem in elems:
-        try:
-            if not elem.is_displayed():
+    for xpath in xpaths:
+        elems = driver.find_elements(By.XPATH, xpath)
+        for elem in elems:
+            try:
+                if not elem.is_displayed():
+                    continue
+                driver.execute_script("arguments[0].scrollIntoView({block:'center'});", elem)
+                time.sleep(0.2)
+                driver.execute_script("arguments[0].click();", elem)
+                time.sleep(3)
+                return True
+            except Exception:
                 continue
-            driver.execute_script("arguments[0].scrollIntoView({block:'center'});", elem)
-            time.sleep(0.2)
-            driver.execute_script("arguments[0].click();", elem)
-            time.sleep(3)
-            return True
-        except Exception:
-            continue
 
     return False
 
@@ -266,19 +268,20 @@ def save_debug_files(driver, suffix=""):
     driver.save_screenshot(f"npl_debug_screenshot{suffix_part}.png")
 
 
-def get_remaining_days_this_week():
+def get_next_7_days():
     today = datetime.now()
-    today_label = today.strftime("%a").upper()
-    start_index = DAY_TO_INDEX[today_label]
-    return DAY_ORDER[start_index:]
+    result = []
 
+    for offset in range(7):
+        target_date = today + timedelta(days=offset)
+        day_label = target_date.strftime("%a").upper()
+        result.append({
+            "day_label": day_label,
+            "date": target_date.strftime("%Y-%m-%d"),
+            "debug_suffix": target_date.strftime("%a").lower()
+        })
 
-def get_date_for_day_label(day_label):
-    today = datetime.now()
-    today_index = today.weekday()  # Mon=0
-    target_index = DAY_TO_INDEX[day_label]
-    target_date = today + timedelta(days=(target_index - today_index))
-    return target_date.strftime("%Y-%m-%d")
+    return result
 
 
 def extract_games_for_current_view(driver, game_date):
@@ -303,46 +306,27 @@ def scrape_npl():
 
         all_games = []
         seen = set()
-        days = get_remaining_days_this_week()
+        next_7_days = get_next_7_days()
 
-        # First scrape whatever is currently shown
-        if days:
-            current_day = days[0]
-            current_date = get_date_for_day_label(current_day)
-            current_games = extract_games_for_current_view(driver, current_date)
+        for i, day_info in enumerate(next_7_days):
+            day_label = day_info["day_label"]
+            game_date = day_info["date"]
+            debug_suffix = f"{i}_{day_label.lower()}"
 
-            print(f"Scraped {len(current_games)} games for initial view ({current_day})")
+            if i == 0:
+                print(f"Using initial page view for {day_label} ({game_date})")
+            else:
+                clicked = click_day_tab(driver, day_label)
+                if not clicked:
+                    print(f"Could not click day tab: {day_label}")
+                    continue
+                time.sleep(4)
 
-            for game in current_games:
-                key = (
-                    game["venue"],
-                    game["suburb"],
-                    game["date"],
-                    game["time"],
-                    game["buyin"],
-                    game["type"]
-                )
-                if key not in seen:
-                    seen.add(key)
-                    all_games.append(game)
-
-            save_debug_files(driver, current_day.lower())
-
-        # Then click later day tabs
-        for day_label in days[1:]:
-            clicked = click_day_tab(driver, day_label)
-            if not clicked:
-                print(f"Could not click day tab: {day_label}")
-                continue
-
-            time.sleep(4)
-
-            game_date = get_date_for_day_label(day_label)
             day_games = extract_games_for_current_view(driver, game_date)
 
             print(f"Scraped {len(day_games)} games for {day_label} ({game_date})")
 
-            save_debug_files(driver, day_label.lower())
+            save_debug_files(driver, debug_suffix)
 
             for game in day_games:
                 key = (
