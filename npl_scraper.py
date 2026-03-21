@@ -2,7 +2,7 @@ import json
 import os
 import re
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -11,6 +11,9 @@ from selenium.webdriver.chrome.options import Options
 
 
 URL = "https://www.npl.com.au/"
+
+DAY_ORDER = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
+DAY_TO_INDEX = {day: i for i, day in enumerate(DAY_ORDER)}
 
 
 def clean_text(text):
@@ -64,7 +67,7 @@ def parse_venue(venue_text):
     return venue, suburb, state, distance
 
 
-def make_game(venue_text, start_text, entry_text, type_text):
+def make_game(venue_text, start_text, entry_text, type_text, game_date):
     venue, suburb, state, distance = parse_venue(venue_text)
 
     return {
@@ -73,7 +76,7 @@ def make_game(venue_text, start_text, entry_text, type_text):
         "name": f"{venue} {clean_text(start_text)}".strip(),
         "venue": venue,
         "suburb": suburb,
-        "date": datetime.now().strftime("%Y-%m-%d"),
+        "date": game_date,
         "time": clean_text(start_text),
         "buyin": parse_buyin(entry_text),
         "guarantee": None,
@@ -135,7 +138,7 @@ def click_text_if_found(driver, text):
             driver.execute_script("arguments[0].scrollIntoView({block:'center'});", elem)
             time.sleep(0.3)
             driver.execute_script("arguments[0].click();", elem)
-            time.sleep(1.0)
+            time.sleep(1.2)
             return True
         except Exception:
             continue
@@ -143,7 +146,7 @@ def click_text_if_found(driver, text):
     return False
 
 
-def extract_games_from_table_rows(driver):
+def extract_games_from_table_rows(driver, game_date):
     games = []
     seen = set()
 
@@ -173,20 +176,17 @@ def extract_games_from_table_rows(driver):
                 continue
 
             seen.add(key)
-            games.append(make_game(venue_text, start_text, entry_text, type_text))
+            games.append(make_game(venue_text, start_text, entry_text, type_text, game_date))
         except Exception:
             continue
 
     return games
 
 
-def extract_games_from_body_text(driver):
+def extract_games_from_body_text(driver, game_date):
     body_text = driver.find_element(By.TAG_NAME, "body").text
     lines = [clean_text(line) for line in body_text.splitlines()]
     lines = [line for line in lines if line]
-
-    with open("npl_debug_text.txt", "w", encoding="utf-8") as f:
-        f.write(body_text)
 
     games = []
     seen = set()
@@ -223,7 +223,7 @@ def extract_games_from_body_text(driver):
             continue
 
         seen.add(key)
-        games.append(make_game(venue_text, start_text, entry_text, type_text))
+        games.append(make_game(venue_text, start_text, entry_text, type_text, game_date))
 
     return games
 
@@ -232,7 +232,50 @@ def save_debug_files(driver):
     with open("npl_debug_source.html", "w", encoding="utf-8") as f:
         f.write(driver.page_source)
 
+    with open("npl_debug_text.txt", "w", encoding="utf-8") as f:
+        f.write(driver.find_element(By.TAG_NAME, "body").text)
+
     driver.save_screenshot("npl_debug_screenshot.png")
+
+
+def get_remaining_days_this_week():
+    today = datetime.now()
+    today_label = today.strftime("%a").upper()
+
+    if today_label not in DAY_TO_INDEX:
+        return []
+
+    start_index = DAY_TO_INDEX[today_label]
+    return DAY_ORDER[start_index:]
+
+
+def get_date_for_day_label(day_label):
+    today = datetime.now()
+    today_index = today.weekday()  # Monday=0 ... Sunday=6
+    target_index = DAY_TO_INDEX[day_label]
+
+    day_diff = target_index - today_index
+    target_date = today + timedelta(days=day_diff)
+
+    return target_date.strftime("%Y-%m-%d")
+
+
+def scrape_single_day(driver, day_label):
+    if not click_text_if_found(driver, day_label):
+        print(f"Could not click day tab: {day_label}")
+        return []
+
+    time.sleep(3)
+
+    game_date = get_date_for_day_label(day_label)
+
+    games = extract_games_from_table_rows(driver, game_date)
+
+    if not games:
+        games = extract_games_from_body_text(driver, game_date)
+
+    print(f"Scraped {len(games)} games for {day_label} ({game_date})")
+    return games
 
 
 def scrape_npl():
@@ -243,19 +286,34 @@ def scrape_npl():
         time.sleep(10)
 
         click_text_if_found(driver, "ALL")
-        click_text_if_found(driver, "NSW")
-        click_text_if_found(driver, datetime.now().strftime("%a").upper())
+        time.sleep(1)
 
-        time.sleep(8)
+        click_text_if_found(driver, "NSW")
+        time.sleep(2)
+
+        all_games = []
+        seen = set()
+
+        for day_label in get_remaining_days_this_week():
+            day_games = scrape_single_day(driver, day_label)
+
+            for game in day_games:
+                key = (
+                    game["venue"],
+                    game["suburb"],
+                    game["date"],
+                    game["time"],
+                    game["buyin"],
+                    game["type"]
+                )
+                if key in seen:
+                    continue
+                seen.add(key)
+                all_games.append(game)
 
         save_debug_files(driver)
 
-        games = extract_games_from_table_rows(driver)
-
-        if not games:
-            games = extract_games_from_body_text(driver)
-
-        return games
+        return all_games
 
     finally:
         driver.quit()
@@ -267,7 +325,7 @@ def main():
     with open("npl_games.json", "w", encoding="utf-8") as f:
         json.dump(games, f, indent=2, ensure_ascii=False)
 
-    print(f"Scraped {len(games)} NPL games")
+    print(f"Scraped {len(games)} total NPL games")
 
 
 if __name__ == "__main__":
