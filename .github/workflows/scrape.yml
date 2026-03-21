@@ -27,29 +27,28 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y chromium-browser chromium-driver
-          which chromium-browser || true
-          which chromium || true
-          which chromedriver || true
-          chromium-browser --version || true
-          chromium --version || true
-          chromedriver --version || true
 
       - name: Run APL scraper
         run: python apl_scraper.py
+        continue-on-error: true
 
       - name: Run NPL scraper
         run: python npl_scraper.py
+        continue-on-error: true
 
       - name: Run Kings scraper
         run: python kings_scraper.py
+        continue-on-error: true
 
       - name: Run Kings Live scraper
         run: python kings_live_scraper.py
+        continue-on-error: true
 
-      - name: Commit and push
+      - name: Commit and push outputs
+        if: always()
         run: |
           git config --global user.name "poker-bot"
           git config --global user.email "actions@github.com"
-          git add *.json *.html *.png || true
+          git add *.json *.html *.txt *.png || true
           git commit -m "update poker data" || echo "No changes to commit"
           git push
