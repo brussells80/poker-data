@@ -11,6 +11,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 URL = "https://www.npl.com.au/"
+DAY_ORDER = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 
 
 def clean_text(text):
@@ -22,7 +23,6 @@ def parse_buyin(entry_text):
 
     if not text:
         return None
-
     if "FREE" in text:
         return 0
 
@@ -123,7 +123,7 @@ def setup_driver():
     return webdriver.Chrome(service=service, options=options)
 
 
-def click_filter_by_exact_text(driver, text):
+def click_exact_text(driver, text):
     xpaths = [
         f"//*[self::button or self::a or self::div or self::span][normalize-space()='{text}']",
         f"//*[contains(@class,'btn') and normalize-space()='{text}']",
@@ -149,34 +149,32 @@ def click_filter_by_exact_text(driver, text):
 
 def get_next_7_days():
     today = datetime.now()
-    days = []
+    result = []
 
     for offset in range(7):
         target_date = today + timedelta(days=offset)
-        days.append({
+        result.append({
+            "day_label": target_date.strftime("%a").upper(),
             "date": target_date.strftime("%Y-%m-%d"),
-            "day_short": target_date.strftime("%a"),       # Sat
-            "date_label": target_date.strftime("%d/%m"),   # 21/03
             "debug_suffix": f"{offset}_{target_date.strftime('%a').lower()}"
         })
 
-    return days
+    return result
 
 
 def extract_games_from_table_rows(driver, game_date):
     games = []
     seen = set()
 
-    row_candidates = driver.find_elements(By.XPATH, "//tr")
+    rows = driver.find_elements(By.XPATH, "//tr")
 
-    for row in row_candidates:
+    for row in rows:
         try:
             cells = row.find_elements(By.XPATH, ".//*[self::td or self::th]")
             texts = [clean_text(c.text) for c in cells if clean_text(c.text)]
 
             if len(texts) < 4:
                 continue
-
             if texts[0].upper() == "VENUE":
                 continue
 
@@ -264,51 +262,83 @@ def save_debug_files(driver, suffix=""):
     driver.save_screenshot(f"npl_debug_screenshot{suffix_part}.png")
 
 
-def find_day_tab_element(driver, day_short, date_label):
-    """
-    Finds the visible day tab using BOTH weekday and date, e.g. 'Sat' + '21/03'
-    """
-    xpath_candidates = [
-        f"//*[contains(normalize-space(.), '{day_short}') and contains(normalize-space(.), '{date_label}')]",
-        f"//*[self::a or self::button or self::div or self::span][contains(., '{day_short}') and contains(., '{date_label}')]",
-        f"//*[contains(@class,'day') and contains(., '{day_short}') and contains(., '{date_label}')]",
-        f"//*[contains(@class,'tab') and contains(., '{day_short}') and contains(., '{date_label}')]",
-    ]
-
-    for xpath in xpath_candidates:
-        elems = driver.find_elements(By.XPATH, xpath)
-        for elem in elems:
-            try:
-                if not elem.is_displayed():
-                    continue
-                text = clean_text(elem.text)
-                if day_short.lower() in text.lower() and date_label in text:
-                    return elem
-            except Exception:
-                continue
-
+def find_league_heading(driver):
+    xpath = (
+        "//*[contains(translate(normalize-space(.), "
+        "'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'), "
+        "\"TODAY'S LEAGUE EVENTS\")]"
+    )
+    elems = driver.find_elements(By.XPATH, xpath)
+    for elem in elems:
+        try:
+            if elem.is_displayed():
+                return elem
+        except Exception:
+            continue
     return None
 
 
-def click_day_tab(driver, day_short, date_label):
-    elem = find_day_tab_element(driver, day_short, date_label)
+def find_day_tab_under_events_section(driver, day_label):
+    heading = find_league_heading(driver)
+    if heading is None:
+        return None
+
+    heading_y = heading.location.get("y", 0)
+
+    candidates = driver.find_elements(
+        By.XPATH,
+        f"//*[self::a or self::button or self::div or self::span][normalize-space()='{day_label.title()}' or normalize-space()='{day_label}']"
+    )
+
+    filtered = []
+    for elem in candidates:
+        try:
+            if not elem.is_displayed():
+                continue
+
+            loc = elem.location
+            size = elem.size
+            text = clean_text(elem.text).upper()
+
+            if text not in {day_label, day_label.title()}:
+                continue
+
+            y = loc.get("y", 0)
+            x = loc.get("x", 0)
+            width = size.get("width", 0)
+            height = size.get("height", 0)
+
+            if y < heading_y:
+                continue
+            if y > heading_y + 350:
+                continue
+            if width > 120 or height > 80:
+                continue
+
+            filtered.append((y, x, elem))
+        except Exception:
+            continue
+
+    filtered.sort(key=lambda item: (item[0], item[1]))
+    return filtered[0][2] if filtered else None
+
+
+def click_day_tab(driver, day_label):
+    elem = find_day_tab_under_events_section(driver, day_label)
     if elem is None:
         return False
 
     try:
-        before_text = driver.find_element(By.TAG_NAME, "body").text
+        before = driver.find_element(By.TAG_NAME, "body").text
 
         driver.execute_script("arguments[0].scrollIntoView({block:'center'});", elem)
         time.sleep(0.3)
         driver.execute_script("arguments[0].click();", elem)
         time.sleep(4)
 
-        after_text = driver.find_element(By.TAG_NAME, "body").text
+        after = driver.find_element(By.TAG_NAME, "body").text
 
-        # Even if the body text is similar, keep going — some days may genuinely share structure.
-        print(f"Clicked tab {day_short} {date_label}")
-        print(f"Body changed after click: {before_text != after_text}")
-
+        print(f"Clicked {day_label}. Body changed: {before != after}")
         return True
     except Exception:
         return False
@@ -321,10 +351,10 @@ def scrape_npl():
         driver.get(URL)
         time.sleep(10)
 
-        click_filter_by_exact_text(driver, "ALL")
+        click_exact_text(driver, "ALL")
         time.sleep(1)
 
-        click_filter_by_exact_text(driver, "NSW")
+        click_exact_text(driver, "NSW")
         time.sleep(2)
 
         all_games = []
@@ -332,25 +362,23 @@ def scrape_npl():
         next_7_days = get_next_7_days()
 
         for i, day_info in enumerate(next_7_days):
+            day_label = day_info["day_label"]
             game_date = day_info["date"]
-            day_short = day_info["day_short"]
-            date_label = day_info["date_label"]
             debug_suffix = day_info["debug_suffix"]
 
             if i == 0:
-                print(f"Using initial page view for {day_short} {date_label} ({game_date})")
+                print(f"Using initial page view for {day_label} ({game_date})")
             else:
-                clicked = click_day_tab(driver, day_short, date_label)
+                clicked = click_day_tab(driver, day_label)
                 if not clicked:
-                    print(f"Could not click day tab: {day_short} {date_label}")
+                    print(f"Could not click day tab: {day_label}")
                     save_debug_files(driver, f"failed_{debug_suffix}")
                     continue
 
             time.sleep(3)
 
             day_games = extract_games_for_current_view(driver, game_date)
-
-            print(f"Scraped {len(day_games)} games for {day_short} {date_label} ({game_date})")
+            print(f"Scraped {len(day_games)} games for {day_label} ({game_date})")
 
             save_debug_files(driver, debug_suffix)
 
