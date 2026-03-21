@@ -42,11 +42,13 @@ def parse_start_datetime(text):
     Fri, 20 Mar 2026 6:30pm
     """
     text = clean_text(text)
+
     for fmt in ("%a, %d %b %Y %I:%M%p", "%a, %d %b %Y %H:%M"):
         try:
             return datetime.strptime(text, fmt)
         except ValueError:
             continue
+
     return None
 
 
@@ -59,37 +61,62 @@ def parse_blind_level_minutes(detail_text):
     Examples:
     Blind Levels: 20 minutes
     Blind Levels: 30 minutes for Day 1 (16 levels) and then 45 min...
+    Blind levels 15 mins
     """
-    match = re.search(
-        r"Blind Levels:\s*(\d+)\s*(?:minutes|minute|min)\b",
-        detail_text,
-        re.IGNORECASE
-    )
-    if match:
-        return int(match.group(1))
+    patterns = [
+        r"Blind Levels?\s*:\s*(\d+)\s*(?:minutes|minute|min|mins)\b",
+        r"Blind Levels?\s*(\d+)\s*(?:minutes|minute|min|mins)\b",
+    ]
+
+    for pattern in patterns:
+        match = re.search(pattern, detail_text, re.IGNORECASE)
+        if match:
+            return int(match.group(1))
+
     return None
 
 
 def parse_late_reg_level(detail_text):
     """
-    Example:
-    Late Registration: Until start of level 7
+    Tries to capture many variants, e.g.:
+    - Late Registration: Until start of level 7
+    - Late Registration Closes: Start of level 7
+    - Late Reg: start of level 9
+    - Late Registration closes at the start of level 12
     """
-    match = re.search(
-        r"Late Registration:\s*Until start of level\s*(\d+)",
-        detail_text,
-        re.IGNORECASE
-    )
-    if match:
-        return int(match.group(1))
+    patterns = [
+        r"Late Registration(?: Closes)?\s*:\s*Until start of level\s*(\d+)",
+        r"Late Registration(?: Closes)?\s*:\s*Start of level\s*(\d+)",
+        r"Late Registration(?: Closes)?\s*:\s*At the start of level\s*(\d+)",
+        r"Late Registration(?: Closes)?\s*:\s*Closes at the start of level\s*(\d+)",
+        r"Late Reg(?:istration)?\s*:\s*Until start of level\s*(\d+)",
+        r"Late Reg(?:istration)?\s*:\s*Start of level\s*(\d+)",
+        r"Late Reg(?:istration)?\s*:\s*At the start of level\s*(\d+)",
+        r"Late Reg(?:istration)?\s*closes?\s*at\s*the\s*start\s*of\s*level\s*(\d+)",
+        r"Late Registration(?: Closes)?\s*.*?start of level\s*(\d+)",
+        r"Late Reg(?:istration)?\s*.*?start of level\s*(\d+)",
+    ]
+
+    for pattern in patterns:
+        match = re.search(pattern, detail_text, re.IGNORECASE)
+        if match:
+            try:
+                return int(match.group(1))
+            except Exception:
+                continue
+
     return None
 
 
 def calculate_late_reg(start_dt, blind_minutes, late_reg_level):
     """
-    'Until start of level 7' means start time + 6 completed levels.
+    'Until start of level 7' means late reg closes when level 7 starts,
+    so add 6 blind levels to the start time.
     """
     if not start_dt or not blind_minutes or not late_reg_level:
+        return None
+
+    if late_reg_level < 1:
         return None
 
     offset_minutes = (late_reg_level - 1) * blind_minutes
@@ -98,7 +125,7 @@ def calculate_late_reg(start_dt, blind_minutes, late_reg_level):
 
 
 def parse_detail_field(detail_text, label):
-    pattern = rf"{re.escape(label)}:\s*(.+)"
+    pattern = rf"{re.escape(label)}\s*:\s*(.+)"
     match = re.search(pattern, detail_text, re.IGNORECASE)
     if match:
         return clean_text(match.group(1))
@@ -112,40 +139,76 @@ def normalize_venue(raw_venue, title):
         return venue
 
     title_clean = clean_text(title)
-    for prefix in [
-        "Star Sydney",
+
+    venue_prefixes = [
         "The Star Sydney",
-        "Star Gold Coast",
         "The Star Gold Coast",
-        "Star Brisbane",
         "The Star Brisbane",
         "Treasury Brisbane",
-    ]:
+        "Star Sydney",
+        "Star Gold Coast",
+        "Star Brisbane",
+    ]
+
+    for prefix in venue_prefixes:
         if title_clean.lower().startswith(prefix.lower()):
-            return prefix.replace("Star ", "The Star ", 1) if prefix.startswith("Star ") else prefix
+            if prefix.startswith("Star "):
+                return prefix.replace("Star ", "The Star ", 1)
+            return prefix
 
     return None
 
 
+def infer_state_and_suburb(venue):
+    if not venue:
+        return None, None
+
+    venue_lower = venue.lower()
+
+    if "sydney" in venue_lower:
+        return "NSW", "Sydney"
+
+    if "gold coast" in venue_lower:
+        return "QLD", "Gold Coast"
+
+    if "brisbane" in venue_lower or "treasury" in venue_lower:
+        return "QLD", "Brisbane"
+
+    return None, None
+
+
 def build_game(title, start_dt, buyin, detail_text):
     venue = normalize_venue(parse_detail_field(detail_text, "Venue"), title)
+    state, suburb = infer_state_and_suburb(venue)
+
     blind_minutes = parse_blind_level_minutes(detail_text)
     late_reg_level = parse_late_reg_level(detail_text)
     late_reg = calculate_late_reg(start_dt, blind_minutes, late_reg_level)
 
-    reentry = parse_detail_field(detail_text, "Re-Entry")
+    reentry = (
+        parse_detail_field(detail_text, "Re-Entry")
+        or parse_detail_field(detail_text, "Re Entry")
+        or parse_detail_field(detail_text, "Reentries")
+    )
+
     starting_stack = parse_detail_field(detail_text, "Starting Stack")
 
-    game = {
+    guarantee = (
+        parse_money(parse_detail_field(detail_text, "Guarantee"))
+        or parse_money(parse_detail_field(detail_text, "Guaranteed Prize Pool"))
+        or parse_money(parse_detail_field(detail_text, "Prize Pool"))
+    )
+
+    return {
         "league": "Star",
         "name": clean_text(title),
         "venue": venue,
-        "suburb": None,
-        "state": None,
+        "suburb": suburb,
+        "state": state,
         "date": start_dt.strftime("%Y-%m-%d") if start_dt else None,
         "time": format_time_24(start_dt),
         "buyin": buyin,
-        "guarantee": None,
+        "guarantee": guarantee,
         "late_reg": late_reg,
         "entries": None,
         "players_remaining": None,
@@ -155,20 +218,6 @@ def build_game(title, start_dt, buyin, detail_text):
         "starting_stack": starting_stack
     }
 
-    if venue:
-        venue_lower = venue.lower()
-        if "sydney" in venue_lower:
-            game["state"] = "NSW"
-            game["suburb"] = "Sydney"
-        elif "gold coast" in venue_lower:
-            game["state"] = "QLD"
-            game["suburb"] = "Gold Coast"
-        elif "brisbane" in venue_lower or "treasury" in venue_lower:
-            game["state"] = "QLD"
-            game["suburb"] = "Brisbane"
-
-    return game
-
 
 def scrape_star():
     response = requests.get(URL, headers=HEADERS, timeout=30)
@@ -176,6 +225,7 @@ def scrape_star():
 
     soup = BeautifulSoup(response.text, "html.parser")
     page_text = soup.get_text("\n")
+
     lines = [clean_text(line) for line in page_text.splitlines()]
     lines = [line for line in lines if line]
 
@@ -188,7 +238,14 @@ def scrape_star():
 
         looks_like_title = (
             not line.lower().startswith("choose ")
-            and line not in {"Tournament Schedule", "Submit", "TOURNAMENT NAME", "START DATE", "TOTAL BUY-IN", "Load more"}
+            and line not in {
+                "Tournament Schedule",
+                "Submit",
+                "TOURNAMENT NAME",
+                "START DATE",
+                "TOTAL BUY-IN",
+                "Load more"
+            }
             and i + 3 < len(lines)
         )
 
@@ -208,18 +265,22 @@ def scrape_star():
             continue
 
         detail_start = i + 3
-        detail_end = min(i + 20, len(lines))
+        detail_end = min(i + 30, len(lines))
         detail_lines = []
 
         for j in range(detail_start, detail_end):
             candidate = lines[j]
 
             if j > detail_start:
-                next_dt = parse_start_datetime(candidate)
-                if next_dt:
+                maybe_next_dt = parse_start_datetime(candidate)
+                if maybe_next_dt:
                     break
 
-            if candidate in {"Tournament conditions apply", "Prize pool can be found here", "Load more"}:
+            if candidate in {
+                "Tournament conditions apply",
+                "Prize pool can be found here",
+                "Load more"
+            }:
                 continue
 
             detail_lines.append(candidate)
