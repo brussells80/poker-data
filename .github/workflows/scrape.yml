@@ -48,6 +48,10 @@ jobs:
         run: python star_scraper.py
         continue-on-error: true
 
+      - name: Run PokerMania scraper
+        run: python pokermania_scraper.py
+        continue-on-error: true
+
       - name: Commit and push outputs
         if: always()
         run: |
