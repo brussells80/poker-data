@@ -1,16 +1,17 @@
 import json
+import os
 import re
+import time
 from datetime import datetime, timedelta
 
-import requests
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 
 
 URL = "https://www.starpoker.com.au/tournaments"
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0"
-}
 
 
 def clean_text(value):
@@ -37,10 +38,6 @@ def parse_money(value):
 
 
 def parse_start_datetime(text):
-    """
-    Example:
-    Fri, 20 Mar 2026 6:30pm
-    """
     text = clean_text(text)
 
     for fmt in ("%a, %d %b %Y %I:%M%p", "%a, %d %b %Y %H:%M"):
@@ -57,12 +54,6 @@ def format_time_24(dt):
 
 
 def parse_blind_level_minutes(detail_text):
-    """
-    Examples:
-    Blind Levels: 20 minutes
-    Blind Levels: 30 minutes for Day 1 (16 levels) and then 45 min...
-    Blind levels 15 mins
-    """
     patterns = [
         r"Blind Levels?\s*:\s*(\d+)\s*(?:minutes|minute|min|mins)\b",
         r"Blind Levels?\s*(\d+)\s*(?:minutes|minute|min|mins)\b",
@@ -77,13 +68,6 @@ def parse_blind_level_minutes(detail_text):
 
 
 def parse_late_reg_level(detail_text):
-    """
-    Tries to capture many variants, e.g.:
-    - Late Registration: Until start of level 7
-    - Late Registration Closes: Start of level 7
-    - Late Reg: start of level 9
-    - Late Registration closes at the start of level 12
-    """
     patterns = [
         r"Late Registration(?: Closes)?\s*:\s*Until start of level\s*(\d+)",
         r"Late Registration(?: Closes)?\s*:\s*Start of level\s*(\d+)",
@@ -109,10 +93,6 @@ def parse_late_reg_level(detail_text):
 
 
 def calculate_late_reg(start_dt, blind_minutes, late_reg_level):
-    """
-    'Until start of level 7' means late reg closes when level 7 starts,
-    so add 6 blind levels to the start time.
-    """
     if not start_dt or not blind_minutes or not late_reg_level:
         return None
 
@@ -219,16 +199,96 @@ def build_game(title, start_dt, buyin, detail_text):
     }
 
 
-def scrape_star():
-    response = requests.get(URL, headers=HEADERS, timeout=30)
-    response.raise_for_status()
+def get_existing_path(paths):
+    for path in paths:
+        if os.path.exists(path):
+            return path
+    return None
 
-    soup = BeautifulSoup(response.text, "html.parser")
-    page_text = soup.get_text("\n")
 
-    lines = [clean_text(line) for line in page_text.splitlines()]
-    lines = [line for line in lines if line]
+def setup_driver():
+    chrome_binary = get_existing_path([
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/snap/bin/chromium",
+    ])
 
+    chromedriver_path = get_existing_path([
+        "/usr/bin/chromedriver",
+        "/usr/lib/chromium-browser/chromedriver",
+        "/usr/lib/chromium/chromedriver",
+    ])
+
+    if not chrome_binary:
+        raise RuntimeError("Could not find Chromium binary on runner")
+
+    if not chromedriver_path:
+        raise RuntimeError("Could not find chromedriver on runner")
+
+    options = Options()
+    options.binary_location = chrome_binary
+    options.add_argument("--headless=new")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--window-size=1800,4000")
+
+    service = Service(executable_path=chromedriver_path)
+    return webdriver.Chrome(service=service, options=options)
+
+
+def click_load_more_until_done(driver, max_clicks=40):
+    clicks = 0
+
+    while clicks < max_clicks:
+        found_button = None
+
+        candidates = driver.find_elements(
+            By.XPATH,
+            "//*[self::a or self::button or self::div or self::span][contains(translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'load more')]"
+        )
+
+        for elem in candidates:
+            try:
+                if not elem.is_displayed():
+                    continue
+                found_button = elem
+                break
+            except Exception:
+                continue
+
+        if not found_button:
+            print("No more Load more button found")
+            break
+
+        before_height = driver.execute_script("return document.body.scrollHeight")
+        before_text = driver.find_element(By.TAG_NAME, "body").text
+
+        try:
+            driver.execute_script("arguments[0].scrollIntoView({block:'center'});", found_button)
+            time.sleep(1)
+            driver.execute_script("arguments[0].click();", found_button)
+            time.sleep(3)
+        except Exception:
+            try:
+                found_button.click()
+                time.sleep(3)
+            except Exception:
+                print("Could not click Load more")
+                break
+
+        after_height = driver.execute_script("return document.body.scrollHeight")
+        after_text = driver.find_element(By.TAG_NAME, "body").text
+
+        clicks += 1
+        print(f"Clicked Load more {clicks} time(s)")
+
+        if before_height == after_height and before_text == after_text:
+            print("Page content did not change after click")
+            break
+
+
+def extract_games_from_lines(lines):
     games = []
     seen = set()
 
@@ -265,7 +325,7 @@ def scrape_star():
             continue
 
         detail_start = i + 3
-        detail_end = min(i + 30, len(lines))
+        detail_end = min(i + 35, len(lines))
         detail_lines = []
 
         for j in range(detail_start, detail_end):
@@ -302,6 +362,35 @@ def scrape_star():
 
         i += 1
 
+    return games
+
+
+def scrape_star():
+    driver = setup_driver()
+
+    try:
+        driver.get(URL)
+        time.sleep(8)
+
+        click_load_more_until_done(driver)
+
+        html = driver.page_source
+
+        with open("star_debug_source.html", "w", encoding="utf-8") as f:
+            f.write(html)
+
+        driver.save_screenshot("star_debug_screenshot.png")
+
+    finally:
+        driver.quit()
+
+    soup = BeautifulSoup(html, "html.parser")
+    page_text = soup.get_text("\n")
+
+    lines = [clean_text(line) for line in page_text.splitlines()]
+    lines = [line for line in lines if line]
+
+    games = extract_games_from_lines(lines)
     games.sort(key=lambda g: (g.get("date") or "", g.get("time") or "", g.get("name") or ""))
 
     with open("star_games.json", "w", encoding="utf-8") as f:
