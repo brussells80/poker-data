@@ -26,7 +26,7 @@ def parse_money(value):
     if not text:
         return None
 
-    match = re.search(r"([0-9]+(?:,[0-9]{3})*(?:\.[0-9]{1,2})?)", text)
+    match = re.search(r"\$?\s*([0-9]+(?:,[0-9]{3})*(?:\.[0-9]{1,2})?)", text)
     if not match:
         return None
 
@@ -35,6 +35,11 @@ def parse_money(value):
         return float(number) if "." in number else int(number)
     except Exception:
         return None
+
+
+def is_date_line(text):
+    text = clean_text(text)
+    return bool(re.match(r"^[A-Z][a-z]{2}, \d{1,2} [A-Z][a-z]{2} \d{4} \d{1,2}:\d{2}(am|pm)$", text))
 
 
 def parse_start_datetime(text):
@@ -292,58 +297,84 @@ def extract_games_from_lines(lines):
     games = []
     seen = set()
 
+    skip_lines = {
+        "Tournament Schedule",
+        "Submit",
+        "TOURNAMENT NAME",
+        "START DATE",
+        "TOTAL BUY-IN",
+        "Load more",
+        "Tournament conditions apply",
+        "Prize pool can be found here",
+    }
+
     i = 0
     while i < len(lines):
         line = lines[i]
 
-        looks_like_title = (
-            not line.lower().startswith("choose ")
-            and line not in {
-                "Tournament Schedule",
-                "Submit",
-                "TOURNAMENT NAME",
-                "START DATE",
-                "TOTAL BUY-IN",
-                "Load more"
-            }
-            and i + 3 < len(lines)
-        )
-
-        if not looks_like_title:
+        if line in skip_lines or line.lower().startswith("choose "):
             i += 1
             continue
 
-        title = lines[i]
-        date_line = lines[i + 1]
-        buyin_line = lines[i + 2]
+        if not is_date_line(line):
+            i += 1
+            continue
 
+        date_line = line
         start_dt = parse_start_datetime(date_line)
-        buyin = parse_money(buyin_line)
 
-        if not start_dt or buyin is None:
+        if not start_dt:
             i += 1
             continue
 
-        detail_start = i + 3
-        detail_end = min(i + 35, len(lines))
+        # Title is all contiguous lines immediately before the date line,
+        # stopping when we hit a previous buyin/date/header/control line.
+        title_parts = []
+        j = i - 1
+
+        while j >= 0:
+            prev_line = lines[j]
+
+            if (
+                prev_line in skip_lines
+                or prev_line.lower().startswith("choose ")
+                or is_date_line(prev_line)
+                or parse_money(prev_line) is not None and prev_line.strip().startswith("$")
+            ):
+                break
+
+            title_parts.insert(0, prev_line)
+            j -= 1
+
+        title = clean_text(" ".join(title_parts))
+
+        # Next line after date should be buyin
+        buyin = None
+        buyin_index = i + 1
+        if buyin_index < len(lines):
+            buyin = parse_money(lines[buyin_index])
+
+        if not title or buyin is None:
+            i += 1
+            continue
+
         detail_lines = []
+        k = i + 2
 
-        for j in range(detail_start, detail_end):
-            candidate = lines[j]
+        while k < len(lines):
+            candidate = lines[k]
 
-            if j > detail_start:
-                maybe_next_dt = parse_start_datetime(candidate)
-                if maybe_next_dt:
-                    break
+            if is_date_line(candidate):
+                break
 
-            if candidate in {
-                "Tournament conditions apply",
-                "Prize pool can be found here",
-                "Load more"
-            }:
-                continue
+            # Stop if this looks like next event title followed by a date soon after
+            if k + 1 < len(lines) and is_date_line(lines[k + 1]):
+                break
 
-            detail_lines.append(candidate)
+            if candidate not in skip_lines:
+                detail_lines.append(candidate)
+
+            k += 1
 
         detail_text = "\n".join(detail_lines)
         game = build_game(title, start_dt, buyin, detail_text)
@@ -360,7 +391,7 @@ def extract_games_from_lines(lines):
             seen.add(dedupe_key)
             games.append(game)
 
-        i += 1
+        i = k
 
     return games
 
