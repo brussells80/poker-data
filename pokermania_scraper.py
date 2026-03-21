@@ -17,7 +17,6 @@ DAY_ORDER = [
 ]
 DAY_TO_INDEX = {day: i for i, day in enumerate(DAY_ORDER)}
 
-
 VENUE_ALIASES = {
     "mollys tavern": "Molly Malone's Irish Tavern",
     "molly malones irish tavern": "Molly Malone's Irish Tavern",
@@ -29,12 +28,32 @@ VENUE_ALIASES = {
     "molly malone’s irish tavern gt’s": "Molly Malone's Irish Tavern",
 }
 
-
 SUBURB_ALIASES = {
     "surry hills": "Surry Hills",
     "taren point": "Taren Point",
     "cabramatta west": "Cabramatta West",
     "surryhills": "Surry Hills",
+}
+
+BAD_NAME_VALUES = {
+    "start time",
+    "late entry",
+    "entry fee",
+    "prize",
+    "venue address",
+    "venue contact",
+    "venue website",
+    "additional notes",
+    "starting stack",
+    "when",
+    "details",
+    "more details",
+}
+
+MULTIWORD_SUBURBS = {
+    "surry hills",
+    "taren point",
+    "cabramatta west",
 }
 
 
@@ -73,6 +92,38 @@ def canonicalize_suburb(value):
         return SUBURB_ALIASES[text]
 
     return clean_text(value).title()
+
+
+def is_bad_name(value):
+    text = simplify_text(value)
+    if not text:
+        return True
+
+    if text in BAD_NAME_VALUES:
+        return True
+
+    if text.startswith("start time"):
+        return True
+    if text.startswith("late entry"):
+        return True
+    if text.startswith("entry fee"):
+        return True
+    if text.startswith("prize"):
+        return True
+    if text.startswith("venue address"):
+        return True
+    if text.startswith("venue contact"):
+        return True
+    if text.startswith("venue website"):
+        return True
+    if text.startswith("additional notes"):
+        return True
+    if text.startswith("starting stack"):
+        return True
+    if text.startswith("when"):
+        return True
+
+    return False
 
 
 def venue_match_score(summary_venue, detail_name, detail_title):
@@ -191,6 +242,21 @@ def day_to_next_date(day_name):
     return target_date.strftime("%Y-%m-%d")
 
 
+def split_venue_and_suburb(rest):
+    rest = clean_text(rest)
+    tokens = rest.split()
+
+    if not tokens:
+        return "", ""
+
+    if len(tokens) >= 2:
+        last_two = " ".join(tokens[-2:])
+        if simplify_text(last_two) in MULTIWORD_SUBURBS:
+            return " ".join(tokens[:-2]), canonicalize_suburb(last_two)
+
+    return " ".join(tokens[:-1]) if len(tokens) > 1 else rest, canonicalize_suburb(tokens[-1] if len(tokens) > 1 else "")
+
+
 def parse_summary_rows(lines):
     games = []
 
@@ -212,6 +278,8 @@ def parse_summary_rows(lines):
                 break
             if candidate in DAY_ORDER:
                 break
+            if candidate.startswith("### "):
+                break
             parts.append(candidate)
             j += 1
 
@@ -227,7 +295,6 @@ def parse_summary_rows(lines):
         right = clean_text(summary_text[time_match.end():])
 
         entry_fee = right if right else None
-
         left = re.sub(rf"^{day_name}\s+", "", left, flags=re.IGNORECASE).strip()
 
         prize = None
@@ -237,17 +304,7 @@ def parse_summary_rows(lines):
         if left.lower().startswith("cash game"):
             prize = "Cash Game"
             rest = left[9:].strip()
-            rest_tokens = rest.split()
-
-            if len(rest_tokens) >= 3:
-                suburb = " ".join(rest_tokens[-2:])
-                venue = " ".join(rest_tokens[:-2])
-
-                if simplify_text(suburb) not in {"surry hills", "taren point", "cabramatta west"}:
-                    suburb = rest_tokens[-1]
-                    venue = " ".join(rest_tokens[:-1])
-            else:
-                venue = rest
+            venue, suburb = split_venue_and_suburb(rest)
         else:
             prize_match = re.match(r"^(\$\s*[0-9,]+\s*(?:EXP|GTD)?|Tournament)\s+(.+)$", left, re.IGNORECASE)
             if prize_match:
@@ -256,22 +313,20 @@ def parse_summary_rows(lines):
             else:
                 rest = left
 
-            rest_tokens = rest.split()
-            if len(rest_tokens) >= 3:
-                suburb = " ".join(rest_tokens[-2:])
-                venue = " ".join(rest_tokens[:-2])
+            venue, suburb = split_venue_and_suburb(rest)
 
-                if simplify_text(suburb) not in {"surry hills", "taren point", "cabramatta west"}:
-                    suburb = rest_tokens[-1]
-                    venue = " ".join(rest_tokens[:-1])
-            else:
-                venue = rest
+        venue = canonicalize_venue(venue)
+        suburb = canonicalize_suburb(suburb)
+
+        if not venue or is_bad_name(venue):
+            i = j + 1 if j < len(lines) and clean_text(lines[j]) == "More Details" else j
+            continue
 
         games.append({
             "day": day_name,
             "summary_prize": clean_text(prize) if prize else None,
-            "venue": canonicalize_venue(venue),
-            "suburb": canonicalize_suburb(suburb),
+            "venue": venue,
+            "suburb": suburb,
             "summary_time": normalize_time(raw_time),
             "summary_entry_fee": clean_text(entry_fee)
         })
@@ -299,6 +354,10 @@ def parse_detail_sections(lines):
         if j < len(lines) and clean_text(lines[j]).startswith("# "):
             display_title = clean_text(lines[j].replace("# ", "", 1))
             j += 1
+
+        if is_bad_name(section_name) or is_bad_name(display_title):
+            i = j
+            continue
 
         block = []
         while j < len(lines):
@@ -393,6 +452,9 @@ def merge_summary_and_details(summary_rows, detail_sections):
         suburb = canonicalize_suburb(summary.get("suburb"))
         state = "NSW"
 
+        if not venue or is_bad_name(venue):
+            continue
+
         game_type = infer_type_from_prize(prize_text, notes_text)
         guarantee = extract_guarantee(prize_text)
 
@@ -400,6 +462,9 @@ def merge_summary_and_details(summary_rows, detail_sections):
             name = f"{venue} {summary['day']} Cash Game"
         else:
             name = f"{venue} {summary['day']}"
+
+        if is_bad_name(name):
+            continue
 
         game = {
             "league": "PokerMania",
