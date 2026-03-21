@@ -22,7 +22,6 @@ def clean_text(value):
 
 def parse_money(value):
     text = clean_text(value)
-
     if not text:
         return None
 
@@ -39,7 +38,14 @@ def parse_money(value):
 
 def is_date_line(text):
     text = clean_text(text)
-    return bool(re.match(r"^[A-Z][a-z]{2}, \d{1,2} [A-Z][a-z]{2} \d{4} \d{1,2}:\d{2}(am|pm)$", text))
+    return bool(
+        re.match(r"^[A-Z][a-z]{2}, \d{1,2} [A-Z][a-z]{2} \d{4} \d{1,2}:\d{2}(am|pm)$", text)
+    )
+
+
+def is_buyin_line(text):
+    text = clean_text(text)
+    return bool(re.match(r"^\$\s*[0-9]", text))
 
 
 def parse_start_datetime(text):
@@ -100,7 +106,6 @@ def parse_late_reg_level(detail_text):
 def calculate_late_reg(start_dt, blind_minutes, late_reg_level):
     if not start_dt or not blind_minutes or not late_reg_level:
         return None
-
     if late_reg_level < 1:
         return None
 
@@ -119,12 +124,10 @@ def parse_detail_field(detail_text, label):
 
 def normalize_venue(raw_venue, title):
     venue = clean_text(raw_venue)
-
     if venue:
         return venue
 
     title_clean = clean_text(title)
-
     venue_prefixes = [
         "The Star Sydney",
         "The Star Gold Coast",
@@ -152,10 +155,8 @@ def infer_state_and_suburb(venue):
 
     if "sydney" in venue_lower:
         return "NSW", "Sydney"
-
     if "gold coast" in venue_lower:
         return "QLD", "Gold Coast"
-
     if "brisbane" in venue_lower or "treasury" in venue_lower:
         return "QLD", "Brisbane"
 
@@ -267,7 +268,6 @@ def click_load_more_until_done(driver, max_clicks=40):
             break
 
         before_height = driver.execute_script("return document.body.scrollHeight")
-        before_text = driver.find_element(By.TAG_NAME, "body").text
 
         try:
             driver.execute_script("arguments[0].scrollIntoView({block:'center'});", found_button)
@@ -283,21 +283,29 @@ def click_load_more_until_done(driver, max_clicks=40):
                 break
 
         after_height = driver.execute_script("return document.body.scrollHeight")
-        after_text = driver.find_element(By.TAG_NAME, "body").text
-
         clicks += 1
         print(f"Clicked Load more {clicks} time(s)")
 
-        if before_height == after_height and before_text == after_text:
-            print("Page content did not change after click")
+        if before_height == after_height:
+            print("Page height did not change after click")
             break
+
+
+def is_event_start(lines, i):
+    return (
+        i >= 1
+        and i + 2 < len(lines)
+        and is_date_line(lines[i])
+        and lines[i + 1] == lines[i]
+        and is_buyin_line(lines[i + 2])
+    )
 
 
 def extract_games_from_lines(lines):
     games = []
     seen = set()
 
-    skip_lines = {
+    skip_exact = {
         "Tournament Schedule",
         "Submit",
         "TOURNAMENT NAME",
@@ -310,70 +318,54 @@ def extract_games_from_lines(lines):
 
     i = 0
     while i < len(lines):
-        line = lines[i]
-
-        if line in skip_lines or line.lower().startswith("choose "):
+        if not is_event_start(lines, i):
             i += 1
             continue
 
-        if not is_date_line(line):
+        title = clean_text(lines[i - 1])
+        date_line = lines[i]
+        buyin_line = lines[i + 2]
+
+        if (
+            not title
+            or title in skip_exact
+            or title.lower().startswith("choose ")
+            or title.startswith("##")
+            or title.startswith("###")
+            or title.lower().startswith("posted ")
+            or "please speak to a casino host" in title.lower()
+        ):
             i += 1
             continue
 
-        date_line = line
         start_dt = parse_start_datetime(date_line)
+        buyin = parse_money(buyin_line)
 
-        if not start_dt:
-            i += 1
-            continue
-
-        # Title is all contiguous lines immediately before the date line,
-        # stopping when we hit a previous buyin/date/header/control line.
-        title_parts = []
-        j = i - 1
-
-        while j >= 0:
-            prev_line = lines[j]
-
-            if (
-                prev_line in skip_lines
-                or prev_line.lower().startswith("choose ")
-                or is_date_line(prev_line)
-                or parse_money(prev_line) is not None and prev_line.strip().startswith("$")
-            ):
-                break
-
-            title_parts.insert(0, prev_line)
-            j -= 1
-
-        title = clean_text(" ".join(title_parts))
-
-        # Next line after date should be buyin
-        buyin = None
-        buyin_index = i + 1
-        if buyin_index < len(lines):
-            buyin = parse_money(lines[buyin_index])
-
-        if not title or buyin is None:
+        if not start_dt or buyin is None:
             i += 1
             continue
 
         detail_lines = []
-        k = i + 2
+        k = i + 3
 
         while k < len(lines):
-            candidate = lines[k]
-
-            if is_date_line(candidate):
+            if is_event_start(lines, k):
                 break
 
-            # Stop if this looks like next event title followed by a date soon after
-            if k + 1 < len(lines) and is_date_line(lines[k + 1]):
-                break
+            candidate = clean_text(lines[k])
 
-            if candidate not in skip_lines:
-                detail_lines.append(candidate)
+            if (
+                not candidate
+                or candidate in skip_exact
+                or candidate.startswith("##")
+                or candidate.startswith("###")
+                or candidate.lower().startswith("posted ")
+                or "please speak to a casino host" in candidate.lower()
+            ):
+                k += 1
+                continue
 
+            detail_lines.append(candidate)
             k += 1
 
         detail_text = "\n".join(detail_lines)
@@ -402,18 +394,13 @@ def scrape_star():
     try:
         driver.get(URL)
         time.sleep(8)
-
         click_load_more_until_done(driver)
-
         html = driver.page_source
-
-        with open("star_debug_source.html", "w", encoding="utf-8") as f:
-            f.write(html)
-
-        driver.save_screenshot("star_debug_screenshot.png")
-
     finally:
         driver.quit()
+
+    with open("star_debug_source.html", "w", encoding="utf-8") as f:
+        f.write(html)
 
     soup = BeautifulSoup(html, "html.parser")
     page_text = soup.get_text("\n")
