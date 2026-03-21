@@ -11,7 +11,6 @@ from selenium.webdriver.chrome.options import Options
 
 
 URL = "https://www.npl.com.au/"
-DAY_ORDER = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 
 
 def clean_text(text):
@@ -262,80 +261,83 @@ def save_debug_files(driver, suffix=""):
     driver.save_screenshot(f"npl_debug_screenshot{suffix_part}.png")
 
 
-def find_league_heading(driver):
-    xpath = (
-        "//*[contains(translate(normalize-space(.), "
-        "'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'), "
-        "\"TODAY'S LEAGUE EVENTS\")]"
+def find_heading_y(driver):
+    elems = driver.find_elements(
+        By.XPATH,
+        "//*[contains(translate(normalize-space(.), 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'), \"TODAY'S LEAGUE EVENTS\")]"
     )
-    elems = driver.find_elements(By.XPATH, xpath)
     for elem in elems:
         try:
             if elem.is_displayed():
-                return elem
+                return elem.location.get("y", 0)
         except Exception:
             continue
-    return None
+    return 0
 
 
-def find_day_tab_under_events_section(driver, day_label):
-    heading = find_league_heading(driver)
-    if heading is None:
-        return None
+def find_day_container(driver, day_label):
+    heading_y = find_heading_y(driver)
 
-    heading_y = heading.location.get("y", 0)
+    candidates = driver.find_elements(By.XPATH, "//*")
+    matches = []
 
-    candidates = driver.find_elements(
-        By.XPATH,
-        f"//*[self::a or self::button or self::div or self::span][normalize-space()='{day_label.title()}' or normalize-space()='{day_label}']"
-    )
-
-    filtered = []
     for elem in candidates:
         try:
             if not elem.is_displayed():
                 continue
 
-            loc = elem.location
-            size = elem.size
             text = clean_text(elem.text).upper()
-
-            if text not in {day_label, day_label.title()}:
+            if text != day_label:
                 continue
 
-            y = loc.get("y", 0)
-            x = loc.get("x", 0)
-            width = size.get("width", 0)
-            height = size.get("height", 0)
+            x = elem.location.get("x", 0)
+            y = elem.location.get("y", 0)
+            width = elem.size.get("width", 0)
+            height = elem.size.get("height", 0)
 
             if y < heading_y:
                 continue
-            if y > heading_y + 350:
+            if y > heading_y + 250:
                 continue
-            if width > 120 or height > 80:
+            if width > 150 or height > 100:
                 continue
 
-            filtered.append((y, x, elem))
+            # Prefer clickable parent/container rather than the raw text node
+            clickable = elem
+            for _ in range(4):
+                parent = clickable.find_element(By.XPATH, "..")
+                parent_tag = parent.tag_name.lower()
+                parent_text = clean_text(parent.text).upper()
+
+                if (
+                    parent_tag in {"a", "button"}
+                    or "btn" in (parent.get_attribute("class") or "").lower()
+                    or "filter" in (parent.get_attribute("class") or "").lower()
+                    or day_label in parent_text
+                ):
+                    clickable = parent
+                else:
+                    break
+
+            matches.append((y, x, clickable))
         except Exception:
             continue
 
-    filtered.sort(key=lambda item: (item[0], item[1]))
-    return filtered[0][2] if filtered else None
+    matches.sort(key=lambda item: (item[0], item[1]))
+    return matches[0][2] if matches else None
 
 
 def click_day_tab(driver, day_label):
-    elem = find_day_tab_under_events_section(driver, day_label)
+    elem = find_day_container(driver, day_label)
     if elem is None:
         return False
 
     try:
         before = driver.find_element(By.TAG_NAME, "body").text
-
         driver.execute_script("arguments[0].scrollIntoView({block:'center'});", elem)
         time.sleep(0.3)
         driver.execute_script("arguments[0].click();", elem)
         time.sleep(4)
-
         after = driver.find_element(By.TAG_NAME, "body").text
 
         print(f"Clicked {day_label}. Body changed: {before != after}")
