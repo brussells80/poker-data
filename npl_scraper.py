@@ -1,47 +1,102 @@
-import requests
 import json
+from datetime import datetime
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import time
 
-BASE_URL = "https://www.npl.com.au/umbraco/surface/eventsurface/IndexEvents"
 
-headers = {
-    "User-Agent": "Mozilla/5.0",
-    "X-Requested-With": "XMLHttpRequest"
-}
+URL = "https://www.npl.com.au/"
 
-games = []
 
-for day in range(7):
+def clean_text(text):
+    return text.strip().replace("\n", "").replace("\t", "")
 
-    url = f"{BASE_URL}?dayOfWeek={day}"
 
-    print("Getting day", day)
+def parse_venue(venue_text):
+    """
+    Example:
+    'PETERSHAM RSL, SYDNEY MARRICKVILLE, NSW (7.6 KM)'
+    """
+    parts = venue_text.split(",")
 
-    r = requests.get(url, headers=headers)
+    venue = parts[0].title()
 
-    if r.status_code != 200:
-        print("Failed request:", r.status_code)
-        continue
+    suburb = ""
+    state = ""
 
-    data = r.json()
+    if len(parts) > 1:
+        suburb = parts[1].strip().title()
 
-    for e in data:
+    if len(parts) > 2:
+        state = parts[2].strip().split(" ")[0]
 
-        games.append({
+    return venue, suburb, state
+
+
+def parse_buyin(entry_text):
+    if "FREE" in entry_text.upper():
+        return 0
+    return int(entry_text.replace("$", "").replace(".00", "").strip())
+
+
+def scrape_npl():
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+
+    driver = webdriver.Chrome(options=options)
+    driver.get(URL)
+
+    time.sleep(5)  # wait for JS to load
+
+    rows = driver.find_elements(By.CSS_SELECTOR, "table tbody tr")
+
+    games = []
+
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    for row in rows:
+        cols = row.find_elements(By.TAG_NAME, "td")
+
+        if len(cols) < 4:
+            continue
+
+        venue_text = clean_text(cols[0].text)
+        start_text = clean_text(cols[1].text)
+        entry_text = clean_text(cols[2].text)
+        type_text = clean_text(cols[3].text)
+
+        venue, suburb, state = parse_venue(venue_text)
+
+        game = {
             "league": "NPL",
-            "state": e.get("State"),
-            "name": e.get("Name"),
-            "venue": e.get("Venue"),
-            "suburb": e.get("Suburb"),
-            "date": e.get("Date"),
-            "time": e.get("StartTime"),
-            "buyin": e.get("Entry"),
-            "guarantee": e.get("Guarantee"),
+            "state": state,
+            "name": f"{venue} {start_text}",
+            "venue": venue,
+            "suburb": suburb,
+            "date": today,
+            "time": start_text,
+            "buyin": parse_buyin(entry_text),
+            "guarantee": None,
             "late_reg": None,
+            "type": type_text,
             "lat": None,
             "lng": None
-        })
+        }
 
-with open("npl_games.json", "w") as f:
-    json.dump(games, f, indent=2)
+        games.append(game)
 
-print("Saved", len(games), "NPL games")
+    driver.quit()
+
+    return games
+
+
+if __name__ == "__main__":
+    games = scrape_npl()
+
+    with open("npl_games.json", "w") as f:
+        json.dump(games, f, indent=2)
+
+    print(f"Scraped {len(games)} games")
