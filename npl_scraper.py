@@ -1,9 +1,11 @@
 import json
-from datetime import datetime
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
 import time
+from datetime import datetime
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 
 
 URL = "https://www.npl.com.au/"
@@ -35,21 +37,38 @@ def parse_venue(venue_text):
 
 
 def parse_buyin(entry_text):
-    if "FREE" in entry_text.upper():
+    entry_text = entry_text.upper()
+
+    if "FREE" in entry_text:
         return 0
-    return int(entry_text.replace("$", "").replace(".00", "").strip())
+
+    try:
+        return int(entry_text.replace("$", "").replace(".00", "").strip())
+    except:
+        return None
 
 
-def scrape_npl():
+def setup_driver():
     options = Options()
-    options.add_argument("--headless")
+    options.add_argument("--headless=new")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
-    driver = webdriver.Chrome(options=options)
+    # Required for GitHub Actions
+    options.binary_location = "/usr/bin/chromium-browser"
+
+    service = Service("/usr/bin/chromedriver")
+
+    driver = webdriver.Chrome(service=service, options=options)
+
+    return driver
+
+
+def scrape_npl():
+    driver = setup_driver()
     driver.get(URL)
 
-    time.sleep(5)  # wait for JS to load
+    time.sleep(6)  # allow JS to render
 
     rows = driver.find_elements(By.CSS_SELECTOR, "table tbody tr")
 
@@ -93,10 +112,14 @@ def scrape_npl():
     return games
 
 
-if __name__ == "__main__":
+def main():
     games = scrape_npl()
 
     with open("npl_games.json", "w") as f:
         json.dump(games, f, indent=2)
 
-    print(f"Scraped {len(games)} games")
+    print(f"Scraped {len(games)} NPL games")
+
+
+if __name__ == "__main__":
+    main()
