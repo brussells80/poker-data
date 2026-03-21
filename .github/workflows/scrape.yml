@@ -44,6 +44,10 @@ jobs:
         run: python kings_live_scraper.py
         continue-on-error: true
 
+      - name: Run Star scraper
+        run: python star_scraper.py
+        continue-on-error: true
+
       - name: Commit and push outputs
         if: always()
         run: |
