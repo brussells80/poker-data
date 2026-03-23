@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Sydney Champs Event #7 $465 PLO",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-03-22",
-    "time": "10:30",
-    "buyin": 465,
-    "guarantee": null,
-    "late_reg": "12:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited re-entry",
-    "blind_level_minutes": 20,
-    "late_reg_level": 7,
-    "starting_stack": "25,000"
-  },
-  {
-    "league": "Star",
     "name": "Sydney Champs Event #1 Opening Event Final Day",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 30,
     "late_reg_level": 9,
     "starting_stack": "50,000"
+  },
+  {
+    "league": "Star",
+    "name": "Sydney Champs The Dominator 1 in 6 Satellite",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-03-23",
+    "time": "20:30",
+    "buyin": 240,
+    "guarantee": null,
+    "late_reg": "22:15",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited re-entry",
+    "blind_level_minutes": 15,
+    "late_reg_level": 8,
+    "starting_stack": "15,000"
   }
 ]
