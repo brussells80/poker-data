@@ -9,7 +9,7 @@
     "buyin": "Tuesday Highroller",
     "guarantee": "$200",
     "late_reg": null,
-    "clock": "$10,370",
+    "clock": "$20,400",
     "type": "20",
     "chips": "Re-Buy",
     "entries": null,
@@ -21,15 +21,15 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Poker @ Churchills Sports Bar 5 times a week!Re-BuyGame:NL HEBuy-In:$200Prize Pool:$10,370Chips:30,000Entries:49Players:48Reg Ends:8Status:OPEN (till level 8)Status:RunningShow me more details...",
+    "start_time": "Poker @ Churchills Sports Bar 5 times a week!Re-BuyGame:NL HEBuy-In:$200Prize Pool:$20,400Chips:30,000Entries:73Players:49Reg Ends:8Status:CLOSEDStatus:RunningShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": "8",
     "clock": "$200",
     "type": "Prize Pool:",
-    "chips": "$10,370",
-    "entries": "49",
-    "players_remaining": "48"
+    "chips": "$20,400",
+    "entries": "73",
+    "players_remaining": "49"
   },
   {
     "league": "Kings",
