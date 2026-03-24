@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Sydney Champs Event #11 NSW PLO Championship Day 1",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-03-23",
-    "time": "18:30",
-    "buyin": 1500,
-    "guarantee": null,
-    "late_reg": "22:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited re-entry",
-    "blind_level_minutes": 30,
-    "late_reg_level": 9,
-    "starting_stack": "50,000"
-  },
-  {
-    "league": "Star",
     "name": "Sydney Champs The Dominator 1 in 6 Satellite",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 20,
     "late_reg_level": 7,
     "starting_stack": "25,000"
+  },
+  {
+    "league": "Star",
+    "name": "Sydney Champs $5k High Roller Challenge 1 in 10 Satellite",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-03-25",
+    "time": "11:30",
+    "buyin": 540,
+    "guarantee": null,
+    "late_reg": "13:15",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited re-entry",
+    "blind_level_minutes": 15,
+    "late_reg_level": 8,
+    "starting_stack": "15,000"
   }
 ]
