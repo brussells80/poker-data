@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Sydney Champs Event #10 $350 Morning Chill Freezeout",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-03-23",
-    "time": "10:30",
-    "buyin": 350,
-    "guarantee": null,
-    "late_reg": "12:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Freezeout",
-    "blind_level_minutes": 20,
-    "late_reg_level": 7,
-    "starting_stack": "25,000"
-  },
-  {
-    "league": "Star",
     "name": "Sydney Champs Main Event 1 in 8 Satellite",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 20,
     "late_reg_level": 7,
     "starting_stack": "30,000"
+  },
+  {
+    "league": "Star",
+    "name": "Sydney Champs Main Event 1 in 8 Satellite",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-03-24",
+    "time": "20:30",
+    "buyin": 290,
+    "guarantee": null,
+    "late_reg": "22:15",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited re-entry",
+    "blind_level_minutes": 15,
+    "late_reg_level": 8,
+    "starting_stack": "15,000"
   }
 ]
