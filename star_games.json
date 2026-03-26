@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Sydney Champs Event #15 $5k High Roller Challenge Day 1",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-03-25",
-    "time": "17:30",
-    "buyin": 5000,
-    "guarantee": null,
-    "late_reg": null,
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited re-entry",
-    "blind_level_minutes": 40,
-    "late_reg_level": null,
-    "starting_stack": "250,000"
-  },
-  {
-    "league": "Star",
     "name": "Sydney Champs Survivor Bounty 1 in 5 Satellite",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 30,
     "late_reg_level": null,
     "starting_stack": "40,000"
+  },
+  {
+    "league": "Star",
+    "name": "Sydney Champs Event #20 Main Event Day 1A",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-03-27",
+    "time": "13:30",
+    "buyin": 2000,
+    "guarantee": null,
+    "late_reg": "19:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited re-entry",
+    "blind_level_minutes": 40,
+    "late_reg_level": 10,
+    "starting_stack": "50,000"
   }
 ]
