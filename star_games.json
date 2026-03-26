@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Sydney Champs Event #13 $400 Single Wave",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-03-25",
-    "time": "10:30",
-    "buyin": 400,
-    "guarantee": null,
-    "late_reg": "12:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Freezeout",
-    "blind_level_minutes": 20,
-    "late_reg_level": 7,
-    "starting_stack": "25,000"
-  },
-  {
-    "league": "Star",
     "name": "Sydney Champs $5k High Roller Challenge 1 in 10 Satellite",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 20,
     "late_reg_level": 7,
     "starting_stack": "30,000"
+  },
+  {
+    "league": "Star",
+    "name": "Sydney Champs Event #18 $400 20-20",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-03-26",
+    "time": "18:30",
+    "buyin": 400,
+    "guarantee": null,
+    "late_reg": "20:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single Re-Entry",
+    "blind_level_minutes": 20,
+    "late_reg_level": 7,
+    "starting_stack": "20,000"
   }
 ]
