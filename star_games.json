@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Sydney Champs Survivor Bounty 1 in 5 Satellite",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-03-25",
-    "time": "20:30",
-    "buyin": 240,
-    "guarantee": null,
-    "late_reg": "22:15",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited re-entry",
-    "blind_level_minutes": 15,
-    "late_reg_level": 8,
-    "starting_stack": "15,000"
-  },
-  {
-    "league": "Star",
     "name": "Sydney Champs Event # 16 PLO Bounty",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 40,
     "late_reg_level": 10,
     "starting_stack": "50,000"
+  },
+  {
+    "league": "Star",
+    "name": "Star Gold Coast $200 Friday Freezeout",
+    "venue": "The Star Gold Coast",
+    "suburb": "Gold Coast",
+    "state": "QLD",
+    "date": "2026-03-27",
+    "time": "17:15",
+    "buyin": 200,
+    "guarantee": null,
+    "late_reg": "19:15",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Freezeout",
+    "blind_level_minutes": 20,
+    "late_reg_level": 7,
+    "starting_stack": "25,000"
   }
 ]
