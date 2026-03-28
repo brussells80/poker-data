@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Sydney Champs Main Event 1 in 5 Satellite",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-03-27",
-    "time": "19:30",
-    "buyin": 440,
-    "guarantee": null,
-    "late_reg": "21:15",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited re-entry",
-    "blind_level_minutes": 15,
-    "late_reg_level": 8,
-    "starting_stack": "15,000"
-  },
-  {
-    "league": "Star",
     "name": "Sydney Champs Event #21 Fast Freeze",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 15,
     "late_reg_level": 8,
     "starting_stack": "15,000"
+  },
+  {
+    "league": "Star",
+    "name": "Sydney Champs Event # 23 Land Shark Frenzy",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-03-30",
+    "time": "10:30",
+    "buyin": 400,
+    "guarantee": null,
+    "late_reg": "12:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited re-entry",
+    "blind_level_minutes": 20,
+    "late_reg_level": 7,
+    "starting_stack": "25,000"
   }
 ]
