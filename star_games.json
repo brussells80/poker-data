@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Sydney Champs Event #21 Fast Freeze",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-03-28",
-    "time": "10:30",
-    "buyin": 400,
-    "guarantee": null,
-    "late_reg": "12:00",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Freezeout",
-    "blind_level_minutes": 15,
-    "late_reg_level": 7,
-    "starting_stack": "25,000"
-  },
-  {
-    "league": "Star",
     "name": "Star Gold Coast $400 Action Clock Saturday",
     "venue": "The Star Gold Coast",
     "suburb": "Gold Coast",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 20,
     "late_reg_level": 7,
     "starting_stack": "25,000"
+  },
+  {
+    "league": "Star",
+    "name": "Sydney Champs Event #20 Main Event Day 2",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-03-30",
+    "time": "11:30",
+    "buyin": 2000,
+    "guarantee": null,
+    "late_reg": null,
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited re-entry",
+    "blind_level_minutes": 40,
+    "late_reg_level": null,
+    "starting_stack": "50,000"
   }
 ]
