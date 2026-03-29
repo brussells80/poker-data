@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Sydney Champs Main Event 1 in 5 Satellite",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-03-28",
-    "time": "20:30",
-    "buyin": 440,
-    "guarantee": null,
-    "late_reg": "22:15",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited re-entry",
-    "blind_level_minutes": 15,
-    "late_reg_level": 8,
-    "starting_stack": "15,000"
-  },
-  {
-    "league": "Star",
     "name": "Sydney Champs Event # 22 $500 Grinder",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 20,
     "late_reg_level": 7,
     "starting_stack": "25,000"
+  },
+  {
+    "league": "Star",
+    "name": "Sydney Champs Event #20 Main Event Final Day",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-03-31",
+    "time": "11:30",
+    "buyin": 2000,
+    "guarantee": null,
+    "late_reg": null,
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited re-entry",
+    "blind_level_minutes": 40,
+    "late_reg_level": null,
+    "starting_stack": "50,000"
   }
 ]
