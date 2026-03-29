@@ -418,6 +418,22 @@
   {
     "league": "NPL",
     "state": "NSW",
+    "name": "Queanbeyan Kangaroos Rlfc 12:00 PM",
+    "venue": "Queanbeyan Kangaroos Rlfc",
+    "suburb": "Queanbeyan / Act",
+    "date": "2026-03-29",
+    "time": "12:00 PM",
+    "buyin": 65.0,
+    "guarantee": null,
+    "late_reg": "3:00 PM",
+    "type": "TEXAS HOLD 'EM",
+    "distance_km": 12199.0,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "league": "NPL",
+    "state": "NSW",
     "name": "Queanbeyan Kangaroos Rlfc 3:00 PM",
     "venue": "Queanbeyan Kangaroos Rlfc",
     "suburb": "Queanbeyan / Act",
