@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Sydney Champs Event #25 Bondi Super Stack Day 1",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-03-30",
-    "time": "17:30",
-    "buyin": 3000,
-    "guarantee": null,
-    "late_reg": "23:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Double re-entry",
-    "blind_level_minutes": 30,
-    "late_reg_level": 13,
-    "starting_stack": "75,000"
-  },
-  {
-    "league": "Star",
     "name": "Sydney Champs Event #26 Final Freeze",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -177,6 +159,24 @@
     "type": "1 re-entry only",
     "blind_level_minutes": 20,
     "late_reg_level": 7,
+    "starting_stack": "30,000"
+  },
+  {
+    "league": "Star",
+    "name": "Star Sydney $300 Mid-week Warrior",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-04-08",
+    "time": "18:15",
+    "buyin": 300,
+    "guarantee": null,
+    "late_reg": "20:20",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 Re-entries",
+    "blind_level_minutes": 25,
+    "late_reg_level": 6,
     "starting_stack": "30,000"
   }
 ]
