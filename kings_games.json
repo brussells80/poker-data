@@ -14,16 +14,16 @@
   },
   {
     "league": "Kings",
-    "name": "Manly Leagues Sunday",
+    "name": "Cancelled",
     "venue": "119",
     "date": "2026-04-05 00:00:00",
     "time": "13:30",
-    "buyin": 150,
-    "guarantee": 4000,
+    "buyin": null,
+    "guarantee": null,
     "late_reg": "16:00",
     "entries": null,
     "players_remaining": null,
-    "type": "2 x re-entry"
+    "type": null
   },
   {
     "league": "Kings",
