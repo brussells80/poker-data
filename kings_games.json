@@ -157,16 +157,16 @@
   },
   {
     "league": "Kings",
-    "name": "Churchills Thursday",
+    "name": "East leaderboard game",
     "venue": "158",
     "date": "2026-04-09 00:00:00",
     "time": "19:00",
-    "buyin": 35,
-    "guarantee": 2000,
+    "buyin": 55,
+    "guarantee": 3000,
     "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
-    "type": "2 x re-entry"
+    "type": "Single re-entry"
   },
   {
     "league": "Kings",
