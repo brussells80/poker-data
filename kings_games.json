@@ -79,6 +79,19 @@
   },
   {
     "league": "Kings",
+    "name": "Kings Room Wednesday Colossus satty",
+    "venue": "122",
+    "date": "2026-04-15 00:00:00",
+    "time": "18:30",
+    "buyin": 150,
+    "guarantee": 9600,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
+  },
+  {
+    "league": "Kings",
     "name": "Kings Room Wednesday cash game",
     "venue": "122",
     "date": "2026-04-15 00:00:00",
