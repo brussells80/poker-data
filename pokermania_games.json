@@ -90,29 +90,6 @@
   },
   {
     "league": "PokerMania",
-    "name": "Meridian Hotel Wednesday Cash Game",
-    "venue": "Meridian Hotel",
-    "suburb": "Hurstville",
-    "state": "NSW",
-    "date": "2026-04-15",
-    "time": "21:30",
-    "buyin": {
-      "min": 50,
-      "max": 200
-    },
-    "guarantee": null,
-    "late_reg": null,
-    "entries": null,
-    "players_remaining": null,
-    "type": "Cash Game",
-    "starting_stack": null,
-    "venue_address": null,
-    "venue_contact": null,
-    "venue_website": null,
-    "additional_notes": null
-  },
-  {
-    "league": "PokerMania",
     "name": "Earlwood Hotel Thursday Cash Game",
     "venue": "Earlwood Hotel",
     "suburb": "Earlwood",
