@@ -9,7 +9,7 @@
     "buyin": "Easts $10k GTD",
     "guarantee": "$90",
     "late_reg": null,
-    "clock": "$10,000",
+    "clock": "$11,680",
     "type": "20",
     "chips": "1xRe-Entry",
     "entries": null,
@@ -21,15 +21,15 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "1xRe-EntryGame:NL HEBuy-In:$90GTD:$10,000Prize Pool:$10,000Chips:40,000Entries:81Players:80Reg Ends:8Status:OPEN (till level 8)Status:RunningShow me more details...",
+    "start_time": "1xRe-EntryGame:NL HEBuy-In:$90GTD:$10,000Prize Pool:$11,680Chips:40,000Entries:146Players:126Reg Ends:8Status:OPEN (till level 8)Status:RunningShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": "8",
     "clock": "$90",
     "type": "GTD:",
     "chips": "$10,000",
-    "entries": "81",
-    "players_remaining": "80"
+    "entries": "146",
+    "players_remaining": "126"
   },
   {
     "league": "Kings",
