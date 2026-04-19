@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Star Sydney $675 Monthly Monster Stack",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-04-18",
-    "time": "14:15",
-    "buyin": 675,
-    "guarantee": null,
-    "late_reg": null,
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited Re-Entry",
-    "blind_level_minutes": 25,
-    "late_reg_level": null,
-    "starting_stack": "50,000"
-  },
-  {
-    "league": "Star",
     "name": "Star Sydney Single Reload Monday",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -177,6 +159,24 @@
     "type": "Unlimited re-entry",
     "blind_level_minutes": 25,
     "late_reg_level": 9,
+    "starting_stack": "40,000"
+  },
+  {
+    "league": "Star",
+    "name": "Star Sydney $400 Action Clock Saturday",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-05-02",
+    "time": "14:15",
+    "buyin": 400,
+    "guarantee": null,
+    "late_reg": "18:25",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited re-entry",
+    "blind_level_minutes": 25,
+    "late_reg_level": 11,
     "starting_stack": "40,000"
   }
 ]
