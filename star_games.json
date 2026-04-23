@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Star Sydney $300 Mid-week Warrior",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-04-22",
-    "time": "18:15",
-    "buyin": 300,
-    "guarantee": null,
-    "late_reg": "20:20",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 Re-entries",
-    "blind_level_minutes": 25,
-    "late_reg_level": 6,
-    "starting_stack": "30,000"
-  },
-  {
-    "league": "Star",
     "name": "Star Gold Coast $250 Single Shot Thursday",
     "venue": "The Star Gold Coast",
     "suburb": "Gold Coast",
@@ -177,6 +159,24 @@
     "type": "1 re-entry only",
     "blind_level_minutes": 20,
     "late_reg_level": 7,
+    "starting_stack": "30,000"
+  },
+  {
+    "league": "Star",
+    "name": "Star Sydney $300 Mid-week Warrior",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-05-06",
+    "time": "18:15",
+    "buyin": 300,
+    "guarantee": null,
+    "late_reg": "20:20",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 Re-entries",
+    "blind_level_minutes": 25,
+    "late_reg_level": 6,
     "starting_stack": "30,000"
   }
 ]
