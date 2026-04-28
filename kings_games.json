@@ -66,6 +66,19 @@
   },
   {
     "league": "Kings",
+    "name": "Kings Room Wednesday Colossus satty",
+    "venue": "122",
+    "date": "2026-04-29 00:00:00",
+    "time": "18:30",
+    "buyin": 150,
+    "guarantee": 9600,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
+  },
+  {
+    "league": "Kings",
     "name": "Kings Room Wednesday cash game",
     "venue": "122",
     "date": "2026-04-29 00:00:00",
@@ -183,19 +196,6 @@
   },
   {
     "league": "Kings",
-    "name": "Arena Sports Thursday",
-    "venue": "181",
-    "date": "2026-04-30 00:00:00",
-    "time": "19:00",
-    "buyin": 30,
-    "guarantee": 2500,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single reload"
-  },
-  {
-    "league": "Kings",
     "name": "Churchills Thursday",
     "venue": "158",
     "date": "2026-04-30 00:00:00",
@@ -245,19 +245,6 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
-  },
-  {
-    "league": "Kings",
-    "name": "Arena Sports Friday",
-    "venue": "181",
-    "date": "2026-05-01 00:00:00",
-    "time": "19:00",
-    "buyin": 30,
-    "guarantee": 2500,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single reload"
   },
   {
     "league": "Kings",
@@ -677,19 +664,6 @@
   },
   {
     "league": "Kings",
-    "name": "Arena Sports Thursday",
-    "venue": "181",
-    "date": "2026-05-07 00:00:00",
-    "time": "19:00",
-    "buyin": 30,
-    "guarantee": 2500,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single reload"
-  },
-  {
-    "league": "Kings",
     "name": "Churchills Thursday",
     "venue": "158",
     "date": "2026-05-07 00:00:00",
@@ -739,19 +713,6 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
-  },
-  {
-    "league": "Kings",
-    "name": "Arena Sports Friday",
-    "venue": "181",
-    "date": "2026-05-08 00:00:00",
-    "time": "19:00",
-    "buyin": 30,
-    "guarantee": 2500,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single reload"
   },
   {
     "league": "Kings",
@@ -1171,19 +1132,6 @@
   },
   {
     "league": "Kings",
-    "name": "Arena Sports Thursday",
-    "venue": "181",
-    "date": "2026-05-14 00:00:00",
-    "time": "19:00",
-    "buyin": 30,
-    "guarantee": 2500,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single reload"
-  },
-  {
-    "league": "Kings",
     "name": "Churchills Thursday",
     "venue": "158",
     "date": "2026-05-14 00:00:00",
@@ -1233,19 +1181,6 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
-  },
-  {
-    "league": "Kings",
-    "name": "Arena Sports Friday",
-    "venue": "181",
-    "date": "2026-05-15 00:00:00",
-    "time": "19:00",
-    "buyin": 30,
-    "guarantee": 2500,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single reload"
   },
   {
     "league": "Kings",
@@ -1652,19 +1587,6 @@
   },
   {
     "league": "Kings",
-    "name": "Arena Sports Thursday",
-    "venue": "181",
-    "date": "2026-05-21 00:00:00",
-    "time": "19:00",
-    "buyin": 30,
-    "guarantee": 2500,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single reload"
-  },
-  {
-    "league": "Kings",
     "name": "Churchills Thursday",
     "venue": "158",
     "date": "2026-05-21 00:00:00",
@@ -1714,19 +1636,6 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
-  },
-  {
-    "league": "Kings",
-    "name": "Arena Sports Friday",
-    "venue": "181",
-    "date": "2026-05-22 00:00:00",
-    "time": "19:00",
-    "buyin": 30,
-    "guarantee": 2500,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single reload"
   },
   {
     "league": "Kings",
@@ -2130,19 +2039,6 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
-  },
-  {
-    "league": "Kings",
-    "name": "Arena Sports Thursday",
-    "venue": "181",
-    "date": "2026-05-28 00:00:00",
-    "time": "19:00",
-    "buyin": 30,
-    "guarantee": 2500,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single reload"
   },
   {
     "league": "Kings",
