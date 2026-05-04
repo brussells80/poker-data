@@ -105,11 +105,11 @@
   },
   {
     "league": "Kings",
-    "name": "Churchills Tuesday Highroller",
+    "name": "Churchills Tuesday XTRA Highroller",
     "venue": "158",
     "date": "2026-05-05 00:00:00",
     "time": "18:00",
-    "buyin": 200,
+    "buyin": 300,
     "guarantee": null,
     "late_reg": "9:20",
     "entries": null,
@@ -313,6 +313,32 @@
   },
   {
     "league": "Kings",
+    "name": "Waverly Greens Friday arvo",
+    "venue": "165",
+    "date": "2026-05-08 00:00:00",
+    "time": "15:00",
+    "buyin": 25,
+    "guarantee": 500,
+    "late_reg": "17:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Kings Room Friday",
+    "venue": "122",
+    "date": "2026-05-08 00:00:00",
+    "time": "17:00",
+    "buyin": 250,
+    "guarantee": 25000,
+    "late_reg": "19:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
+  },
+  {
+    "league": "Kings",
     "name": "Scots Club Friday",
     "venue": "166",
     "date": "2026-05-08 00:00:00",
@@ -323,19 +349,6 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
-    "name": "Kings Room Friday",
-    "venue": "122",
-    "date": "2026-05-08 00:00:00",
-    "time": "18:30",
-    "buyin": 250,
-    "guarantee": 15000,
-    "late_reg": "21:00",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Re entry"
   },
   {
     "league": "Kings",
@@ -781,6 +794,19 @@
   },
   {
     "league": "Kings",
+    "name": "Waverly Greens Friday arvo",
+    "venue": "165",
+    "date": "2026-05-15 00:00:00",
+    "time": "15:00",
+    "buyin": 25,
+    "guarantee": 500,
+    "late_reg": "17:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Scots Club Friday",
     "venue": "166",
     "date": "2026-05-15 00:00:00",
@@ -1236,6 +1262,19 @@
   },
   {
     "league": "Kings",
+    "name": "Waverly Greens Friday arvo",
+    "venue": "165",
+    "date": "2026-05-22 00:00:00",
+    "time": "15:00",
+    "buyin": 25,
+    "guarantee": 500,
+    "late_reg": "17:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Scots Club Friday",
     "venue": "166",
     "date": "2026-05-22 00:00:00",
@@ -1688,6 +1727,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "CASH GAME"
+  },
+  {
+    "league": "Kings",
+    "name": "Waverly Greens Friday arvo",
+    "venue": "165",
+    "date": "2026-05-29 00:00:00",
+    "time": "15:00",
+    "buyin": 25,
+    "guarantee": 500,
+    "late_reg": "17:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
   },
   {
     "league": "Kings",
