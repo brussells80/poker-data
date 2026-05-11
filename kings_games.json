@@ -135,12 +135,12 @@
     "venue": "178",
     "date": "2026-05-12 00:00:00",
     "time": "19:00",
-    "buyin": 65,
-    "guarantee": 4000,
-    "late_reg": "9:40",
+    "buyin": 100,
+    "guarantee": 10000,
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
-    "type": "2 x re-entry"
+    "type": "3 x re-entry"
   },
   {
     "league": "Kings",
