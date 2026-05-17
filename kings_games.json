@@ -40,26 +40,13 @@
   },
   {
     "league": "Kings",
-    "name": "Hillside Hotel Mondays",
-    "venue": "182",
-    "date": "2026-05-18 00:00:00",
-    "time": "18:30",
-    "buyin": 120,
-    "guarantee": 4000,
-    "late_reg": "9:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Re entry"
-  },
-  {
-    "league": "Kings",
-    "name": "Kings Room Mondays",
+    "name": "SERIES",
     "venue": "122",
     "date": "2026-05-18 00:00:00",
     "time": "18:30",
-    "buyin": 120,
-    "guarantee": 5000,
-    "late_reg": "9:40",
+    "buyin": null,
+    "guarantee": null,
+    "late_reg": "21:00",
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
@@ -505,19 +492,6 @@
     "entries": null,
     "players_remaining": null,
     "type": "Single rebuy"
-  },
-  {
-    "league": "Kings",
-    "name": "Hillside Hotel Mondays",
-    "venue": "182",
-    "date": "2026-05-25 00:00:00",
-    "time": "18:30",
-    "buyin": 120,
-    "guarantee": 4000,
-    "late_reg": "9:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Re entry"
   },
   {
     "league": "Kings",
@@ -976,19 +950,6 @@
   },
   {
     "league": "Kings",
-    "name": "Hillside Hotel Mondays",
-    "venue": "182",
-    "date": "2026-06-01 00:00:00",
-    "time": "18:30",
-    "buyin": 120,
-    "guarantee": 4000,
-    "late_reg": "9:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Re entry"
-  },
-  {
-    "league": "Kings",
     "name": "Doncaster Monday",
     "venue": "174",
     "date": "2026-06-01 00:00:00",
@@ -1431,19 +1392,6 @@
   },
   {
     "league": "Kings",
-    "name": "Hillside Hotel Mondays",
-    "venue": "182",
-    "date": "2026-06-08 00:00:00",
-    "time": "18:30",
-    "buyin": 120,
-    "guarantee": 4000,
-    "late_reg": "9:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Re entry"
-  },
-  {
-    "league": "Kings",
     "name": "Doncaster Monday",
     "venue": "174",
     "date": "2026-06-08 00:00:00",
@@ -1831,19 +1779,6 @@
     "entries": null,
     "players_remaining": null,
     "type": "Single rebuy"
-  },
-  {
-    "league": "Kings",
-    "name": "Hillside Hotel Mondays",
-    "venue": "182",
-    "date": "2026-06-15 00:00:00",
-    "time": "18:30",
-    "buyin": 120,
-    "guarantee": 4000,
-    "late_reg": "9:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Re entry"
   },
   {
     "league": "Kings",
