@@ -1,71 +1,6 @@
 [
   {
     "league": "Kings",
-    "name": "Waverly Greens Thursday arvo",
-    "venue": "165",
-    "date": "2026-05-21 00:00:00",
-    "time": "15:00",
-    "buyin": 25,
-    "guarantee": 500,
-    "late_reg": "17:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Rebuy"
-  },
-  {
-    "league": "Kings",
-    "name": "Chatswood Club Thursday",
-    "venue": "180",
-    "date": "2026-05-21 00:00:00",
-    "time": "18:00",
-    "buyin": 150,
-    "guarantee": 5000,
-    "late_reg": "9:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2x re entry"
-  },
-  {
-    "league": "Kings",
-    "name": "SERIES",
-    "venue": "122",
-    "date": "2026-05-21 00:00:00",
-    "time": "18:30",
-    "buyin": null,
-    "guarantee": null,
-    "late_reg": "21:00",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Re entry"
-  },
-  {
-    "league": "Kings",
-    "name": "Churchills Thursday",
-    "venue": "158",
-    "date": "2026-05-21 00:00:00",
-    "time": "19:00",
-    "buyin": 35,
-    "guarantee": 2000,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
-    "name": "Doncaster Thursday CASH GAME",
-    "venue": "174",
-    "date": "2026-05-21 00:00:00",
-    "time": "20:30",
-    "buyin": 50,
-    "guarantee": null,
-    "late_reg": "23:00",
-    "entries": null,
-    "players_remaining": null,
-    "type": "CASH GAME"
-  },
-  {
-    "league": "Kings",
     "name": "Waverly Greens Friday arvo",
     "venue": "165",
     "date": "2026-05-22 00:00:00",
@@ -1870,5 +1805,31 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Scots Club Sunday Megastack",
+    "venue": "166",
+    "date": "2026-06-21 00:00:00",
+    "time": "13:00",
+    "buyin": 50,
+    "guarantee": 2000,
+    "late_reg": "15:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Easts Bondi Junction Sunday",
+    "venue": "116",
+    "date": "2026-06-21 00:00:00",
+    "time": "19:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
   }
 ]
