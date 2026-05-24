@@ -1,45 +1,6 @@
 [
   {
     "league": "Kings",
-    "name": "Easts Saturday",
-    "venue": "116",
-    "date": "2026-05-23 00:00:00",
-    "time": "13:00",
-    "buyin": 25,
-    "guarantee": 1000,
-    "late_reg": "15:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single rebuy"
-  },
-  {
-    "league": "Kings",
-    "name": "Manly Leagues Saturday",
-    "venue": "185",
-    "date": "2026-05-23 00:00:00",
-    "time": "18:00",
-    "buyin": 120,
-    "guarantee": null,
-    "late_reg": "9:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
-    "name": "Churchills Saturday",
-    "venue": "158",
-    "date": "2026-05-23 00:00:00",
-    "time": "19:00",
-    "buyin": 60,
-    "guarantee": 5000,
-    "late_reg": "9:20",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
     "name": "Scots Club Sunday Megastack",
     "venue": "166",
     "date": "2026-05-24 00:00:00",
@@ -1805,5 +1766,44 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Bella Vista Hotel Tuesdays",
+    "venue": "171",
+    "date": "2026-06-23 00:00:00",
+    "time": "18:30",
+    "buyin": 150,
+    "guarantee": 6000,
+    "late_reg": "21:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Rocksia Hotel Tuesday",
+    "venue": "178",
+    "date": "2026-06-23 00:00:00",
+    "time": "19:00",
+    "buyin": 65,
+    "guarantee": 4000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Royal Oak Tuesday",
+    "venue": "108",
+    "date": "2026-06-23 00:00:00",
+    "time": "19:00",
+    "buyin": 20,
+    "guarantee": 500,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy/addon"
   }
 ]
