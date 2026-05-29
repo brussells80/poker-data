@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "Star Gold Coast $250 Single Shot Thursday",
-    "venue": "The Star Gold Coast",
-    "suburb": "Gold Coast",
-    "state": "QLD",
-    "date": "2026-05-28",
-    "time": "18:15",
-    "buyin": 250,
-    "guarantee": null,
-    "late_reg": "20:15",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Freezeout",
-    "blind_level_minutes": 20,
-    "late_reg_level": 7,
-    "starting_stack": "30,000"
-  },
-  {
-    "league": "Star",
     "name": "Star Gold Coast $200 Friday Freezeout",
     "venue": "The Star Gold Coast",
     "suburb": "Gold Coast",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 25,
     "late_reg_level": 11,
     "starting_stack": "40,000"
+  },
+  {
+    "league": "Star",
+    "name": "Star Gold Coast $250 Two Bullet Tuesday",
+    "venue": "The Star Gold Coast",
+    "suburb": "Gold Coast",
+    "state": "QLD",
+    "date": "2026-06-09",
+    "time": "18:15",
+    "buyin": 250,
+    "guarantee": null,
+    "late_reg": "20:15",
+    "entries": null,
+    "players_remaining": null,
+    "type": "1 re-entry only",
+    "blind_level_minutes": 20,
+    "late_reg_level": 7,
+    "starting_stack": "30,000"
   }
 ]
