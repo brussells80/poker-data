@@ -91,7 +91,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12606.4,
+    "distance_km": 15039.8,
     "lat": null,
     "lng": null
   },
@@ -107,7 +107,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12606.4,
+    "distance_km": 15039.8,
     "lat": null,
     "lng": null
   },
@@ -123,7 +123,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12741.8,
+    "distance_km": 15125.3,
     "lat": null,
     "lng": null
   },
@@ -139,7 +139,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12777.9,
+    "distance_km": 15158.4,
     "lat": null,
     "lng": null
   },
@@ -155,7 +155,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13236.2,
+    "distance_km": 15538.4,
     "lat": null,
     "lng": null
   },
@@ -171,7 +171,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13240.9,
+    "distance_km": 15543.0,
     "lat": null,
     "lng": null
   },
@@ -187,7 +187,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13241.8,
+    "distance_km": 15543.7,
     "lat": null,
     "lng": null
   },
@@ -203,7 +203,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13241.8,
+    "distance_km": 15543.7,
     "lat": null,
     "lng": null
   },
@@ -219,7 +219,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13241.8,
+    "distance_km": 15543.7,
     "lat": null,
     "lng": null
   },
@@ -235,7 +235,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13247.2,
+    "distance_km": 15548.2,
     "lat": null,
     "lng": null
   },
@@ -251,7 +251,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13247.9,
+    "distance_km": 15548.5,
     "lat": null,
     "lng": null
   },
@@ -267,23 +267,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13249.9,
-    "lat": null,
-    "lng": null
-  },
-  {
-    "league": "NPL",
-    "state": "NSW",
-    "name": "Hotel Seven Hills 7:30 PM",
-    "venue": "Hotel Seven Hills",
-    "suburb": "Blacktown / Seven Hills",
-    "date": "2026-05-30",
-    "time": "7:30 PM",
-    "buyin": 40.0,
-    "guarantee": null,
-    "late_reg": null,
-    "type": "TEXAS HOLD 'EM",
-    "distance_km": 13253.2,
+    "distance_km": 15550.7,
     "lat": null,
     "lng": null
   },
@@ -299,7 +283,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13255.0,
+    "distance_km": 15556.7,
     "lat": null,
     "lng": null
   },
@@ -315,7 +299,23 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13255.0,
+    "distance_km": 15556.7,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "league": "NPL",
+    "state": "NSW",
+    "name": "Hotel Seven Hills 7:30 PM",
+    "venue": "Hotel Seven Hills",
+    "suburb": "Blacktown / Seven Hills",
+    "date": "2026-05-30",
+    "time": "7:30 PM",
+    "buyin": 40.0,
+    "guarantee": null,
+    "late_reg": null,
+    "type": "TEXAS HOLD 'EM",
+    "distance_km": 15559.4,
     "lat": null,
     "lng": null
   },
@@ -331,7 +331,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13255.2,
+    "distance_km": 15559.6,
     "lat": null,
     "lng": null
   },
@@ -347,7 +347,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13258.2,
+    "distance_km": 15569.6,
     "lat": null,
     "lng": null
   },
@@ -363,7 +363,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13269.1,
+    "distance_km": 15570.9,
     "lat": null,
     "lng": null
   },
@@ -379,7 +379,7 @@
     "guarantee": 1000.0,
     "late_reg": "9:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13280.7,
+    "distance_km": 15581.2,
     "lat": null,
     "lng": null
   },
@@ -395,7 +395,7 @@
     "guarantee": 250.0,
     "late_reg": "8:20 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13338.9,
+    "distance_km": 15623.3,
     "lat": null,
     "lng": null
   },
@@ -411,7 +411,7 @@
     "guarantee": null,
     "late_reg": "7:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13416.6,
+    "distance_km": 15684.5,
     "lat": null,
     "lng": null
   },
@@ -427,7 +427,7 @@
     "guarantee": null,
     "late_reg": "2:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13465.2,
+    "distance_km": 15752.8,
     "lat": null,
     "lng": null
   },
@@ -443,7 +443,7 @@
     "guarantee": null,
     "late_reg": "6:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13475.4,
+    "distance_km": 15759.2,
     "lat": null,
     "lng": null
   },
@@ -459,7 +459,7 @@
     "guarantee": null,
     "late_reg": "9:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13475.4,
+    "distance_km": 15759.2,
     "lat": null,
     "lng": null
   },
@@ -475,7 +475,7 @@
     "guarantee": null,
     "late_reg": "1:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13475.4,
+    "distance_km": 15759.2,
     "lat": null,
     "lng": null
   }
