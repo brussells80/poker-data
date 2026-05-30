@@ -59,7 +59,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13718.8,
+    "distance_km": 11979.4,
     "lat": null,
     "lng": null
   },
@@ -75,7 +75,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13843.8,
+    "distance_km": 12069.7,
     "lat": null,
     "lng": null
   },
@@ -91,7 +91,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14009.6,
+    "distance_km": 12264.6,
     "lat": null,
     "lng": null
   },
@@ -107,7 +107,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14327.3,
+    "distance_km": 12527.3,
     "lat": null,
     "lng": null
   },
@@ -123,7 +123,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14335.8,
+    "distance_km": 12535.9,
     "lat": null,
     "lng": null
   },
@@ -139,7 +139,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14335.8,
+    "distance_km": 12535.9,
     "lat": null,
     "lng": null
   },
@@ -155,7 +155,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14340.2,
+    "distance_km": 12539.9,
     "lat": null,
     "lng": null
   },
@@ -171,7 +171,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14343.8,
+    "distance_km": 12543.5,
     "lat": null,
     "lng": null
   },
@@ -187,23 +187,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14343.8,
-    "lat": null,
-    "lng": null
-  },
-  {
-    "league": "NPL",
-    "state": "NSW",
-    "name": "Granville Diggers 2:00 PM",
-    "venue": "Granville Diggers",
-    "suburb": "Blacktown / Seven Hills",
-    "date": "2026-05-30",
-    "time": "2:00 PM",
-    "buyin": 35.0,
-    "guarantee": null,
-    "late_reg": null,
-    "type": "TEXAS HOLD 'EM - DEALERS",
-    "distance_km": 14352.9,
+    "distance_km": 12543.5,
     "lat": null,
     "lng": null
   },
@@ -219,7 +203,23 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14353.2,
+    "distance_km": 12552.6,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "league": "NPL",
+    "state": "NSW",
+    "name": "Granville Diggers 2:00 PM",
+    "venue": "Granville Diggers",
+    "suburb": "Blacktown / Seven Hills",
+    "date": "2026-05-30",
+    "time": "2:00 PM",
+    "buyin": 35.0,
+    "guarantee": null,
+    "late_reg": null,
+    "type": "TEXAS HOLD 'EM - DEALERS",
+    "distance_km": 12553.2,
     "lat": null,
     "lng": null
   },
@@ -235,7 +235,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14356.0,
+    "distance_km": 12555.5,
     "lat": null,
     "lng": null
   },
@@ -251,7 +251,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14357.2,
+    "distance_km": 12557.5,
     "lat": null,
     "lng": null
   },
@@ -267,7 +267,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14358.1,
+    "distance_km": 12558.5,
     "lat": null,
     "lng": null
   },
@@ -283,7 +283,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14364.0,
+    "distance_km": 12564.2,
     "lat": null,
     "lng": null
   },
@@ -299,7 +299,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14411.5,
+    "distance_km": 12608.6,
     "lat": null,
     "lng": null
   },
@@ -315,7 +315,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14441.2,
+    "distance_km": 12637.2,
     "lat": null,
     "lng": null
   },
@@ -331,7 +331,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14450.8,
+    "distance_km": 12645.6,
     "lat": null,
     "lng": null
   },
@@ -347,7 +347,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14476.3,
+    "distance_km": 12670.2,
     "lat": null,
     "lng": null
   },
@@ -363,7 +363,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14518.8,
+    "distance_km": 12711.2,
     "lat": null,
     "lng": null
   },
@@ -379,23 +379,7 @@
     "guarantee": null,
     "late_reg": "6:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14536.3,
-    "lat": null,
-    "lng": null
-  },
-  {
-    "league": "NPL",
-    "state": "NSW",
-    "name": "Test 3:15 PM",
-    "venue": "Test",
-    "suburb": "Sydney Cbd",
-    "date": "2026-05-30",
-    "time": "3:15 PM",
-    "buyin": 0,
-    "guarantee": null,
-    "late_reg": "3:15 PM",
-    "type": "TEXAS HOLD 'EM",
-    "distance_km": 14547.9,
+    "distance_km": 12728.4,
     "lat": null,
     "lng": null
   },
@@ -411,7 +395,7 @@
     "guarantee": null,
     "late_reg": "5:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14577.8,
+    "distance_km": 12774.2,
     "lat": null,
     "lng": null
   },
@@ -427,7 +411,23 @@
     "guarantee": null,
     "late_reg": "4:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14577.8,
+    "distance_km": 12774.2,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "league": "NPL",
+    "state": "NSW",
+    "name": "Test 3:15 PM",
+    "venue": "Test",
+    "suburb": "Sydney Cbd",
+    "date": "2026-05-30",
+    "time": "3:15 PM",
+    "buyin": 0,
+    "guarantee": null,
+    "late_reg": "3:15 PM",
+    "type": "TEXAS HOLD 'EM",
+    "distance_km": 12777.3,
     "lat": null,
     "lng": null
   },
@@ -443,7 +443,7 @@
     "guarantee": null,
     "late_reg": "8:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 15416.8,
+    "distance_km": 13644.4,
     "lat": null,
     "lng": null
   }
