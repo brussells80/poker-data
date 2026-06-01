@@ -1,45 +1,6 @@
 [
   {
     "league": "Kings",
-    "name": "Scots Club Sunday Megastack",
-    "venue": "166",
-    "date": "2026-05-31 00:00:00",
-    "time": "13:00",
-    "buyin": 50,
-    "guarantee": 2000,
-    "late_reg": "15:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
-    "name": "CANCELLED due to KR series",
-    "venue": "158",
-    "date": "2026-05-31 00:00:00",
-    "time": "18:00",
-    "buyin": null,
-    "guarantee": null,
-    "late_reg": "20:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Re entry"
-  },
-  {
-    "league": "Kings",
-    "name": "Easts Bondi Junction Sunday",
-    "venue": "116",
-    "date": "2026-05-31 00:00:00",
-    "time": "19:00",
-    "buyin": 25,
-    "guarantee": 1000,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single rebuy"
-  },
-  {
-    "league": "Kings",
     "name": "Doncaster Monday",
     "venue": "174",
     "date": "2026-06-01 00:00:00",
@@ -1636,5 +1597,57 @@
     "entries": null,
     "players_remaining": null,
     "type": "Rebuy/addon"
+  },
+  {
+    "league": "Kings",
+    "name": "Hornsby RSL Wednesdays",
+    "venue": "183",
+    "date": "2026-07-01 00:00:00",
+    "time": "18:30",
+    "buyin": 120,
+    "guarantee": 4000,
+    "late_reg": "21:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Kings Room Wednesday cash game",
+    "venue": "122",
+    "date": "2026-07-01 00:00:00",
+    "time": "18:30",
+    "buyin": 50,
+    "guarantee": null,
+    "late_reg": "21:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "CASH GAME"
+  },
+  {
+    "league": "Kings",
+    "name": "Wenty Leagues Wednesdays",
+    "venue": "123",
+    "date": "2026-07-01 00:00:00",
+    "time": "18:30",
+    "buyin": 150,
+    "guarantee": 10000,
+    "late_reg": "21:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re-buy"
+  },
+  {
+    "league": "Kings",
+    "name": "Tennyson Hotel Wednesday",
+    "venue": "162",
+    "date": "2026-07-01 00:00:00",
+    "time": "21:00",
+    "buyin": 35,
+    "guarantee": 1000,
+    "late_reg": "23:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
   }
 ]
