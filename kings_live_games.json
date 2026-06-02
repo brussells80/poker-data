@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "league": "Kings",
+    "series": "Live",
+    "name": "6:00 pm",
+    "venue": "Kings Live",
+    "date": null,
+    "start_time": "",
+    "buyin": "June Big Extra",
+    "guarantee": "$300",
+    "late_reg": null,
+    "clock": "$41,860",
+    "type": "20",
+    "chips": "Re-Buy",
+    "entries": null,
+    "players_remaining": null
+  },
+  {
+    "league": "Kings",
+    "series": "Live",
+    "name": "Game:",
+    "venue": "Kings Live",
+    "date": null,
+    "start_time": "Late rego and rebuys until 9:20pmRe-BuyGame:NL HEBuy-In:$300Prize Pool:$41,860Chips:30,000Entries:113Players:92Reg Ends:8Status:CLOSEDStatus:RunningShow me more details...",
+    "buyin": "NL HE",
+    "guarantee": "Buy-In:",
+    "late_reg": "8",
+    "clock": "$300",
+    "type": "Prize Pool:",
+    "chips": "$41,860",
+    "entries": "113",
+    "players_remaining": "92"
+  }
+]
