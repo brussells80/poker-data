@@ -91,7 +91,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12844.9,
+    "distance_km": 11278.8,
     "lat": null,
     "lng": null
   },
@@ -107,7 +107,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12965.0,
+    "distance_km": 11400.2,
     "lat": null,
     "lng": null
   },
@@ -123,7 +123,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13504.6,
+    "distance_km": 11950.6,
     "lat": null,
     "lng": null
   },
@@ -139,7 +139,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13510.1,
+    "distance_km": 11956.6,
     "lat": null,
     "lng": null
   },
@@ -155,7 +155,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13510.1,
+    "distance_km": 11956.6,
     "lat": null,
     "lng": null
   },
@@ -171,7 +171,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13516.5,
+    "distance_km": 11963.2,
     "lat": null,
     "lng": null
   },
@@ -187,39 +187,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13520.7,
-    "lat": null,
-    "lng": null
-  },
-  {
-    "league": "NPL",
-    "state": "NSW",
-    "name": "Maso'S 7:00 PM",
-    "venue": "Maso'S",
-    "suburb": "Sydney South",
-    "date": "2026-06-04",
-    "time": "7:00 PM",
-    "buyin": 35.0,
-    "guarantee": null,
-    "late_reg": null,
-    "type": "TEXAS HOLD 'EM",
-    "distance_km": 13521.6,
-    "lat": null,
-    "lng": null
-  },
-  {
-    "league": "NPL",
-    "state": "NSW",
-    "name": "Guildford Leagues Club 7:00 PM",
-    "venue": "Guildford Leagues Club",
-    "suburb": "Sydney Parramatta",
-    "date": "2026-06-04",
-    "time": "7:00 PM",
-    "buyin": 35.0,
-    "guarantee": null,
-    "late_reg": null,
-    "type": "TEXAS HOLD 'EM",
-    "distance_km": 13522.1,
+    "distance_km": 11966.4,
     "lat": null,
     "lng": null
   },
@@ -235,7 +203,39 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13522.2,
+    "distance_km": 11967.2,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "league": "NPL",
+    "state": "NSW",
+    "name": "Guildford Leagues Club 7:00 PM",
+    "venue": "Guildford Leagues Club",
+    "suburb": "Sydney Parramatta",
+    "date": "2026-06-04",
+    "time": "7:00 PM",
+    "buyin": 35.0,
+    "guarantee": null,
+    "late_reg": null,
+    "type": "TEXAS HOLD 'EM",
+    "distance_km": 11968.1,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "league": "NPL",
+    "state": "NSW",
+    "name": "Maso'S 7:00 PM",
+    "venue": "Maso'S",
+    "suburb": "Sydney South",
+    "date": "2026-06-04",
+    "time": "7:00 PM",
+    "buyin": 35.0,
+    "guarantee": null,
+    "late_reg": null,
+    "type": "TEXAS HOLD 'EM",
+    "distance_km": 11968.2,
     "lat": null,
     "lng": null
   },
@@ -251,7 +251,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13523.0,
+    "distance_km": 11969.0,
     "lat": null,
     "lng": null
   },
@@ -267,7 +267,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13523.3,
+    "distance_km": 11969.8,
     "lat": null,
     "lng": null
   },
@@ -283,7 +283,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13537.4,
+    "distance_km": 11983.7,
     "lat": null,
     "lng": null
   },
@@ -299,7 +299,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13549.2,
+    "distance_km": 11995.6,
     "lat": null,
     "lng": null
   },
@@ -315,7 +315,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13579.3,
+    "distance_km": 12027.3,
     "lat": null,
     "lng": null
   },
@@ -331,7 +331,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13610.0,
+    "distance_km": 12058.8,
     "lat": null,
     "lng": null
   },
@@ -347,7 +347,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13625.9,
+    "distance_km": 12075.7,
     "lat": null,
     "lng": null
   },
@@ -363,7 +363,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13672.4,
+    "distance_km": 12119.3,
     "lat": null,
     "lng": null
   },
@@ -379,7 +379,7 @@
     "guarantee": null,
     "late_reg": "8:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13709.0,
+    "distance_km": 12160.7,
     "lat": null,
     "lng": null
   },
@@ -395,7 +395,7 @@
     "guarantee": null,
     "late_reg": "8:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13741.1,
+    "distance_km": 12186.9,
     "lat": null,
     "lng": null
   },
@@ -411,7 +411,7 @@
     "guarantee": null,
     "late_reg": "7:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13745.8,
+    "distance_km": 12193.9,
     "lat": null,
     "lng": null
   },
@@ -427,7 +427,7 @@
     "guarantee": null,
     "late_reg": "8:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13745.8,
+    "distance_km": 12193.9,
     "lat": null,
     "lng": null
   },
@@ -443,7 +443,7 @@
     "guarantee": null,
     "late_reg": "8:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 14563.4,
+    "distance_km": 12998.3,
     "lat": null,
     "lng": null
   }
