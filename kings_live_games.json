@@ -9,7 +9,7 @@
     "buyin": "Churchills $10k GTD",
     "guarantee": "$90",
     "late_reg": null,
-    "clock": "$16,640",
+    "clock": "$19,440",
     "type": "20",
     "chips": "1xRe-Entry",
     "entries": null,
@@ -21,15 +21,15 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "1xRe-EntryGame:NL HEBuy-In:$90GTD:$10,000Prize Pool:$16,640Chips:40,000Entries:208Players:150Reg Ends:8Status:OPEN (till level 8)Status:RunningShow me more details...",
+    "start_time": "1xRe-EntryGame:NL HEBuy-In:$90GTD:$10,000Prize Pool:$19,440Chips:40,000Entries:243Players:124Reg Ends:8Status:CLOSEDStatus:RunningShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": "8",
     "clock": "$90",
     "type": "GTD:",
     "chips": "$10,000",
-    "entries": "208",
-    "players_remaining": "150"
+    "entries": "243",
+    "players_remaining": "124"
   },
   {
     "league": "Kings",
