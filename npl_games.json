@@ -75,7 +75,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12809.0,
+    "distance_km": 15205.2,
     "lat": null,
     "lng": null
   },
@@ -91,7 +91,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12822.9,
+    "distance_km": 15227.4,
     "lat": null,
     "lng": null
   },
@@ -107,7 +107,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12848.2,
+    "distance_km": 15248.6,
     "lat": null,
     "lng": null
   },
@@ -123,7 +123,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12919.1,
+    "distance_km": 15284.6,
     "lat": null,
     "lng": null
   },
@@ -139,7 +139,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12958.9,
+    "distance_km": 15302.8,
     "lat": null,
     "lng": null
   },
@@ -155,7 +155,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12987.0,
+    "distance_km": 15334.8,
     "lat": null,
     "lng": null
   },
@@ -171,7 +171,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13169.8,
+    "distance_km": 15478.5,
     "lat": null,
     "lng": null
   },
@@ -187,7 +187,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13452.3,
+    "distance_km": 15720.1,
     "lat": null,
     "lng": null
   },
@@ -203,7 +203,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13460.6,
+    "distance_km": 15729.0,
     "lat": null,
     "lng": null
   },
@@ -219,7 +219,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13468.9,
+    "distance_km": 15735.5,
     "lat": null,
     "lng": null
   },
@@ -235,7 +235,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13473.5,
+    "distance_km": 15738.6,
     "lat": null,
     "lng": null
   },
@@ -251,23 +251,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13475.9,
-    "lat": null,
-    "lng": null
-  },
-  {
-    "league": "NPL",
-    "state": "NSW",
-    "name": "Club Parramatta 6:30 PM",
-    "venue": "Club Parramatta",
-    "suburb": "Sydney Parramatta",
-    "date": "2026-06-09",
-    "time": "6:30 PM",
-    "buyin": 10.0,
-    "guarantee": null,
-    "late_reg": null,
-    "type": "TEXAS HOLD 'EM",
-    "distance_km": 13477.5,
+    "distance_km": 15740.5,
     "lat": null,
     "lng": null
   },
@@ -283,7 +267,23 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13478.6,
+    "distance_km": 15743.7,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "league": "NPL",
+    "state": "NSW",
+    "name": "Club Parramatta 6:30 PM",
+    "venue": "Club Parramatta",
+    "suburb": "Sydney Parramatta",
+    "date": "2026-06-09",
+    "time": "6:30 PM",
+    "buyin": 10.0,
+    "guarantee": null,
+    "late_reg": null,
+    "type": "TEXAS HOLD 'EM",
+    "distance_km": 15747.1,
     "lat": null,
     "lng": null
   },
@@ -299,7 +299,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13480.5,
+    "distance_km": 15751.4,
     "lat": null,
     "lng": null
   },
@@ -315,23 +315,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13482.8,
-    "lat": null,
-    "lng": null
-  },
-  {
-    "league": "NPL",
-    "state": "NSW",
-    "name": "The Richmond Inn 7:00 PM",
-    "venue": "The Richmond Inn",
-    "suburb": "Hawkesbury",
-    "date": "2026-06-09",
-    "time": "7:00 PM",
-    "buyin": 35.0,
-    "guarantee": null,
-    "late_reg": null,
-    "type": "TEXAS HOLD 'EM",
-    "distance_km": 13484.8,
+    "distance_km": 15751.9,
     "lat": null,
     "lng": null
   },
@@ -347,7 +331,23 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13488.8,
+    "distance_km": 15757.2,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "league": "NPL",
+    "state": "NSW",
+    "name": "The Richmond Inn 7:00 PM",
+    "venue": "The Richmond Inn",
+    "suburb": "Hawkesbury",
+    "date": "2026-06-09",
+    "time": "7:00 PM",
+    "buyin": 35.0,
+    "guarantee": null,
+    "late_reg": null,
+    "type": "TEXAS HOLD 'EM",
+    "distance_km": 15761.1,
     "lat": null,
     "lng": null
   },
@@ -363,7 +363,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13508.8,
+    "distance_km": 15774.1,
     "lat": null,
     "lng": null
   },
@@ -379,7 +379,7 @@
     "guarantee": 300.0,
     "late_reg": "7:45 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13542.9,
+    "distance_km": 15793.4,
     "lat": null,
     "lng": null
   },
@@ -395,7 +395,7 @@
     "guarantee": null,
     "late_reg": "7:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13560.1,
+    "distance_km": 15806.8,
     "lat": null,
     "lng": null
   },
@@ -411,7 +411,7 @@
     "guarantee": 200.0,
     "late_reg": "8:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13585.0,
+    "distance_km": 15827.7,
     "lat": null,
     "lng": null
   },
@@ -427,7 +427,7 @@
     "guarantee": 500.0,
     "late_reg": "7:45 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13605.1,
+    "distance_km": 15844.6,
     "lat": null,
     "lng": null
   },
@@ -443,7 +443,7 @@
     "guarantee": null,
     "late_reg": "8:20 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13650.0,
+    "distance_km": 15880.8,
     "lat": null,
     "lng": null
   },
@@ -459,7 +459,7 @@
     "guarantee": null,
     "late_reg": "8:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13667.8,
+    "distance_km": 15896.9,
     "lat": null,
     "lng": null
   },
@@ -475,7 +475,7 @@
     "guarantee": null,
     "late_reg": "8:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13705.2,
+    "distance_km": 15954.9,
     "lat": null,
     "lng": null
   }
