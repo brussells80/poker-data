@@ -105,16 +105,16 @@
   },
   {
     "league": "Kings",
-    "name": "Churchills Friday",
-    "venue": "158",
+    "name": "Churchills Saturday",
+    "venue": "186",
     "date": "2026-06-13 00:00:00",
     "time": "19:00",
     "buyin": 60,
     "guarantee": 5000,
-    "late_reg": "9:20",
+    "late_reg": "9:40",
     "entries": null,
     "players_remaining": null,
-    "type": "2 x re-entry"
+    "type": "2 x rebuy"
   },
   {
     "league": "Kings",
@@ -131,8 +131,8 @@
   },
   {
     "league": "Kings",
-    "name": "Churchills Sunday HIGHROLLER",
-    "venue": "158",
+    "name": "Churchills Sunday Highroller",
+    "venue": "186",
     "date": "2026-06-14 00:00:00",
     "time": "18:00",
     "buyin": 200,
@@ -140,7 +140,7 @@
     "late_reg": "8:15",
     "entries": null,
     "players_remaining": null,
-    "type": "Re entry"
+    "type": "Rebuy"
   },
   {
     "league": "Kings",
@@ -235,6 +235,19 @@
   },
   {
     "league": "Kings",
+    "name": "Churchills Tuesday Highroller",
+    "venue": "186",
+    "date": "2026-06-16 00:00:00",
+    "time": "18:00",
+    "buyin": 200,
+    "guarantee": null,
+    "late_reg": "9:20",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Bella Vista Hotel Tuesdays",
     "venue": "171",
     "date": "2026-06-16 00:00:00",
@@ -379,7 +392,7 @@
   {
     "league": "Kings",
     "name": "Churchills Thursday",
-    "venue": "158",
+    "venue": "186",
     "date": "2026-06-18 00:00:00",
     "time": "19:00",
     "buyin": 35,
@@ -387,7 +400,7 @@
     "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
-    "type": "2 x re-entry"
+    "type": "2 x rebuy"
   },
   {
     "league": "Kings",
@@ -427,6 +440,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Churchills Friday",
+    "venue": "186",
+    "date": "2026-06-19 00:00:00",
+    "time": "19:00",
+    "buyin": 60,
+    "guarantee": 5000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x rebuy"
   },
   {
     "league": "Kings",
@@ -495,6 +521,19 @@
   },
   {
     "league": "Kings",
+    "name": "Churchills Saturday",
+    "venue": "186",
+    "date": "2026-06-20 00:00:00",
+    "time": "19:00",
+    "buyin": 60,
+    "guarantee": 5000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Scots Club Sunday Megastack",
     "venue": "166",
     "date": "2026-06-21 00:00:00",
@@ -505,6 +544,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Churchills Sunday Highroller",
+    "venue": "186",
+    "date": "2026-06-21 00:00:00",
+    "time": "18:00",
+    "buyin": 200,
+    "guarantee": null,
+    "late_reg": "8:15",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
   },
   {
     "league": "Kings",
@@ -586,6 +638,19 @@
   },
   {
     "league": "Kings",
+    "name": "Churchills Tuesday Highroller",
+    "venue": "186",
+    "date": "2026-06-23 00:00:00",
+    "time": "18:00",
+    "buyin": 200,
+    "guarantee": null,
+    "late_reg": "9:20",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Bella Vista Hotel Tuesdays",
     "venue": "171",
     "date": "2026-06-23 00:00:00",
@@ -730,7 +795,7 @@
   {
     "league": "Kings",
     "name": "Churchills Thursday",
-    "venue": "158",
+    "venue": "186",
     "date": "2026-06-25 00:00:00",
     "time": "19:00",
     "buyin": 35,
@@ -738,7 +803,7 @@
     "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
-    "type": "2 x re-entry"
+    "type": "2 x rebuy"
   },
   {
     "league": "Kings",
@@ -778,6 +843,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Churchills Friday",
+    "venue": "186",
+    "date": "2026-06-26 00:00:00",
+    "time": "19:00",
+    "buyin": 60,
+    "guarantee": 5000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x rebuy"
   },
   {
     "league": "Kings",
@@ -833,6 +911,19 @@
   },
   {
     "league": "Kings",
+    "name": "Churchills Saturday",
+    "venue": "186",
+    "date": "2026-06-27 00:00:00",
+    "time": "19:00",
+    "buyin": 60,
+    "guarantee": 5000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Scots Club Sunday Megastack",
     "venue": "166",
     "date": "2026-06-28 00:00:00",
@@ -843,6 +934,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Churchills Sunday Highroller",
+    "venue": "186",
+    "date": "2026-06-28 00:00:00",
+    "time": "18:00",
+    "buyin": 200,
+    "guarantee": null,
+    "late_reg": "8:15",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
   },
   {
     "league": "Kings",
@@ -908,6 +1012,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Churchills Tuesday Highroller",
+    "venue": "186",
+    "date": "2026-06-30 00:00:00",
+    "time": "18:00",
+    "buyin": 200,
+    "guarantee": null,
+    "late_reg": "9:20",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
   },
   {
     "league": "Kings",
@@ -1042,7 +1159,7 @@
   {
     "league": "Kings",
     "name": "Churchills Thursday",
-    "venue": "158",
+    "venue": "186",
     "date": "2026-07-02 00:00:00",
     "time": "19:00",
     "buyin": 35,
@@ -1050,7 +1167,7 @@
     "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
-    "type": "2 x re-entry"
+    "type": "2 x rebuy"
   },
   {
     "league": "Kings",
@@ -1090,6 +1207,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Churchills Friday",
+    "venue": "186",
+    "date": "2026-07-03 00:00:00",
+    "time": "19:00",
+    "buyin": 60,
+    "guarantee": 5000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x rebuy"
   },
   {
     "league": "Kings",
@@ -1145,6 +1275,19 @@
   },
   {
     "league": "Kings",
+    "name": "Churchills Saturday",
+    "venue": "186",
+    "date": "2026-07-04 00:00:00",
+    "time": "19:00",
+    "buyin": 60,
+    "guarantee": 5000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Scots Club Sunday Megastack",
     "venue": "166",
     "date": "2026-07-05 00:00:00",
@@ -1155,6 +1298,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Churchills Sunday Highroller",
+    "venue": "186",
+    "date": "2026-07-05 00:00:00",
+    "time": "18:00",
+    "buyin": 200,
+    "guarantee": null,
+    "late_reg": "8:15",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
   },
   {
     "league": "Kings",
@@ -1220,6 +1376,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Churchills Tuesday Highroller",
+    "venue": "186",
+    "date": "2026-07-07 00:00:00",
+    "time": "18:00",
+    "buyin": 200,
+    "guarantee": null,
+    "late_reg": "9:20",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
   },
   {
     "league": "Kings",
@@ -1354,7 +1523,7 @@
   {
     "league": "Kings",
     "name": "Churchills Thursday",
-    "venue": "158",
+    "venue": "186",
     "date": "2026-07-09 00:00:00",
     "time": "19:00",
     "buyin": 35,
@@ -1362,7 +1531,7 @@
     "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
-    "type": "2 x re-entry"
+    "type": "2 x rebuy"
   },
   {
     "league": "Kings",
@@ -1402,6 +1571,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Churchills Friday",
+    "venue": "186",
+    "date": "2026-07-10 00:00:00",
+    "time": "19:00",
+    "buyin": 60,
+    "guarantee": 5000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x rebuy"
   },
   {
     "league": "Kings",
@@ -1457,6 +1639,19 @@
   },
   {
     "league": "Kings",
+    "name": "Churchills Saturday",
+    "venue": "186",
+    "date": "2026-07-11 00:00:00",
+    "time": "19:00",
+    "buyin": 60,
+    "guarantee": 5000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Scots Club Sunday Megastack",
     "venue": "166",
     "date": "2026-07-12 00:00:00",
@@ -1467,5 +1662,18 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Churchills Sunday Highroller",
+    "venue": "186",
+    "date": "2026-07-12 00:00:00",
+    "time": "18:00",
+    "buyin": 200,
+    "guarantee": null,
+    "late_reg": "8:15",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
   }
 ]
