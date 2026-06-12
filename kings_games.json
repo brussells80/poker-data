@@ -105,6 +105,19 @@
   },
   {
     "league": "Kings",
+    "name": "Churchills Friday",
+    "venue": "158",
+    "date": "2026-06-13 00:00:00",
+    "time": "19:00",
+    "buyin": 60,
+    "guarantee": 5000,
+    "late_reg": "9:20",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
     "name": "Scots Club Sunday Megastack",
     "venue": "166",
     "date": "2026-06-14 00:00:00",
