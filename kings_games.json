@@ -40,6 +40,19 @@
   },
   {
     "league": "Kings",
+    "name": "Kings Room Mondays",
+    "venue": "122",
+    "date": "2026-06-15 00:00:00",
+    "time": "18:30",
+    "buyin": 150,
+    "guarantee": 10000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
+  },
+  {
+    "league": "Kings",
     "name": "Doncaster Monday",
     "venue": "174",
     "date": "2026-06-15 00:00:00",
@@ -148,12 +161,12 @@
     "venue": "178",
     "date": "2026-06-16 00:00:00",
     "time": "19:00",
-    "buyin": 65,
-    "guarantee": 4000,
-    "late_reg": "9:40",
+    "buyin": 100,
+    "guarantee": 10000,
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
-    "type": "2 x re-entry"
+    "type": "3 x re-entry"
   },
   {
     "league": "Kings",
@@ -170,12 +183,25 @@
   },
   {
     "league": "Kings",
-    "name": "Hornsby RSL Wednesdays",
+    "name": "CANCELLED due to Origin",
+    "venue": "123",
+    "date": "2026-06-17 00:00:00",
+    "time": "18:30",
+    "buyin": null,
+    "guarantee": null,
+    "late_reg": "21:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re-buy"
+  },
+  {
+    "league": "Kings",
+    "name": "CANCELLED due to Origin",
     "venue": "183",
     "date": "2026-06-17 00:00:00",
     "time": "18:30",
-    "buyin": 120,
-    "guarantee": 4000,
+    "buyin": null,
+    "guarantee": null,
     "late_reg": "21:00",
     "entries": null,
     "players_remaining": null,
@@ -196,16 +222,29 @@
   },
   {
     "league": "Kings",
-    "name": "Wenty Leagues Wednesdays",
-    "venue": "123",
+    "name": "CANCELLED due to Origin",
+    "venue": "173",
     "date": "2026-06-17 00:00:00",
-    "time": "18:30",
-    "buyin": 150,
-    "guarantee": 10000,
-    "late_reg": "21:00",
+    "time": "19:00",
+    "buyin": null,
+    "guarantee": null,
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
-    "type": "Re-buy"
+    "type": "CASH GAME"
+  },
+  {
+    "league": "Kings",
+    "name": "CANCELLED due to Origin",
+    "venue": "174",
+    "date": "2026-06-17 00:00:00",
+    "time": "19:00",
+    "buyin": null,
+    "guarantee": null,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
   },
   {
     "league": "Kings",
@@ -222,12 +261,12 @@
   },
   {
     "league": "Kings",
-    "name": "Tennyson Hotel Wednesday",
+    "name": "CANCELLED due to Origin",
     "venue": "162",
     "date": "2026-06-17 00:00:00",
     "time": "21:00",
-    "buyin": 35,
-    "guarantee": 1000,
+    "buyin": null,
+    "guarantee": null,
     "late_reg": "23:30",
     "entries": null,
     "players_remaining": null,
@@ -284,6 +323,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Doncaster Thursday cash game",
+    "venue": "174",
+    "date": "2026-06-18 00:00:00",
+    "time": "20:30",
+    "buyin": 50,
+    "guarantee": null,
+    "late_reg": "23:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "CASH GAME"
   },
   {
     "league": "Kings",
@@ -456,6 +508,19 @@
   },
   {
     "league": "Kings",
+    "name": "Kings Room Mondays",
+    "venue": "122",
+    "date": "2026-06-22 00:00:00",
+    "time": "18:30",
+    "buyin": 150,
+    "guarantee": 10000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
+  },
+  {
+    "league": "Kings",
     "name": "Ivanhoe Hotel Monday",
     "venue": "107",
     "date": "2026-06-22 00:00:00",
@@ -609,6 +674,32 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re-buy"
+  },
+  {
+    "league": "Kings",
+    "name": "Brookvale Hotel Wednesdays",
+    "venue": "173",
+    "date": "2026-06-24 00:00:00",
+    "time": "19:00",
+    "buyin": 50,
+    "guarantee": null,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "CASH GAME"
+  },
+  {
+    "league": "Kings",
+    "name": "Doncaster Wednesday",
+    "venue": "174",
+    "date": "2026-06-24 00:00:00",
+    "time": "19:00",
+    "buyin": 25,
+    "guarantee": null,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
   },
   {
     "league": "Kings",
@@ -690,6 +781,19 @@
   },
   {
     "league": "Kings",
+    "name": "Doncaster Thursday cash game",
+    "venue": "174",
+    "date": "2026-06-25 00:00:00",
+    "time": "20:30",
+    "buyin": 50,
+    "guarantee": null,
+    "late_reg": "23:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "CASH GAME"
+  },
+  {
+    "league": "Kings",
     "name": "Waverly Greens Friday arvo",
     "venue": "165",
     "date": "2026-06-26 00:00:00",
@@ -830,6 +934,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Kings Room Mondays",
+    "venue": "122",
+    "date": "2026-06-29 00:00:00",
+    "time": "18:30",
+    "buyin": 150,
+    "guarantee": 10000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
   },
   {
     "league": "Kings",
@@ -989,6 +1106,32 @@
   },
   {
     "league": "Kings",
+    "name": "Brookvale Hotel Wednesdays",
+    "venue": "173",
+    "date": "2026-07-01 00:00:00",
+    "time": "19:00",
+    "buyin": 50,
+    "guarantee": null,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "CASH GAME"
+  },
+  {
+    "league": "Kings",
+    "name": "Doncaster Wednesday",
+    "venue": "174",
+    "date": "2026-07-01 00:00:00",
+    "time": "19:00",
+    "buyin": 25,
+    "guarantee": null,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Tennyson Hotel Wednesday",
     "venue": "162",
     "date": "2026-07-01 00:00:00",
@@ -1051,6 +1194,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Doncaster Thursday cash game",
+    "venue": "174",
+    "date": "2026-07-02 00:00:00",
+    "time": "20:30",
+    "buyin": 50,
+    "guarantee": null,
+    "late_reg": "23:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "CASH GAME"
   },
   {
     "league": "Kings",
@@ -1194,6 +1350,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Kings Room Mondays",
+    "venue": "122",
+    "date": "2026-07-06 00:00:00",
+    "time": "18:30",
+    "buyin": 150,
+    "guarantee": 10000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
   },
   {
     "league": "Kings",
@@ -1353,6 +1522,32 @@
   },
   {
     "league": "Kings",
+    "name": "Brookvale Hotel Wednesdays",
+    "venue": "173",
+    "date": "2026-07-08 00:00:00",
+    "time": "19:00",
+    "buyin": 50,
+    "guarantee": null,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "CASH GAME"
+  },
+  {
+    "league": "Kings",
+    "name": "Doncaster Wednesday",
+    "venue": "174",
+    "date": "2026-07-08 00:00:00",
+    "time": "19:00",
+    "buyin": 25,
+    "guarantee": null,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Tennyson Hotel Wednesday",
     "venue": "162",
     "date": "2026-07-08 00:00:00",
@@ -1415,6 +1610,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Doncaster Thursday cash game",
+    "venue": "174",
+    "date": "2026-07-09 00:00:00",
+    "time": "20:30",
+    "buyin": 50,
+    "guarantee": null,
+    "late_reg": "23:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "CASH GAME"
   },
   {
     "league": "Kings",
@@ -1558,6 +1766,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Kings Room Mondays",
+    "venue": "122",
+    "date": "2026-07-13 00:00:00",
+    "time": "18:30",
+    "buyin": 150,
+    "guarantee": 10000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
   },
   {
     "league": "Kings",
