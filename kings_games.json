@@ -46,7 +46,7 @@
     "time": "19:00",
     "buyin": 60,
     "guarantee": 5000,
-    "late_reg": "9:40",
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
@@ -124,7 +124,7 @@
     "time": "19:00",
     "buyin": 60,
     "guarantee": 5000,
-    "late_reg": "9:40",
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
@@ -501,7 +501,7 @@
     "time": "19:00",
     "buyin": 60,
     "guarantee": 5000,
-    "late_reg": "9:40",
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
@@ -566,7 +566,7 @@
     "time": "19:00",
     "buyin": 60,
     "guarantee": 5000,
-    "late_reg": "9:40",
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
@@ -917,7 +917,7 @@
     "time": "19:00",
     "buyin": 60,
     "guarantee": 5000,
-    "late_reg": "9:40",
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
@@ -982,7 +982,7 @@
     "time": "19:00",
     "buyin": 60,
     "guarantee": 5000,
-    "late_reg": "9:40",
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
@@ -1333,7 +1333,7 @@
     "time": "19:00",
     "buyin": 60,
     "guarantee": 5000,
-    "late_reg": "9:40",
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
@@ -1398,7 +1398,7 @@
     "time": "19:00",
     "buyin": 60,
     "guarantee": 5000,
-    "late_reg": "9:40",
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
@@ -1749,7 +1749,7 @@
     "time": "19:00",
     "buyin": 60,
     "guarantee": 5000,
-    "late_reg": "9:40",
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
@@ -1814,7 +1814,7 @@
     "time": "19:00",
     "buyin": 60,
     "guarantee": 5000,
-    "late_reg": "9:40",
+    "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
