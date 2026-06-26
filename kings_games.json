@@ -92,12 +92,25 @@
   },
   {
     "league": "Kings",
+    "name": "Easts Saturday",
+    "venue": "116",
+    "date": "2026-06-27 00:00:00",
+    "time": "13:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "15:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Manly Leagues Saturday",
     "venue": "185",
     "date": "2026-06-27 00:00:00",
     "time": "18:00",
     "buyin": 120,
-    "guarantee": 5000,
+    "guarantee": null,
     "late_reg": "9:40",
     "entries": null,
     "players_remaining": null,
@@ -531,6 +544,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Easts Saturday",
+    "venue": "116",
+    "date": "2026-07-04 00:00:00",
+    "time": "13:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "15:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
   },
   {
     "league": "Kings",
@@ -976,6 +1002,19 @@
   },
   {
     "league": "Kings",
+    "name": "Easts Saturday",
+    "venue": "116",
+    "date": "2026-07-11 00:00:00",
+    "time": "13:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "15:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Manly Leagues Saturday",
     "venue": "185",
     "date": "2026-07-11 00:00:00",
@@ -1418,6 +1457,19 @@
   },
   {
     "league": "Kings",
+    "name": "Easts Saturday",
+    "venue": "116",
+    "date": "2026-07-18 00:00:00",
+    "time": "13:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "15:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Manly Leagues Saturday",
     "venue": "185",
     "date": "2026-07-18 00:00:00",
@@ -1857,6 +1909,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Easts Saturday",
+    "venue": "116",
+    "date": "2026-07-25 00:00:00",
+    "time": "13:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "15:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
   },
   {
     "league": "Kings",
