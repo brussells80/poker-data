@@ -66,6 +66,19 @@
   },
   {
     "league": "Kings",
+    "name": "Easts Bondi Junction Sunday",
+    "venue": "116",
+    "date": "2026-06-28 00:00:00",
+    "time": "19:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Bella Vista Hotel Mondays",
     "venue": "187",
     "date": "2026-06-29 00:00:00",
@@ -518,6 +531,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Easts Bondi Junction Sunday",
+    "venue": "116",
+    "date": "2026-07-05 00:00:00",
+    "time": "19:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
   },
   {
     "league": "Kings",
@@ -976,6 +1002,19 @@
   },
   {
     "league": "Kings",
+    "name": "Easts Bondi Junction Sunday",
+    "venue": "116",
+    "date": "2026-07-12 00:00:00",
+    "time": "19:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Bella Vista Hotel Mondays",
     "venue": "187",
     "date": "2026-07-13 00:00:00",
@@ -1431,6 +1470,19 @@
   },
   {
     "league": "Kings",
+    "name": "Easts Bondi Junction Sunday",
+    "venue": "116",
+    "date": "2026-07-19 00:00:00",
+    "time": "19:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Bella Vista Hotel Mondays",
     "venue": "187",
     "date": "2026-07-20 00:00:00",
@@ -1883,6 +1935,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Easts Bondi Junction Sunday",
+    "venue": "116",
+    "date": "2026-07-26 00:00:00",
+    "time": "19:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
   },
   {
     "league": "Kings",
