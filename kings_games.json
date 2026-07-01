@@ -66,6 +66,19 @@
   },
   {
     "league": "Kings",
+    "name": "Easts Bondi Junction Wednesday",
+    "venue": "116",
+    "date": "2026-07-01 00:00:00",
+    "time": "19:00",
+    "buyin": 25,
+    "guarantee": 1000,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Tennyson Hotel Wednesday",
     "venue": "162",
     "date": "2026-07-01 00:00:00",
