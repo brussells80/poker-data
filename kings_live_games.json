@@ -9,7 +9,7 @@
     "buyin": "July Big Extra",
     "guarantee": "$300",
     "late_reg": null,
-    "clock": "$24,440",
+    "clock": "$52,780",
     "type": "20",
     "chips": "Re-Buy",
     "entries": null,
@@ -21,15 +21,15 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Late rego and rebuys until 9:20pmRe-BuyGame:NL HEBuy-In:$300Prize Pool:$24,440Chips:30,000Entries:80Players:79Reg Ends:8Status:OPEN (till level 8)Status:RunningShow me more details...",
+    "start_time": "Late rego and rebuys until 9:20pmRe-BuyGame:NL HEBuy-In:$300Prize Pool:$52,780Chips:30,000Entries:128Players:89Reg Ends:8Status:CLOSEDStatus:RunningShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": "8",
     "clock": "$300",
     "type": "Prize Pool:",
-    "chips": "$24,440",
-    "entries": "80",
-    "players_remaining": "79"
+    "chips": "$52,780",
+    "entries": "128",
+    "players_remaining": "89"
   },
   {
     "league": "Kings",
