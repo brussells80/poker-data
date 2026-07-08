@@ -105,19 +105,6 @@
   },
   {
     "league": "Kings",
-    "name": "Chatswood Club Thursday",
-    "venue": "180",
-    "date": "2026-07-09 00:00:00",
-    "time": "18:00",
-    "buyin": 150,
-    "guarantee": 5000,
-    "late_reg": "9:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
     "name": "Kings Room Thursday",
     "venue": "122",
     "date": "2026-07-09 00:00:00",
@@ -583,19 +570,6 @@
     "entries": null,
     "players_remaining": null,
     "type": "Rebuy"
-  },
-  {
-    "league": "Kings",
-    "name": "Chatswood Club Thursday",
-    "venue": "180",
-    "date": "2026-07-16 00:00:00",
-    "time": "18:00",
-    "buyin": 150,
-    "guarantee": 5000,
-    "late_reg": "9:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
   },
   {
     "league": "Kings",
@@ -1067,19 +1041,6 @@
   },
   {
     "league": "Kings",
-    "name": "Chatswood Club Thursday",
-    "venue": "180",
-    "date": "2026-07-23 00:00:00",
-    "time": "18:00",
-    "buyin": 150,
-    "guarantee": 5000,
-    "late_reg": "9:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
     "name": "Kings Room Thursday",
     "venue": "122",
     "date": "2026-07-23 00:00:00",
@@ -1535,19 +1496,6 @@
   },
   {
     "league": "Kings",
-    "name": "Chatswood Club Thursday",
-    "venue": "180",
-    "date": "2026-07-30 00:00:00",
-    "time": "18:00",
-    "buyin": 150,
-    "guarantee": 5000,
-    "late_reg": "9:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
     "name": "Kings Room Thursday",
     "venue": "122",
     "date": "2026-07-30 00:00:00",
@@ -1974,19 +1922,6 @@
     "entries": null,
     "players_remaining": null,
     "type": "Rebuy"
-  },
-  {
-    "league": "Kings",
-    "name": "Chatswood Club Thursday",
-    "venue": "180",
-    "date": "2026-08-06 00:00:00",
-    "time": "18:00",
-    "buyin": 150,
-    "guarantee": 5000,
-    "late_reg": "9:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
   },
   {
     "league": "Kings",
