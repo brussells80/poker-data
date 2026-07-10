@@ -586,6 +586,19 @@
   },
   {
     "league": "Kings",
+    "name": "Rowers on Cooks Saturday",
+    "venue": "188",
+    "date": "2026-07-18 00:00:00",
+    "time": "13:00",
+    "buyin": 50,
+    "guarantee": 2000,
+    "late_reg": "15:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
     "name": "Manly Leagues Saturday",
     "venue": "185",
     "date": "2026-07-18 00:00:00",
@@ -1067,6 +1080,19 @@
   },
   {
     "league": "Kings",
+    "name": "Rowers on Cooks Saturday",
+    "venue": "188",
+    "date": "2026-07-25 00:00:00",
+    "time": "13:00",
+    "buyin": 50,
+    "guarantee": 2000,
+    "late_reg": "15:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
     "name": "Manly Leagues Saturday",
     "venue": "185",
     "date": "2026-07-25 00:00:00",
@@ -1535,6 +1561,19 @@
   },
   {
     "league": "Kings",
+    "name": "Rowers on Cooks Saturday",
+    "venue": "188",
+    "date": "2026-08-01 00:00:00",
+    "time": "13:00",
+    "buyin": 50,
+    "guarantee": 2000,
+    "late_reg": "15:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
     "name": "Manly Leagues Saturday",
     "venue": "185",
     "date": "2026-08-01 00:00:00",
@@ -1974,6 +2013,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Rowers on Cooks Saturday",
+    "venue": "188",
+    "date": "2026-08-08 00:00:00",
+    "time": "13:00",
+    "buyin": 50,
+    "guarantee": 2000,
+    "late_reg": "15:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
   },
   {
     "league": "Kings",

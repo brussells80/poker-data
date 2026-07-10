@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "NSW Shot Clock Super Stacks Event #1 Sydney Poker Cup 1A",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-07-09",
-    "time": "14:30",
-    "buyin": 1000,
-    "guarantee": null,
-    "late_reg": null,
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited Re-Entry",
-    "blind_level_minutes": 30,
-    "late_reg_level": null,
-    "starting_stack": "50,000"
-  },
-  {
-    "league": "Star",
     "name": "NSW Shot Clock Super Stacks Poker Cup 1 in 5 Satellite",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -176,6 +158,24 @@
     "players_remaining": null,
     "type": "Unlimited Re-Entry",
     "blind_level_minutes": 45,
+    "late_reg_level": null,
+    "starting_stack": "50,000"
+  },
+  {
+    "league": "Star",
+    "name": "NSW Shot Clock Super Stacks Event #4 Harbour City Deepstack Day 1",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-07-11",
+    "time": "14:30",
+    "buyin": 1000,
+    "guarantee": null,
+    "late_reg": null,
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited Re-Entry",
+    "blind_level_minutes": 30,
     "late_reg_level": null,
     "starting_stack": "50,000"
   }
