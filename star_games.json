@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "NSW Shot Clock Super Stacks Event #6 NSW Monster Stack Day 1",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-07-13",
-    "time": "14:30",
-    "buyin": 1150,
-    "guarantee": null,
-    "late_reg": null,
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited Re-Entry",
-    "blind_level_minutes": 30,
-    "late_reg_level": null,
-    "starting_stack": "60,000"
-  },
-  {
-    "league": "Star",
     "name": "NSW Shot Clock Super Stacks Event #7 $450 Single Shot",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 30,
     "late_reg_level": null,
     "starting_stack": "50000"
+  },
+  {
+    "league": "Star",
+    "name": "NSW Shot Clock Super Stacks Event #10 The Dominator Day 1",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-07-15",
+    "time": "14:30",
+    "buyin": 1200,
+    "guarantee": null,
+    "late_reg": null,
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited Re-Entry",
+    "blind_level_minutes": 30,
+    "late_reg_level": null,
+    "starting_stack": "100,000"
   }
 ]
