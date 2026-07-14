@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "NSW Shot Clock Super Stacks Event #5 $680 Stacked Bounty Day 2",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-07-13",
-    "time": "12:30",
-    "buyin": 680,
-    "guarantee": null,
-    "late_reg": null,
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited Re-Entry",
-    "blind_level_minutes": 30,
-    "late_reg_level": null,
-    "starting_stack": "40,000"
-  },
-  {
-    "league": "Star",
     "name": "NSW Shot Clock Super Stacks Event #6 NSW Monster Stack Day 1",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 20,
     "late_reg_level": null,
     "starting_stack": "20,000"
+  },
+  {
+    "league": "Star",
+    "name": "NSW Shot Clock Super Stacks Event #8 PLO $800 High Roller Day 2",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-07-15",
+    "time": "12:30",
+    "buyin": 800,
+    "guarantee": null,
+    "late_reg": null,
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited Re-Entry",
+    "blind_level_minutes": 30,
+    "late_reg_level": null,
+    "starting_stack": "50000"
   }
 ]
