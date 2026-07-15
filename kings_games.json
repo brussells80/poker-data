@@ -118,12 +118,12 @@
   },
   {
     "league": "Kings",
-    "name": "Kings Room Thursday",
+    "name": "Kings Room Thursday Sig series mega satty",
     "venue": "122",
     "date": "2026-07-16 00:00:00",
     "time": "18:30",
-    "buyin": 120,
-    "guarantee": 6000,
+    "buyin": 150,
+    "guarantee": 9600,
     "late_reg": "9:40",
     "entries": null,
     "players_remaining": null,
@@ -144,16 +144,16 @@
   },
   {
     "league": "Kings",
-    "name": "Churchills Thursday",
+    "name": "East leaderboard game",
     "venue": "186",
     "date": "2026-07-16 00:00:00",
     "time": "19:00",
-    "buyin": 35,
-    "guarantee": 2000,
+    "buyin": 55,
+    "guarantee": 3000,
     "late_reg": "21:30",
     "entries": null,
     "players_remaining": null,
-    "type": "2 x rebuy"
+    "type": "1 x rebuy"
   },
   {
     "league": "Kings",
