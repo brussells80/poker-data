@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "NSW Shot Clock Super Stacks Event #8 PLO $800 High Roller Day 1",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-07-14",
-    "time": "14:30",
-    "buyin": 800,
-    "guarantee": null,
-    "late_reg": null,
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited Re-Entry",
-    "blind_level_minutes": 30,
-    "late_reg_level": null,
-    "starting_stack": "50,000"
-  },
-  {
-    "league": "Star",
     "name": "Star Gold Coast $250 Two Bullet Tuesday",
     "venue": "The Star Gold Coast",
     "suburb": "Gold Coast",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 30,
     "late_reg_level": null,
     "starting_stack": "100,000"
+  },
+  {
+    "league": "Star",
+    "name": "NSW Shot Clock Super Stacks Event #12 Main Event Day 1A",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-07-16",
+    "time": "14:30",
+    "buyin": 1500,
+    "guarantee": null,
+    "late_reg": null,
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited Re-Entry",
+    "blind_level_minutes": 40,
+    "late_reg_level": null,
+    "starting_stack": "75,000"
   }
 ]
