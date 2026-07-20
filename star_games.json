@@ -109,6 +109,24 @@
   },
   {
     "league": "Star",
+    "name": "Star Sydney $350 Mid-week Warrior",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-07-22",
+    "time": "18:15",
+    "buyin": 350,
+    "guarantee": null,
+    "late_reg": "20:20",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 Re-entries",
+    "blind_level_minutes": 25,
+    "late_reg_level": 6,
+    "starting_stack": "30,000"
+  },
+  {
+    "league": "Star",
     "name": "Star Gold Coast $200 Friday Freezeout",
     "venue": "The Star Gold Coast",
     "suburb": "Gold Coast",
@@ -160,23 +178,5 @@
     "blind_level_minutes": 25,
     "late_reg_level": null,
     "starting_stack": "50000"
-  },
-  {
-    "league": "Star",
-    "name": "WPT Australia Championship Event $550 Direct Qualifier Satellite",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-07-25",
-    "time": "19:30",
-    "buyin": 550,
-    "guarantee": null,
-    "late_reg": "21:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited re-entry",
-    "blind_level_minutes": 20,
-    "late_reg_level": 7,
-    "starting_stack": "25,000"
   }
 ]
