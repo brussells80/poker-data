@@ -66,6 +66,19 @@
   },
   {
     "league": "Kings",
+    "name": "Kings Room Wednesday Sig series satty",
+    "venue": "122",
+    "date": "2026-07-22 00:00:00",
+    "time": "18:30",
+    "buyin": 150,
+    "guarantee": 4800,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
+  },
+  {
+    "league": "Kings",
     "name": "Kings Room Wednesday cash game",
     "venue": "122",
     "date": "2026-07-22 00:00:00",
@@ -157,19 +170,6 @@
   },
   {
     "league": "Kings",
-    "name": "Kings Room Thursday",
-    "venue": "122",
-    "date": "2026-07-23 00:00:00",
-    "time": "18:30",
-    "buyin": 120,
-    "guarantee": 6000,
-    "late_reg": "9:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Re entry"
-  },
-  {
-    "league": "Kings",
     "name": "Manly Leagues Thursday",
     "venue": "185",
     "date": "2026-07-23 00:00:00",
@@ -180,6 +180,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Signature series satty",
+    "venue": "122",
+    "date": "2026-07-23 00:00:00",
+    "time": "18:30",
+    "buyin": 150,
+    "guarantee": 4800,
+    "late_reg": "21:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
   },
   {
     "league": "Kings",
