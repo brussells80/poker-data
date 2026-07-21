@@ -625,6 +625,19 @@
   },
   {
     "league": "Kings",
+    "name": "Tennyson Hotel Wednesday",
+    "venue": "162",
+    "date": "2026-07-29 00:00:00",
+    "time": "21:00",
+    "buyin": 35,
+    "guarantee": 1000,
+    "late_reg": "23:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Waverly Greens Thursday arvo",
     "venue": "165",
     "date": "2026-07-30 00:00:00",
@@ -950,6 +963,19 @@
   },
   {
     "league": "Kings",
+    "name": "Silverwater Hotel Monday",
+    "venue": "176",
+    "date": "2026-08-03 00:00:00",
+    "time": "19:00",
+    "buyin": 40,
+    "guarantee": 2000,
+    "late_reg": "9:20",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
     "name": "Tea Gardens Bondi Junction",
     "venue": "167",
     "date": "2026-08-03 00:00:00",
@@ -1015,6 +1041,19 @@
   },
   {
     "league": "Kings",
+    "name": "Hornsby RSL Wednesdays",
+    "venue": "183",
+    "date": "2026-08-05 00:00:00",
+    "time": "18:30",
+    "buyin": 120,
+    "guarantee": 4000,
+    "late_reg": "21:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
+  },
+  {
+    "league": "Kings",
     "name": "Kings Room Wednesday cash game",
     "venue": "122",
     "date": "2026-08-05 00:00:00",
@@ -1074,6 +1113,19 @@
     "buyin": 25,
     "guarantee": 1000,
     "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Tennyson Hotel Wednesday",
+    "venue": "162",
+    "date": "2026-08-05 00:00:00",
+    "time": "21:00",
+    "buyin": 35,
+    "guarantee": 1000,
+    "late_reg": "23:30",
     "entries": null,
     "players_remaining": null,
     "type": "Single rebuy"
@@ -1405,6 +1457,19 @@
   },
   {
     "league": "Kings",
+    "name": "Silverwater Hotel Monday",
+    "venue": "176",
+    "date": "2026-08-10 00:00:00",
+    "time": "19:00",
+    "buyin": 40,
+    "guarantee": 2000,
+    "late_reg": "9:20",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
     "name": "Tea Gardens Bondi Junction",
     "venue": "167",
     "date": "2026-08-10 00:00:00",
@@ -1470,6 +1535,19 @@
   },
   {
     "league": "Kings",
+    "name": "Hornsby RSL Wednesdays",
+    "venue": "183",
+    "date": "2026-08-12 00:00:00",
+    "time": "18:30",
+    "buyin": 120,
+    "guarantee": 4000,
+    "late_reg": "21:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
+  },
+  {
+    "league": "Kings",
     "name": "Kings Room Wednesday cash game",
     "venue": "122",
     "date": "2026-08-12 00:00:00",
@@ -1529,6 +1607,19 @@
     "buyin": 25,
     "guarantee": 1000,
     "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Tennyson Hotel Wednesday",
+    "venue": "162",
+    "date": "2026-08-12 00:00:00",
+    "time": "21:00",
+    "buyin": 35,
+    "guarantee": 1000,
+    "late_reg": "23:30",
     "entries": null,
     "players_remaining": null,
     "type": "Single rebuy"
@@ -1847,6 +1938,19 @@
   },
   {
     "league": "Kings",
+    "name": "Silverwater Hotel Monday",
+    "venue": "176",
+    "date": "2026-08-17 00:00:00",
+    "time": "19:00",
+    "buyin": 40,
+    "guarantee": 2000,
+    "late_reg": "9:20",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
     "name": "Tea Gardens Bondi Junction",
     "venue": "167",
     "date": "2026-08-17 00:00:00",
@@ -1886,6 +1990,19 @@
   },
   {
     "league": "Kings",
+    "name": "Rocksia Hotel Tuesday",
+    "venue": "178",
+    "date": "2026-08-18 00:00:00",
+    "time": "19:00",
+    "buyin": 65,
+    "guarantee": 4000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
     "name": "Royal Oak Tuesday",
     "venue": "108",
     "date": "2026-08-18 00:00:00",
@@ -1896,6 +2013,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Rebuy/addon"
+  },
+  {
+    "league": "Kings",
+    "name": "Hornsby RSL Wednesdays",
+    "venue": "183",
+    "date": "2026-08-19 00:00:00",
+    "time": "18:30",
+    "buyin": 120,
+    "guarantee": 4000,
+    "late_reg": "21:00",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
   },
   {
     "league": "Kings",
@@ -1958,6 +2088,19 @@
     "buyin": 25,
     "guarantee": 1000,
     "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Tennyson Hotel Wednesday",
+    "venue": "162",
+    "date": "2026-08-19 00:00:00",
+    "time": "21:00",
+    "buyin": 35,
+    "guarantee": 1000,
+    "late_reg": "23:30",
     "entries": null,
     "players_remaining": null,
     "type": "Single rebuy"
