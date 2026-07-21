@@ -1,13 +1,13 @@
 [
   {
     "league": "Kings",
-    "name": "XTRA BIG GUN",
+    "name": "Churchills Tuesday Highroller",
     "venue": "186",
     "date": "2026-07-21 00:00:00",
-    "time": "17:00",
-    "buyin": 400,
-    "guarantee": 50000,
-    "late_reg": "19:30",
+    "time": "18:00",
+    "buyin": 200,
+    "guarantee": null,
+    "late_reg": "9:20",
     "entries": null,
     "players_remaining": null,
     "type": "Rebuy"
