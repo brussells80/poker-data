@@ -11,7 +11,7 @@
     "guarantee": 200.0,
     "late_reg": "8:15 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 11959.8,
+    "distance_km": 15057.3,
     "lat": null,
     "lng": null
   },
@@ -27,7 +27,7 @@
     "guarantee": 300.0,
     "late_reg": "8:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 11979.0,
+    "distance_km": 15074.9,
     "lat": null,
     "lng": null
   },
@@ -43,7 +43,7 @@
     "guarantee": null,
     "late_reg": "8:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12058.6,
+    "distance_km": 15158.2,
     "lat": null,
     "lng": null
   },
@@ -59,7 +59,7 @@
     "guarantee": null,
     "late_reg": "7:15 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12264.0,
+    "distance_km": 15355.7,
     "lat": null,
     "lng": null
   },
@@ -75,7 +75,7 @@
     "guarantee": null,
     "late_reg": "7:15 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12335.2,
+    "distance_km": 15430.9,
     "lat": null,
     "lng": null
   },
@@ -91,7 +91,7 @@
     "guarantee": null,
     "late_reg": "8:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12486.1,
+    "distance_km": 15584.2,
     "lat": null,
     "lng": null
   },
@@ -107,7 +107,7 @@
     "guarantee": 1000.0,
     "late_reg": "9:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12533.9,
+    "distance_km": 15613.4,
     "lat": null,
     "lng": null
   },
@@ -123,7 +123,7 @@
     "guarantee": 1500.0,
     "late_reg": "8:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12538.9,
+    "distance_km": 15618.2,
     "lat": null,
     "lng": null
   },
@@ -139,7 +139,7 @@
     "guarantee": 4000.0,
     "late_reg": "9:45 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12539.3,
+    "distance_km": 15619.1,
     "lat": null,
     "lng": null
   },
@@ -155,7 +155,7 @@
     "guarantee": null,
     "late_reg": "9:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12539.8,
+    "distance_km": 15620.0,
     "lat": null,
     "lng": null
   },
@@ -171,7 +171,7 @@
     "guarantee": 1000.0,
     "late_reg": "9:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12543.7,
+    "distance_km": 15622.9,
     "lat": null,
     "lng": null
   },
@@ -187,7 +187,7 @@
     "guarantee": null,
     "late_reg": "11:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12544.5,
+    "distance_km": 15623.7,
     "lat": null,
     "lng": null
   },
@@ -203,7 +203,7 @@
     "guarantee": 4000.0,
     "late_reg": "9:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12546.3,
+    "distance_km": 15625.6,
     "lat": null,
     "lng": null
   },
@@ -219,7 +219,7 @@
     "guarantee": 2000.0,
     "late_reg": "9:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12550.2,
+    "distance_km": 15629.0,
     "lat": null,
     "lng": null
   },
@@ -235,7 +235,7 @@
     "guarantee": null,
     "late_reg": "1:00 AM",
     "type": "TEXAS HOLD 'EM - CASH GAME",
-    "distance_km": 12550.2,
+    "distance_km": 15629.0,
     "lat": null,
     "lng": null
   },
@@ -251,23 +251,7 @@
     "guarantee": 1000.0,
     "late_reg": "9:35 PM",
     "type": "TEXAS HOLD 'EM - DEALERS",
-    "distance_km": 12553.4,
-    "lat": null,
-    "lng": null
-  },
-  {
-    "league": "NPL",
-    "state": "NSW",
-    "name": "Riverstone Schofields Memorial Club 7:00 PM",
-    "venue": "Riverstone Schofields Memorial Club",
-    "suburb": "Hawkesbury",
-    "date": "2026-07-22",
-    "time": "7:00 PM",
-    "buyin": 35.0,
-    "guarantee": null,
-    "late_reg": "9:00 PM",
-    "type": "TEXAS HOLD 'EM",
-    "distance_km": 12558.3,
+    "distance_km": 15633.4,
     "lat": null,
     "lng": null
   },
@@ -283,7 +267,23 @@
     "guarantee": 300.0,
     "late_reg": "4:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12558.7,
+    "distance_km": 15638.7,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "league": "NPL",
+    "state": "NSW",
+    "name": "Riverstone Schofields Memorial Club 7:00 PM",
+    "venue": "Riverstone Schofields Memorial Club",
+    "suburb": "Hawkesbury",
+    "date": "2026-07-22",
+    "time": "7:00 PM",
+    "buyin": 35.0,
+    "guarantee": null,
+    "late_reg": "9:00 PM",
+    "type": "TEXAS HOLD 'EM",
+    "distance_km": 15639.9,
     "lat": null,
     "lng": null
   },
@@ -299,7 +299,7 @@
     "guarantee": 8000.0,
     "late_reg": "9:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12564.4,
+    "distance_km": 15644.3,
     "lat": null,
     "lng": null
   },
@@ -315,7 +315,7 @@
     "guarantee": 1500.0,
     "late_reg": "9:20 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12583.2,
+    "distance_km": 15662.0,
     "lat": null,
     "lng": null
   },
@@ -331,7 +331,7 @@
     "guarantee": null,
     "late_reg": "9:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12588.7,
+    "distance_km": 15665.1,
     "lat": null,
     "lng": null
   },
@@ -347,7 +347,7 @@
     "guarantee": 300.0,
     "late_reg": "7:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12624.8,
+    "distance_km": 15697.6,
     "lat": null,
     "lng": null
   },
@@ -363,7 +363,7 @@
     "guarantee": 200.0,
     "late_reg": "7:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12646.0,
+    "distance_km": 15717.1,
     "lat": null,
     "lng": null
   },
@@ -379,23 +379,7 @@
     "guarantee": 200.0,
     "late_reg": "8:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12670.4,
-    "lat": null,
-    "lng": null
-  },
-  {
-    "league": "NPL",
-    "state": "NSW",
-    "name": "Goulburn Workers Club 6:00 PM",
-    "venue": "Goulburn Workers Club",
-    "suburb": "Southern Tablelands",
-    "date": "2026-07-22",
-    "time": "6:00 PM",
-    "buyin": 40.0,
-    "guarantee": 2000.0,
-    "late_reg": "8:00 PM",
-    "type": "TEXAS HOLD 'EM",
-    "distance_km": 12704.6,
+    "distance_km": 15739.6,
     "lat": null,
     "lng": null
   },
@@ -411,7 +395,23 @@
     "guarantee": null,
     "late_reg": "8:30 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12711.0,
+    "distance_km": 15777.8,
+    "lat": null,
+    "lng": null
+  },
+  {
+    "league": "NPL",
+    "state": "NSW",
+    "name": "Goulburn Workers Club 6:00 PM",
+    "venue": "Goulburn Workers Club",
+    "suburb": "Southern Tablelands",
+    "date": "2026-07-22",
+    "time": "6:00 PM",
+    "buyin": 40.0,
+    "guarantee": 2000.0,
+    "late_reg": "8:00 PM",
+    "type": "TEXAS HOLD 'EM",
+    "distance_km": 15781.2,
     "lat": null,
     "lng": null
   },
@@ -427,7 +427,7 @@
     "guarantee": null,
     "late_reg": "8:00 PM",
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12729.0,
+    "distance_km": 15794.2,
     "lat": null,
     "lng": null
   },
@@ -443,7 +443,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12738.5,
+    "distance_km": 15800.4,
     "lat": null,
     "lng": null
   },
@@ -459,7 +459,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12767.6,
+    "distance_km": 15841.9,
     "lat": null,
     "lng": null
   },
@@ -475,7 +475,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12774.4,
+    "distance_km": 15847.4,
     "lat": null,
     "lng": null
   },
@@ -491,7 +491,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12774.4,
+    "distance_km": 15847.4,
     "lat": null,
     "lng": null
   },
@@ -507,7 +507,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 12873.1,
+    "distance_km": 15957.4,
     "lat": null,
     "lng": null
   },
@@ -523,7 +523,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM - CASH GAME",
-    "distance_km": 12991.0,
+    "distance_km": 16079.4,
     "lat": null,
     "lng": null
   },
@@ -539,7 +539,7 @@
     "guarantee": null,
     "late_reg": null,
     "type": "TEXAS HOLD 'EM",
-    "distance_km": 13644.5,
+    "distance_km": 16741.4,
     "lat": null,
     "lng": null
   }
