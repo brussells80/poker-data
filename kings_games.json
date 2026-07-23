@@ -79,25 +79,12 @@
   },
   {
     "league": "Kings",
-    "name": "Scots Club Friday",
-    "venue": "166",
-    "date": "2026-07-24 00:00:00",
-    "time": "18:00",
-    "buyin": 60,
-    "guarantee": 3000,
-    "late_reg": "8:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
     "name": "Kings Room Friday",
     "venue": "122",
     "date": "2026-07-24 00:00:00",
     "time": "18:30",
-    "buyin": 250,
-    "guarantee": 15000,
+    "buyin": 150,
+    "guarantee": 6000,
     "late_reg": "21:00",
     "entries": null,
     "players_remaining": null,
@@ -105,7 +92,20 @@
   },
   {
     "league": "Kings",
-    "name": "Churchills Friday",
+    "name": "Scots Club Friday",
+    "venue": "166",
+    "date": "2026-07-24 00:00:00",
+    "time": "18:30",
+    "buyin": 50,
+    "guarantee": 2000,
+    "late_reg": "9:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
+  },
+  {
+    "league": "Kings",
+    "name": "CANCELLED due to Kings Cup",
     "venue": "186",
     "date": "2026-07-24 00:00:00",
     "time": "19:00",
@@ -196,7 +196,7 @@
   },
   {
     "league": "Kings",
-    "name": "Churchills Saturday",
+    "name": "CANCELLED due to Kings Cup",
     "venue": "186",
     "date": "2026-07-25 00:00:00",
     "time": "19:00",
@@ -222,7 +222,7 @@
   },
   {
     "league": "Kings",
-    "name": "Churchills Sunday Highroller",
+    "name": "CANCELLED due to Kings Cup",
     "venue": "186",
     "date": "2026-07-26 00:00:00",
     "time": "18:00",
@@ -573,19 +573,6 @@
   },
   {
     "league": "Kings",
-    "name": "Scots Club Friday",
-    "venue": "166",
-    "date": "2026-07-31 00:00:00",
-    "time": "18:00",
-    "buyin": 60,
-    "guarantee": 3000,
-    "late_reg": "8:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
     "name": "Kings Room Friday",
     "venue": "122",
     "date": "2026-07-31 00:00:00",
@@ -596,6 +583,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Scots Club Friday",
+    "venue": "166",
+    "date": "2026-07-31 00:00:00",
+    "time": "18:30",
+    "buyin": 50,
+    "guarantee": 2000,
+    "late_reg": "9:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
   },
   {
     "league": "Kings",
@@ -1067,19 +1067,6 @@
   },
   {
     "league": "Kings",
-    "name": "Scots Club Friday",
-    "venue": "166",
-    "date": "2026-08-07 00:00:00",
-    "time": "18:00",
-    "buyin": 60,
-    "guarantee": 3000,
-    "late_reg": "8:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
     "name": "Kings Room Friday",
     "venue": "122",
     "date": "2026-08-07 00:00:00",
@@ -1090,6 +1077,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Scots Club Friday",
+    "venue": "166",
+    "date": "2026-08-07 00:00:00",
+    "time": "18:30",
+    "buyin": 50,
+    "guarantee": 2000,
+    "late_reg": "9:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
   },
   {
     "league": "Kings",
@@ -1561,19 +1561,6 @@
   },
   {
     "league": "Kings",
-    "name": "Scots Club Friday",
-    "venue": "166",
-    "date": "2026-08-14 00:00:00",
-    "time": "18:00",
-    "buyin": 60,
-    "guarantee": 3000,
-    "late_reg": "8:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
     "name": "Kings Room Friday",
     "venue": "122",
     "date": "2026-08-14 00:00:00",
@@ -1584,6 +1571,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Scots Club Friday",
+    "venue": "166",
+    "date": "2026-08-14 00:00:00",
+    "time": "18:30",
+    "buyin": 50,
+    "guarantee": 2000,
+    "late_reg": "9:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
   },
   {
     "league": "Kings",
@@ -2055,19 +2055,6 @@
   },
   {
     "league": "Kings",
-    "name": "Scots Club Friday",
-    "venue": "166",
-    "date": "2026-08-21 00:00:00",
-    "time": "18:00",
-    "buyin": 60,
-    "guarantee": 3000,
-    "late_reg": "8:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
     "name": "Kings Room Friday",
     "venue": "122",
     "date": "2026-08-21 00:00:00",
@@ -2078,6 +2065,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Re entry"
+  },
+  {
+    "league": "Kings",
+    "name": "Scots Club Friday",
+    "venue": "166",
+    "date": "2026-08-21 00:00:00",
+    "time": "18:30",
+    "buyin": 50,
+    "guarantee": 2000,
+    "late_reg": "9:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "2 x re-entry"
   },
   {
     "league": "Kings",
