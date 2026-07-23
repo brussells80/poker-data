@@ -1483,6 +1483,19 @@
   },
   {
     "league": "Kings",
+    "name": "Waverly Greens Thursday arvo",
+    "venue": "165",
+    "date": "2026-08-13 00:00:00",
+    "time": "15:00",
+    "buyin": 25,
+    "guarantee": 500,
+    "late_reg": "17:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
+  },
+  {
+    "league": "Kings",
     "name": "Kings Room Thursday",
     "venue": "122",
     "date": "2026-08-13 00:00:00",
@@ -1961,6 +1974,19 @@
     "entries": null,
     "players_remaining": null,
     "type": "Single rebuy"
+  },
+  {
+    "league": "Kings",
+    "name": "Waverly Greens Thursday arvo",
+    "venue": "165",
+    "date": "2026-08-20 00:00:00",
+    "time": "15:00",
+    "buyin": 25,
+    "guarantee": 500,
+    "late_reg": "17:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Rebuy"
   },
   {
     "league": "Kings",
