@@ -7,7 +7,7 @@
     "date": null,
     "start_time": "",
     "buyin": "KC @ Churchills Event 1: MAIN EVENT - Day 2",
-    "guarantee": "$400",
+    "guarantee": "Limited",
     "late_reg": null,
     "clock": "$260,130",
     "type": "40",
@@ -21,15 +21,15 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Re-EntryGame:NL HEBuy-In:$400GTD:$200,000Prize Pool:$260,130Chips:50,000Entries:754Players:116Status:OPENStatus:RegisteringShow me more details...",
+    "start_time": "Time chip + 1 at 45, 19, 9Re-EntryGame:NL HEBuy-In:LimitedGTD:$200,000Prize Pool:$260,130Chips:50,000Entries:754Players:58Status:FINALStatus:RunningShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": null,
-    "clock": "$400",
+    "clock": "Limited",
     "type": "GTD:",
     "chips": "$200,000",
     "entries": "754",
-    "players_remaining": "116"
+    "players_remaining": "58"
   },
   {
     "league": "Kings",
@@ -53,15 +53,15 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Re-EntryGame:NL HEBuy-In:$300GTD:$25,000Prize Pool:$25,000Chips:100,000Entries:0Players:0Reg Ends:10Status:ScheduledStatus:InitiatingShow me more details...",
+    "start_time": "Re-EntryGame:NL HEBuy-In:$300GTD:$25,000Prize Pool:$25,000Chips:100,000Entries:5Players:5Reg Ends:10Status:OPEN (till level 10)Status:RegisteringShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
     "late_reg": "10",
     "clock": "$300",
     "type": "GTD:",
     "chips": "$25,000",
-    "entries": "0",
-    "players_remaining": "0"
+    "entries": "5",
+    "players_remaining": "5"
   },
   {
     "league": "Kings",
