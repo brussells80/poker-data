@@ -9,7 +9,7 @@
     "buyin": "KC @ Churchills Event 4: Highroller Day 1",
     "guarantee": "$750",
     "late_reg": null,
-    "clock": "$75,000",
+    "clock": "$83,850",
     "type": "30",
     "chips": "Re-Entry",
     "entries": null,
@@ -21,15 +21,15 @@
     "name": "Game:",
     "venue": "Kings Live",
     "date": null,
-    "start_time": "Re-EntryGame:NL HEBuy-In:$750GTD:$75,000Prize Pool:$75,000Chips:75,000Entries:112Players:72Reg Ends:12Status:OPEN (till level 12)Status:RunningShow me more details...",
+    "start_time": "Re-EntryGame:NL HEBuy-In:$750GTD:$75,000Prize Pool:$83,850Chips:75,000Entries:129Players:52Reg Ends:14Status:OPEN (till level 14)Status:Clock stoppedShow me more details...",
     "buyin": "NL HE",
     "guarantee": "Buy-In:",
-    "late_reg": "12",
+    "late_reg": "14",
     "clock": "$750",
     "type": "GTD:",
     "chips": "$75,000",
-    "entries": "112",
-    "players_remaining": "72"
+    "entries": "129",
+    "players_remaining": "52"
   },
   {
     "league": "Kings",
