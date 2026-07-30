@@ -14,6 +14,19 @@
   },
   {
     "league": "Kings",
+    "name": "Kings Room Thursday",
+    "venue": "122",
+    "date": "2026-07-30 00:00:00",
+    "time": "18:30",
+    "buyin": 120,
+    "guarantee": 6000,
+    "late_reg": "9:40",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Re entry"
+  },
+  {
+    "league": "Kings",
     "name": "Manly Leagues Thursday",
     "venue": "185",
     "date": "2026-07-30 00:00:00",
@@ -24,19 +37,6 @@
     "entries": null,
     "players_remaining": null,
     "type": "2 x re-entry"
-  },
-  {
-    "league": "Kings",
-    "name": "SERIES",
-    "venue": "122",
-    "date": "2026-07-30 00:00:00",
-    "time": "18:30",
-    "buyin": 120,
-    "guarantee": 6000,
-    "late_reg": "9:40",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Re entry"
   },
   {
     "league": "Kings",
