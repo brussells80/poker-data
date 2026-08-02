@@ -308,9 +308,9 @@
   },
   {
     "league": "PokerMania",
-    "name": "Madison Hotel Wednesday Cash Game",
-    "venue": "Madison Hotel",
-    "suburb": "Surry Hills",
+    "name": "Canterbury Hotel Wednesday Cash Game",
+    "venue": "Canterbury Hotel",
+    "suburb": "Canterbury",
     "state": "NSW",
     "date": "2026-08-05",
     "time": "21:00",
@@ -331,12 +331,12 @@
   },
   {
     "league": "PokerMania",
-    "name": "Canterbury Hotel Wednesday Cash Game",
-    "venue": "Canterbury Hotel",
-    "suburb": "Canterbury",
+    "name": "Madison Hotel Wednesday Cash Game",
+    "venue": "Madison Hotel",
+    "suburb": "Surry Hills",
     "state": "NSW",
     "date": "2026-08-05",
-    "time": "22:00",
+    "time": "21:00",
     "buyin": {
       "min": 50,
       "max": 200
