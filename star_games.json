@@ -99,12 +99,12 @@
     "time": "12:15",
     "buyin": 400,
     "guarantee": null,
-    "late_reg": "15:35",
+    "late_reg": "16:25",
     "entries": null,
     "players_remaining": null,
     "type": "Unlimited re-entry",
     "blind_level_minutes": 25,
-    "late_reg_level": 9,
+    "late_reg_level": 11,
     "starting_stack": "40,000"
   },
   {
