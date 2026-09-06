@@ -526,5 +526,28 @@
     "venue_contact": null,
     "venue_website": null,
     "additional_notes": null
+  },
+  {
+    "league": "PokerMania",
+    "name": "Chatswood Hotel Saturday Cash Game",
+    "venue": "Chatswood Hotel",
+    "suburb": "Chatswood",
+    "state": "NSW",
+    "date": "2026-09-12",
+    "time": "19:30",
+    "buyin": {
+      "min": 50,
+      "max": 200
+    },
+    "guarantee": null,
+    "late_reg": null,
+    "entries": null,
+    "players_remaining": null,
+    "type": "Cash Game",
+    "starting_stack": null,
+    "venue_address": null,
+    "venue_contact": null,
+    "venue_website": null,
+    "additional_notes": null
   }
 ]
