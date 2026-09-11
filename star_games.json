@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "WPT Australia Australian Poker Cup 1 in 5 Satellite",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-09-10",
-    "time": "10:30",
-    "buyin": 270,
-    "guarantee": null,
-    "late_reg": "12:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited re-entry",
-    "blind_level_minutes": 20,
-    "late_reg_level": 7,
-    "starting_stack": "20,000"
-  },
-  {
-    "league": "Star",
     "name": "WPT AUS Event #1 Australia Poker Cup Day 1A",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 25,
     "late_reg_level": 11,
     "starting_stack": "40,000"
+  },
+  {
+    "league": "Star",
+    "name": "WPT AUS Event #1 Australia Poker Cup Day 1C",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-09-12",
+    "time": "12:30",
+    "buyin": 1150,
+    "guarantee": null,
+    "late_reg": "18:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited re-entry",
+    "blind_level_minutes": 30,
+    "late_reg_level": 13,
+    "starting_stack": "50,000"
   }
 ]
