@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "WPT AUS Event #1 Australia Poker Cup Day 1B",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-09-11",
-    "time": "14:30",
-    "buyin": 1150,
-    "guarantee": null,
-    "late_reg": "20:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited re-entry",
-    "blind_level_minutes": 30,
-    "late_reg_level": 13,
-    "starting_stack": "50,000"
-  },
-  {
-    "league": "Star",
     "name": "Star Gold Coast $200 Friday Freezeout",
     "venue": "The Star Gold Coast",
     "suburb": "Gold Coast",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 30,
     "late_reg_level": 13,
     "starting_stack": "50,000"
+  },
+  {
+    "league": "Star",
+    "name": "WPT AUS Event #6 Aussie Monster Stack Day 1",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-09-13",
+    "time": "14:30",
+    "buyin": 1250,
+    "guarantee": null,
+    "late_reg": "20:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Double re-entry",
+    "blind_level_minutes": 30,
+    "late_reg_level": 13,
+    "starting_stack": "60,000"
   }
 ]
