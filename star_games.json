@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "WPT AUS Event #21 $460 Double Trouble",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-09-22",
-    "time": "10:30",
-    "buyin": 460,
-    "guarantee": null,
-    "late_reg": "12:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single re-entry",
-    "blind_level_minutes": 20,
-    "late_reg_level": 7,
-    "starting_stack": "25,000"
-  },
-  {
-    "league": "Star",
     "name": "WPT AUS Event #14 Prime Championship Event Final Day",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
