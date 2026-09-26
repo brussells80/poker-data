@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "WPT Australia Championship Event $550 Direct Qualifier Turbo Satellite",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-09-25",
-    "time": "22:00",
-    "buyin": 550,
-    "guarantee": null,
-    "late_reg": "23:45",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Unlimited re-entry",
-    "blind_level_minutes": 15,
-    "late_reg_level": 8,
-    "starting_stack": "25,000"
-  },
-  {
-    "league": "Star",
     "name": "WPT AUS Event #27 $500 Second Shot Turbo",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": null,
     "late_reg_level": 9,
     "starting_stack": "50,000"
+  },
+  {
+    "league": "Star",
+    "name": "WPT Australia $1,250 Down Under Dominator 1 in 5 Satellite",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-09-27",
+    "time": "20:30",
+    "buyin": 290,
+    "guarantee": null,
+    "late_reg": "22:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Unlimited re-entry",
+    "blind_level_minutes": 20,
+    "late_reg_level": 7,
+    "starting_stack": "20,000"
   }
 ]
