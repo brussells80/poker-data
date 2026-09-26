@@ -1,24 +1,6 @@
 [
   {
     "league": "Star",
-    "name": "WPT AUS Event #25 $450 Twin Fin Turbo",
-    "venue": "The Star Sydney",
-    "suburb": "Sydney",
-    "state": "NSW",
-    "date": "2026-09-25",
-    "time": "10:30",
-    "buyin": 450,
-    "guarantee": null,
-    "late_reg": "12:30",
-    "entries": null,
-    "players_remaining": null,
-    "type": "Single re-entry",
-    "blind_level_minutes": 15,
-    "late_reg_level": 9,
-    "starting_stack": "25,000"
-  },
-  {
-    "league": "Star",
     "name": "WPT AUS Event #24 Championship Event Day 1B",
     "venue": "The Star Sydney",
     "suburb": "Sydney",
@@ -178,5 +160,23 @@
     "blind_level_minutes": 20,
     "late_reg_level": 11,
     "starting_stack": "30,000"
+  },
+  {
+    "league": "Star",
+    "name": "WPT AUS Event #29 $1,100 Prime Time Turbo",
+    "venue": "The Star Sydney",
+    "suburb": "Sydney",
+    "state": "NSW",
+    "date": "2026-09-26",
+    "time": "19:30",
+    "buyin": 1100,
+    "guarantee": null,
+    "late_reg": "21:30",
+    "entries": null,
+    "players_remaining": null,
+    "type": "Single re-entry",
+    "blind_level_minutes": 15,
+    "late_reg_level": 9,
+    "starting_stack": "25,000"
   }
 ]
