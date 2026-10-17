@@ -98,11 +98,11 @@
   {
     "league": "NPL",
     "state": "NSW",
-    "name": "The Alcott 8:00 PM",
+    "name": "The Alcott 8:30 PM",
     "venue": "The Alcott",
     "suburb": "Sydney North",
     "date": "2026-10-17",
-    "time": "8:00 PM",
+    "time": "8:30 PM",
     "buyin": 30.0,
     "guarantee": null,
     "late_reg": null,
