@@ -374,6 +374,29 @@
   },
   {
     "league": "PokerMania",
+    "name": "Dixon Hotel Thursday Cash Game",
+    "venue": "Dixon Hotel",
+    "suburb": "Haymarket",
+    "state": "NSW",
+    "date": "2026-10-22",
+    "time": "19:30",
+    "buyin": {
+      "min": 50,
+      "max": 200
+    },
+    "guarantee": null,
+    "late_reg": null,
+    "entries": null,
+    "players_remaining": null,
+    "type": "Cash Game",
+    "starting_stack": null,
+    "venue_address": null,
+    "venue_contact": null,
+    "venue_website": null,
+    "additional_notes": null
+  },
+  {
+    "league": "PokerMania",
     "name": "Madison Hotel Thursday Cash Game",
     "venue": "Madison Hotel",
     "suburb": "Surry Hills",
